@@ -11,7 +11,19 @@
 		F5AF15B12B092FF80027422A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15B02B092FF80027422A /* ContentView.swift */; };
 		F5AF15B32B092FFB0027422A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AF15B22B092FFB0027422A /* Assets.xcassets */; };
 		F5AF15B62B092FFB0027422A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AF15B52B092FFB0027422A /* Preview Assets.xcassets */; };
+		F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15BF2B0931B60027422A /* LetterPack.swift */; };
+		F5AF15CF2B0944280027422A /* LetterPackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15CE2B0944280027422A /* LetterPackTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5AF15C92B0944010027422A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5AF15A32B092FF80027422A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5AF15AA2B092FF80027422A;
+			remoteInfo = letterise;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F5AF15AB2B092FF80027422A /* letterise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = letterise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +31,20 @@
 		F5AF15B02B092FF80027422A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F5AF15B22B092FFB0027422A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5AF15B52B092FFB0027422A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5AF15BF2B0931B60027422A /* LetterPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPack.swift; sourceTree = "<group>"; };
+		F5AF15C52B0944010027422A /* letteriseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = letteriseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5AF15CE2B0944280027422A /* LetterPackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F5AF15A82B092FF80027422A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5AF15C22B0944010027422A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				F5AF15AD2B092FF80027422A /* letterise */,
+				F5AF15C62B0944010027422A /* letteriseTests */,
 				F5AF15AC2B092FF80027422A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				F5AF15AB2B092FF80027422A /* letterise.app */,
+				F5AF15C52B0944010027422A /* letteriseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +75,8 @@
 		F5AF15AD2B092FF80027422A /* letterise */ = {
 			isa = PBXGroup;
 			children = (
+				F5AF15BD2B09313A0027422A /* Scene */,
+				F5AF15BC2B0931300027422A /* Util */,
 				F5AF15AE2B092FF80027422A /* letteriseApp.swift */,
 				F5AF15B02B092FF80027422A /* ContentView.swift */,
 				F5AF15B22B092FFB0027422A /* Assets.xcassets */,
@@ -65,6 +91,37 @@
 				F5AF15B52B092FFB0027422A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5AF15BC2B0931300027422A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F5AF15BD2B09313A0027422A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF15BE2B09317D0027422A /* LetterPack */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F5AF15BE2B09317D0027422A /* LetterPack */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF15BF2B0931B60027422A /* LetterPack.swift */,
+			);
+			path = LetterPack;
+			sourceTree = "<group>";
+		};
+		F5AF15C62B0944010027422A /* letteriseTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF15CE2B0944280027422A /* LetterPackTests.swift */,
+			);
+			path = letteriseTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +144,24 @@
 			productReference = F5AF15AB2B092FF80027422A /* letterise.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F5AF15C42B0944010027422A /* letteriseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5AF15CB2B0944010027422A /* Build configuration list for PBXNativeTarget "letteriseTests" */;
+			buildPhases = (
+				F5AF15C12B0944010027422A /* Sources */,
+				F5AF15C22B0944010027422A /* Frameworks */,
+				F5AF15C32B0944010027422A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5AF15CA2B0944010027422A /* PBXTargetDependency */,
+			);
+			name = letteriseTests;
+			productName = letteriseTests;
+			productReference = F5AF15C52B0944010027422A /* letteriseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +174,10 @@
 				TargetAttributes = {
 					F5AF15AA2B092FF80027422A = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					F5AF15C42B0944010027422A = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = F5AF15AA2B092FF80027422A;
 					};
 				};
 			};
@@ -116,6 +195,7 @@
 			projectRoot = "";
 			targets = (
 				F5AF15AA2B092FF80027422A /* letterise */,
+				F5AF15C42B0944010027422A /* letteriseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +210,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5AF15C32B0944010027422A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +225,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5AF15B12B092FF80027422A /* ContentView.swift in Sources */,
+				F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */,
 				F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5AF15C12B0944010027422A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5AF15CF2B0944280027422A /* LetterPackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5AF15CA2B0944010027422A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5AF15AA2B092FF80027422A /* letterise */;
+			targetProxy = F5AF15C92B0944010027422A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F5AF15B72B092FFB0027422A /* Debug */ = {
@@ -338,6 +442,42 @@
 			};
 			name = Release;
 		};
+		F5AF15CC2B0944010027422A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GD2RK7JQN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letteriseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/letterise.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/letterise";
+			};
+			name = Debug;
+		};
+		F5AF15CD2B0944010027422A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GD2RK7JQN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letteriseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/letterise.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/letterise";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +495,15 @@
 			buildConfigurations = (
 				F5AF15BA2B092FFB0027422A /* Debug */,
 				F5AF15BB2B092FFB0027422A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5AF15CB2B0944010027422A /* Build configuration list for PBXNativeTarget "letteriseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5AF15CC2B0944010027422A /* Debug */,
+				F5AF15CD2B0944010027422A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
