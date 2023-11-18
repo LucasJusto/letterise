@@ -13,6 +13,18 @@
 		F5AF15B62B092FFB0027422A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AF15B52B092FFB0027422A /* Preview Assets.xcassets */; };
 		F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15BF2B0931B60027422A /* LetterPack.swift */; };
 		F5AF15CF2B0944280027422A /* LetterPackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15CE2B0944280027422A /* LetterPackTests.swift */; };
+		F5AF15D12B09490D0027422A /* LetterPackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15D02B09490D0027422A /* LetterPackViewModel.swift */; };
+		F5AF15D32B094E230027422A /* LetterPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15D22B094E230027422A /* LetterPackView.swift */; };
+		F5AF15D62B0950980027422A /* AnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15D52B0950980027422A /* AnswersView.swift */; };
+		F5AF15D82B09519E0027422A /* AnswerLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15D72B09519E0027422A /* AnswerLetterView.swift */; };
+		F5AF15DB2B09521A0027422A /* BorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15DA2B09521A0027422A /* BorderRadius.swift */; };
+		F5AF15DD2B0952790027422A /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15DC2B0952790027422A /* Tokens.swift */; };
+		F5AF15E02B09555C0027422A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15DF2B09555C0027422A /* Colors.swift */; };
+		F5AF15E22B0957280027422A /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15E12B0957280027422A /* Border.swift */; };
+		F5AF15E52B0959F70027422A /* DSText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15E42B0959F60027422A /* DSText.swift */; };
+		F5AF15E72B095B370027422A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15E62B095B370027422A /* Fonts.swift */; };
+		F5AF15E92B095CF10027422A /* AnswerWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15E82B095CF10027422A /* AnswerWordView.swift */; };
+		F5AF15EB2B09602F0027422A /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15EA2B09602F0027422A /* Padding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,19 @@
 		F5AF15BF2B0931B60027422A /* LetterPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPack.swift; sourceTree = "<group>"; };
 		F5AF15C52B0944010027422A /* letteriseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = letteriseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AF15CE2B0944280027422A /* LetterPackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackTests.swift; sourceTree = "<group>"; };
+		F5AF15D02B09490D0027422A /* LetterPackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackViewModel.swift; sourceTree = "<group>"; };
+		F5AF15D22B094E230027422A /* LetterPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackView.swift; sourceTree = "<group>"; };
+		F5AF15D52B0950980027422A /* AnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersView.swift; sourceTree = "<group>"; };
+		F5AF15D72B09519E0027422A /* AnswerLetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerLetterView.swift; sourceTree = "<group>"; };
+		F5AF15DA2B09521A0027422A /* BorderRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderRadius.swift; sourceTree = "<group>"; };
+		F5AF15DC2B0952790027422A /* Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
+		F5AF15DE2B09552D0027422A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F5AF15DF2B09555C0027422A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F5AF15E12B0957280027422A /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
+		F5AF15E42B0959F60027422A /* DSText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSText.swift; sourceTree = "<group>"; };
+		F5AF15E62B095B370027422A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		F5AF15E82B095CF10027422A /* AnswerWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerWordView.swift; sourceTree = "<group>"; };
+		F5AF15EA2B09602F0027422A /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +100,7 @@
 		F5AF15AD2B092FF80027422A /* letterise */ = {
 			isa = PBXGroup;
 			children = (
+				F5AF15DE2B09552D0027422A /* Info.plist */,
 				F5AF15BD2B09313A0027422A /* Scene */,
 				F5AF15BC2B0931300027422A /* Util */,
 				F5AF15AE2B092FF80027422A /* letteriseApp.swift */,
@@ -96,6 +122,7 @@
 		F5AF15BC2B0931300027422A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F5AF15D92B0951FA0027422A /* DesignSystem */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -112,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				F5AF15BF2B0931B60027422A /* LetterPack.swift */,
+				F5AF15D02B09490D0027422A /* LetterPackViewModel.swift */,
+				F5AF15D22B094E230027422A /* LetterPackView.swift */,
 			);
 			path = LetterPack;
 			sourceTree = "<group>";
@@ -122,6 +151,39 @@
 				F5AF15CE2B0944280027422A /* LetterPackTests.swift */,
 			);
 			path = letteriseTests;
+			sourceTree = "<group>";
+		};
+		F5AF15D42B09504E0027422A /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF15D52B0950980027422A /* AnswersView.swift */,
+				F5AF15D72B09519E0027422A /* AnswerLetterView.swift */,
+				F5AF15E42B0959F60027422A /* DSText.swift */,
+				F5AF15E82B095CF10027422A /* AnswerWordView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		F5AF15D92B0951FA0027422A /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF15D42B09504E0027422A /* Component */,
+				F5AF15E32B0959110027422A /* Tokens */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		F5AF15E32B0959110027422A /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF15DA2B09521A0027422A /* BorderRadius.swift */,
+				F5AF15DC2B0952790027422A /* Tokens.swift */,
+				F5AF15DF2B09555C0027422A /* Colors.swift */,
+				F5AF15E12B0957280027422A /* Border.swift */,
+				F5AF15E62B095B370027422A /* Fonts.swift */,
+				F5AF15EA2B09602F0027422A /* Padding.swift */,
+			);
+			path = Tokens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,8 +287,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5AF15B12B092FF80027422A /* ContentView.swift in Sources */,
+				F5AF15E22B0957280027422A /* Border.swift in Sources */,
+				F5AF15EB2B09602F0027422A /* Padding.swift in Sources */,
+				F5AF15E92B095CF10027422A /* AnswerWordView.swift in Sources */,
+				F5AF15E02B09555C0027422A /* Colors.swift in Sources */,
+				F5AF15E52B0959F70027422A /* DSText.swift in Sources */,
+				F5AF15D32B094E230027422A /* LetterPackView.swift in Sources */,
+				F5AF15D82B09519E0027422A /* AnswerLetterView.swift in Sources */,
+				F5AF15DB2B09521A0027422A /* BorderRadius.swift in Sources */,
+				F5AF15E72B095B370027422A /* Fonts.swift in Sources */,
 				F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */,
 				F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */,
+				F5AF15D62B0950980027422A /* AnswersView.swift in Sources */,
+				F5AF15D12B09490D0027422A /* LetterPackViewModel.swift in Sources */,
+				F5AF15DD2B0952790027422A /* Tokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +453,7 @@
 				DEVELOPMENT_TEAM = 6GD2RK7JQN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = letterise/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = letterise;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -388,6 +463,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,6 +492,7 @@
 				DEVELOPMENT_TEAM = 6GD2RK7JQN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = letterise/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = letterise;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -425,6 +502,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
