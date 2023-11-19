@@ -14,6 +14,18 @@ struct AnswersView: View {
     let rows: [GridItem] = [
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0)
     ]
     
@@ -24,7 +36,12 @@ struct AnswersView: View {
             
             VStack(alignment: .leading) {
                 ScrollView(.horizontal) {
-                    LazyHGrid(rows: rows, content: {
+                    LazyHGrid(
+                        rows: rows,
+                        alignment: .top,
+                        spacing: tokens.padding.micro,
+                        content:
+                    {
                         ForEach(answers, id: \.self) { answer in
                             AnswerWordView(word: answer)
                         }
@@ -34,11 +51,23 @@ struct AnswersView: View {
                 Spacer()
             }
             .padding(.horizontal, tokens.padding.xxs)
-            
+            .padding(.top, tokens.padding.xxs)
         }
     }
 }
 
 #Preview {
-    AnswersView(answers: ["  ", "ra", "   ", "caro", "arco"])
+    AnswersView(answers: AnswersPreviewGenerator.generateAnswersForPreview())
+}
+
+struct AnswersPreviewGenerator {
+    static func generateAnswersForPreview() -> [String] {
+        var answers: [String] = ["  ", "ra", "   ", "caro", "arco"]
+        
+        for i in 1...50 {
+            answers.append("arco\(i)")
+        }
+        
+        return answers
+    }
 }

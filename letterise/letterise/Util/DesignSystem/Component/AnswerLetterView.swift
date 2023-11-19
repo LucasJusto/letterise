@@ -21,9 +21,10 @@ struct AnswerLetterView: View {
             DSText("\(letter.uppercased())")
                 .textStyle(tokens.font.standard, withColor: tokens.color.label.primary)
         }
-        .frame(width: 20, height: 20)
+        .frame(width: constants.width, height: constants.height)
         .background {
-            tokens.color.background.primary
+            RoundedRectangle(cornerRadius: tokens.borderRadius.sm)
+                .foregroundColor(tokens.color.background.primary)
         }
     }
 }
