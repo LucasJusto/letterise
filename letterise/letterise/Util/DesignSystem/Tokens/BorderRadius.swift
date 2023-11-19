@@ -9,11 +9,11 @@ import Foundation
 
 public struct BorderRadius {
     /// 4
-    public let sm = 4.0
+    let sm = 4.0
     
     /// 8
-    public let md = 8.0
+    let md = 8.0
     
     /// 16
-    public let lg = 16.0
+    let lg = 16.0
 }

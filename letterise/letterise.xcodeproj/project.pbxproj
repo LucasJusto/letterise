@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD74292B09A7740062ED5F /* DSButton.swift */; };
 		F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15AE2B092FF80027422A /* letteriseApp.swift */; };
 		F5AF15B12B092FF80027422A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15B02B092FF80027422A /* ContentView.swift */; };
 		F5AF15B32B092FFB0027422A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AF15B22B092FFB0027422A /* Assets.xcassets */; };
@@ -25,6 +26,8 @@
 		F5AF15E72B095B370027422A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15E62B095B370027422A /* Fonts.swift */; };
 		F5AF15E92B095CF10027422A /* AnswerWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15E82B095CF10027422A /* AnswerWordView.swift */; };
 		F5AF15EB2B09602F0027422A /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15EA2B09602F0027422A /* Padding.swift */; };
+		F5AF15EE2B0992030027422A /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15ED2B0992030027422A /* KeyboardView.swift */; };
+		F5AF15F02B0993080027422A /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15EF2B0993080027422A /* KeyboardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5AD74292B09A7740062ED5F /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
 		F5AF15AB2B092FF80027422A /* letterise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = letterise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AF15AE2B092FF80027422A /* letteriseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = letteriseApp.swift; sourceTree = "<group>"; };
 		F5AF15B02B092FF80027422A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		F5AF15E62B095B370027422A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		F5AF15E82B095CF10027422A /* AnswerWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerWordView.swift; sourceTree = "<group>"; };
 		F5AF15EA2B09602F0027422A /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		F5AF15ED2B0992030027422A /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		F5AF15EF2B0993080027422A /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,10 +162,12 @@
 		F5AF15D42B09504E0027422A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F5AF15EC2B098E700027422A /* UserInput */,
 				F5AF15D52B0950980027422A /* AnswersView.swift */,
 				F5AF15D72B09519E0027422A /* AnswerLetterView.swift */,
 				F5AF15E42B0959F60027422A /* DSText.swift */,
 				F5AF15E82B095CF10027422A /* AnswerWordView.swift */,
+				F5AD74292B09A7740062ED5F /* DSButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -184,6 +192,15 @@
 				F5AF15EA2B09602F0027422A /* Padding.swift */,
 			);
 			path = Tokens;
+			sourceTree = "<group>";
+		};
+		F5AF15EC2B098E700027422A /* UserInput */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF15ED2B0992030027422A /* KeyboardView.swift */,
+				F5AF15EF2B0993080027422A /* KeyboardViewModel.swift */,
+			);
+			path = UserInput;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,11 +312,14 @@
 				F5AF15D32B094E230027422A /* LetterPackView.swift in Sources */,
 				F5AF15D82B09519E0027422A /* AnswerLetterView.swift in Sources */,
 				F5AF15DB2B09521A0027422A /* BorderRadius.swift in Sources */,
+				F5AF15EE2B0992030027422A /* KeyboardView.swift in Sources */,
 				F5AF15E72B095B370027422A /* Fonts.swift in Sources */,
 				F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */,
 				F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */,
+				F5AF15F02B0993080027422A /* KeyboardViewModel.swift in Sources */,
 				F5AF15D62B0950980027422A /* AnswersView.swift in Sources */,
 				F5AF15D12B09490D0027422A /* LetterPackViewModel.swift in Sources */,
+				F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */,
 				F5AF15DD2B0952790027422A /* Tokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

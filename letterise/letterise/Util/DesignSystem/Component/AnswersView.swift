@@ -12,11 +12,11 @@ struct AnswersView: View {
     
     var answers: [String]
     let rows: [GridItem] = [
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
@@ -33,6 +33,7 @@ struct AnswersView: View {
         ZStack {
             Image("AnswersBackground")
                 .resizable()
+                .offset(y: -tokens.padding.xs)
             
             VStack(alignment: .leading) {
                 ScrollView(.horizontal) {
@@ -42,16 +43,17 @@ struct AnswersView: View {
                         spacing: tokens.padding.micro,
                         content:
                     {
-                        ForEach(answers, id: \.self) { answer in
-                            AnswerWordView(word: answer)
+                        // ignore the warning. it is safe in this case and id: \.self will break the code because of the strings that are equal (empty ones).
+                        ForEach(0..<answers.count) { index in
+                            AnswerWordView(word: answers[index])
                         }
                     })
                 }
                 
                 Spacer()
             }
-            .padding(.horizontal, tokens.padding.xxs)
-            .padding(.top, tokens.padding.xxs)
+            .padding(.horizontal, tokens.padding.xs)
+            .padding(.top, tokens.padding.sm)
         }
     }
 }

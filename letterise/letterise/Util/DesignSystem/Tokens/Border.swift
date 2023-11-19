@@ -9,11 +9,11 @@ import Foundation
 
 public struct Border {
     /// 1
-    public let sm = 1.0
+    let sm = 1.0
     
     /// 2
-    public let md = 2.0
+    let md = 2.0
     
     /// 4
-    public let lg = 4.0
+    let lg = 4.0
 }

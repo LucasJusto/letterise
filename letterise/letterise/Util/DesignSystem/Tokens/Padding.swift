@@ -24,11 +24,17 @@ struct Padding {
     let nano: CGFloat = 8.0
     
     /// 12
-    public let micro: CGFloat = 12.0
+    let micro: CGFloat = 12.0
     
     /// 16
-    public let xxxs: CGFloat = 16.0
+    let xxxs: CGFloat = 16.0
+    
+    /// 24
+    let xxs: CGFloat = 24.0
     
     /// 32
-    public let xxs: CGFloat = 32.0
+    let xs: CGFloat = 32.0
+    
+    /// 64
+    let sm: CGFloat = 64.0
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LetterPackView: View {
+    @Environment(\.designTokens) var tokens
+    
     private var viewModel: LetterPackViewModelProtocol
     
     init(letterPack: LetterPack) {
@@ -15,13 +17,25 @@ struct LetterPackView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            AnswersView(answers: viewModel.answered)
+            
+            KeyboardView(letters: viewModel.letterOptions)
+            
+            DSButton(label: "Try word") {
+                print("Tried")
+            }
+            .frame(maxHeight: 50)
+            .padding(.top, tokens.padding.xxs)
+            .padding(.bottom, tokens.padding.xs)
+            .padding(.horizontal, tokens.padding.sm)
+        }
     }
 }
 
 #Preview {
     LetterPackView(
         letterPack: try! LetterPack(
-            letters: ["c", "a", "r", "o"]
-            , answers: ["caro", "ar", "aro", "arco", "ra"]))
+            letters: ["c", "a", "r", "o"],
+            answers: ["caro", "ar", "aro", "arco", "ra"]))
 }

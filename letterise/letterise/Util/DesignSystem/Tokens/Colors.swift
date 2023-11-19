@@ -14,6 +14,7 @@ struct Colors {
 
 struct Background {
     let primary: Color = .white
+    let counterPrimary: Color = .black
 }
 
 struct BorderColor {
@@ -22,4 +23,5 @@ struct BorderColor {
 
 struct LabelColor {
     let primary: Color = .black
+    let counterPrimary: Color = .white
 }

@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            LetterPackView(
+                letterPack: try! LetterPack(
+                    letters: ["c", "a", "r", "o"],
+                    answers: ["caro", "ar", "aro", "arco", "ra"]))
         }
         .padding()
     }
