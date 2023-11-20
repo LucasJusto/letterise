@@ -1,5 +1,5 @@
 //
-//  AnswerLetterView.swift
+//  KeyboardWordView.swift
 //  letterise
 //
 //  Created by Lucas Justo on 18/11/23.
@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct AnswerWordView: View {
+struct KeyboardWordView: View {
     @Environment(\.designTokens) var tokens
     
-    let word: String
+    let word: Word
     
     var body: some View {
         HStack(spacing: tokens.padding.xquarck) {
-            ForEach(0..<word.count, id: \.self) { index in
-                AnswerLetterView(letter: Array(word)[index])
+            ForEach(word.word) { letter in
+                KeyboardLetterView(letter: letter)
             }
         }
     }
 }
 
 #Preview {
-    AnswerWordView(word: "Dog")
+    KeyboardWordView(word: Word(word: "DOG"))
 }

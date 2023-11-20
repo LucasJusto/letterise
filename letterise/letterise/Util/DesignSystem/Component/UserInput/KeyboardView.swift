@@ -9,39 +9,41 @@ import SwiftUI
 
 struct KeyboardView: View {
     @Environment(\.designTokens) var tokens
-    @State var options: [Character]
-    @State var typed: [Character]
-    let letters: [Character]
+    let letters: [Letter]
     
-    var viewModel: KeyboardViewModelProtocol
+    @ObservedObject var viewModel: KeyboardViewModel
     
-    init(letters: [Character]) {
+    init(letters: [Letter]) {
         self.letters = letters
-        self.viewModel = KeyboardViewModel()
-        self._options = State(initialValue: letters)
-        self._typed = State(initialValue: self.viewModel.spaceFilledArray(letters: letters))
+        self.viewModel = KeyboardViewModel(letters: letters)
     }
     
     var body: some View {
         VStack {
-            AnswerWordView(
-                word: viewModel.toString(chars: typed),
-                size: .big)
+            KeyboardWordView(
+                word: Word(word: viewModel.typed))
             .padding(.bottom, tokens.padding.xxxs)
             
-            AnswerWordView(
-                word: viewModel.toString(chars: options),
-                size: .big)
+            KeyboardWordView(
+                word: Word(word: viewModel.options))
             .padding(tokens.padding.xxxs)
             .background {
                 Image("KeyboardBackground")
                     .resizable()
             }
+            
+            DSButton(label: "Try word") {
+                print("Tried")
+            }
+            .frame(maxHeight: 50)
+            .padding(.top, tokens.padding.xxs)
+            .padding(.bottom, tokens.padding.xs)
+            .padding(.horizontal, tokens.padding.sm)
         }
         .padding(.horizontal, 16)
     }
 }
 
 #Preview {
-    KeyboardView(letters: ["d", "o", "r", "i", "m", "e"])
+    KeyboardView(letters: [Letter(char: "d"), Letter(char: "o"), Letter(char: "r"), Letter(char: "i"), Letter(char: "m"), Letter(char: "e")])
 }

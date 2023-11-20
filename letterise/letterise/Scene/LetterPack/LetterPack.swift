@@ -8,10 +8,10 @@
 import Foundation
 
 struct LetterPack {
-    let letters: [Character]
+    let letters: [Letter]
     let answers: [String]
     
-    init(letters: [Character], answers: [String]) throws {
+    init(letters: [Letter], answers: [String]) throws {
         try LetterPackChecker.validate(letters: letters, answers: answers)
         
         self.letters = letters
@@ -19,22 +19,65 @@ struct LetterPack {
     }
 }
 
+struct Word: Equatable, Identifiable {
+    let id: Int
+    let word: [Letter]
+    var asString: String {
+        StringHandler.lettersToString(from: word)
+    }
+    
+    init(id: Int = 0, word: String) {
+        self.id = id
+        self.word = StringHandler.stringToLetters(from: word)
+    }
+    
+    init(id: Int = 0, word: [Letter]) {
+        self.id = id
+        self.word = StringHandler.lettersWithID(from: word)
+    }
+    
+    static func ==(lhs: Word, rhs: Word) -> Bool {
+        return lhs.id == rhs.id &&
+        lhs.word == rhs.word
+    }
+}
+
+struct Letter: Equatable, Identifiable {
+    let id: Int
+    let char: Character
+    let emptyChar: Character = " "
+    var isEmpty: Bool
+    
+    init(id: Int = 0, char: Character, isEmpty: Bool = false) {
+        self.id = id
+        self.char = char
+        self.isEmpty = isEmpty
+    }
+    
+    static func ==(lhs: Letter, rhs: Letter) -> Bool {
+        return lhs.id == rhs.id &&
+        lhs.char == rhs.char &&
+        lhs.emptyChar == rhs.emptyChar &&
+        lhs.isEmpty == rhs.isEmpty
+    }
+}
+
 struct LetterPackChecker {
-    static func validate(letters: [Character], answers: [String]) throws {
+    static func validate(letters: [Letter], answers: [String]) throws {
         for answer in answers {
             try validateAnswer(letters: letters, answer: answer)
         }
     }
     
-    private static func validateAnswer(letters: [Character], answer: String) throws {
-        var lettersLeft: [Character] = letters
+    private static func validateAnswer(letters: [Letter], answer: String) throws {
+        var lettersLeft: [Letter] = letters
         
         try answer.forEach { letter in
             // could use array operations (contains, firstIndex, remove...) but would need to iterate way too much. so let's do it in only one iteration:
             var foundOne: Bool = false
             
             lettersLeft = lettersLeft.filter { char in
-                if char == letter && !foundOne {
+                if char.char == letter && !foundOne {
                     foundOne = true
                     return false
                 }
@@ -44,7 +87,8 @@ struct LetterPackChecker {
             }
             
             if !foundOne {
-                print(">>>>> Failed when trying to accept answer: \"\(answer)\" for letters: \(letters) <<<<<")
+                let chars = letters.map { $0.char }
+                print(">>>>> Failed when trying to accept answer: \"\(answer)\" for letters: \(chars) <<<<<")
                 throw LetterPackError.invalidAnswers
             }
         }

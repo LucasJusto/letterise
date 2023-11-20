@@ -7,29 +7,32 @@
 
 import Foundation
 
-protocol KeyboardViewModelProtocol {
-    func toString(chars: [Character]) -> String
-    func spaceFilledArray(letters: [Character]) -> [Character]
+protocol KeyboardViewModelProtocol: ObservableObject {
+    func toWord(letters: [Letter]) -> Word
+    func hideAllTyped()
 }
 
 final class KeyboardViewModel: KeyboardViewModelProtocol {
-    func toString(chars: [Character]) -> String {
-        var string: String = ""
-        
-        for char in chars {
-            string += "\(char)"
-        }
-        
-        return string
+    @Published var options: [Letter]
+    @Published var typed: [Letter] = []
+    
+    init(letters: [Letter]) {
+        self._options = Published(initialValue: letters)
+        self._typed = Published(initialValue: letters)
+        hideAllTyped()
     }
     
-    func spaceFilledArray(letters: [Character]) -> [Character] {
-        var spaceFilledArray: [Character] = []
+    func toWord(letters: [Letter]) -> Word {
+        var string: String = ""
         
-        for _ in letters {
-            spaceFilledArray.append(" ")
+        for letter in letters {
+            string += "\(letter.char)"
         }
         
-        return spaceFilledArray
+        return Word(word: string)
+    }
+    
+    func hideAllTyped() {
+        typed = StringHandler.hide(letters: typed)
     }
 }

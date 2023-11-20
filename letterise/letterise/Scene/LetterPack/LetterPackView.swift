@@ -21,14 +21,6 @@ struct LetterPackView: View {
             AnswersView(answers: viewModel.answered)
             
             KeyboardView(letters: viewModel.letterOptions)
-            
-            DSButton(label: "Try word") {
-                print("Tried")
-            }
-            .frame(maxHeight: 50)
-            .padding(.top, tokens.padding.xxs)
-            .padding(.bottom, tokens.padding.xs)
-            .padding(.horizontal, tokens.padding.sm)
         }
     }
 }
@@ -36,6 +28,7 @@ struct LetterPackView: View {
 #Preview {
     LetterPackView(
         letterPack: try! LetterPack(
-            letters: ["c", "a", "r", "o"],
+            letters: [Letter(char: "c"), Letter(char: "a"), Letter(char: "r"), Letter(char: "o")],
             answers: ["caro", "ar", "aro", "arco", "ra"]))
 }
+

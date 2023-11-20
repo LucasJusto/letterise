@@ -5,7 +5,7 @@ final class LetterPackTests: XCTestCase {
     
     func test_letter_pack_init_success() {
         // given
-        let letters: [Character] = ["a", "r", "a", "r", "a"]
+        let letters: [Letter] = StringHandler.stringToLetters(from: "arara")
         
         let answers: [String] = ["arara", "ar", "ara", "ra", "rara"]
         
@@ -22,7 +22,7 @@ final class LetterPackTests: XCTestCase {
     
     func test_letter_pack_init_invalid_answers_error() {
         // given
-        let letters: [Character] = ["a", "r", "a", "r", "a"]
+        let letters: [Letter] = StringHandler.stringToLetters(from: "arara")
         
         let answers: [String] = ["arara", "ar", "aro", "ra", "rara"] // aro should fail for missing o at letters
         
@@ -40,7 +40,7 @@ final class LetterPackTests: XCTestCase {
     
     func test_letter_pack_init_with_two_equal_letters_invalid_answers_error() {
         // given
-        let letters: [Character] = ["c", "a", "r", "o"]
+        let letters: [Letter] = StringHandler.stringToLetters(from: "caro")
         
         let answers: [String] = ["caro", "ar", "aro", "carro", "ra"] // carro should fail for missing one r at letters
         

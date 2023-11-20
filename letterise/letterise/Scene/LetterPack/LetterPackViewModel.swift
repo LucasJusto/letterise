@@ -9,16 +9,16 @@ import Foundation
 
 protocol LetterPackViewModelProtocol {
     var answered: [String] { get set }
-    var letterOptions: [Character] { get set }
-    var typedLetters: [Character] { get set }
+    var letterOptions: [Letter] { get set }
+    var typedLetters: [Letter] { get set }
 }
 
 final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     private var letterPack: LetterPack
     
     @Published var answered: [String]
-    @Published var letterOptions: [Character]
-    @Published var typedLetters: [Character]
+    @Published var letterOptions: [Letter]
+    @Published var typedLetters: [Letter]
     
     init(letterPack: LetterPack) {
         self.letterPack = letterPack
@@ -50,11 +50,11 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
         return answered
     }
     
-    private func buildEmptyTypedLetters(letterPack: LetterPack) -> [Character] {
-        var typedLetters: [Character] = []
+    private func buildEmptyTypedLetters(letterPack: LetterPack) -> [Letter] {
+        var typedLetters: [Letter] = []
         
-        for _ in letterPack.letters {
-            typedLetters.append(" ")
+        for char in letterPack.letters {
+            typedLetters.append(Letter(char: char.char, isEmpty: true))
         }
         
         return typedLetters

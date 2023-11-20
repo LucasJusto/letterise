@@ -12,16 +12,6 @@ struct AnswerLetterView: View {
     let constants: AnswerLetterViewConstants = AnswerLetterViewConstants()
     
     let letter: Character
-    let width: CGFloat
-    let height: CGFloat
-    let fontStyle: FontStyle
-    
-    init(letter: Character, size: LetterSize = .standard) {
-        self.letter = letter
-        self.width = size == .standard ? constants.width : constants.biggerWidth
-        self.height = size == .standard ? constants.height : constants.biggerHeight
-        self.fontStyle = size == .standard ? Fonts().standard : Fonts().big
-    }
     
     var body: some View {
         ZStack {
@@ -29,9 +19,9 @@ struct AnswerLetterView: View {
                 .stroke(tokens.color.border.primary, lineWidth: tokens.border.sm)
             
             DSText("\(letter.uppercased())")
-                .textStyle(fontStyle, withColor: tokens.color.label.primary)
+                .textStyle(tokens.font.standard, withColor: tokens.color.label.primary)
         }
-        .frame(minWidth: constants.width, maxWidth: width, minHeight: constants.height, maxHeight: height)
+        .frame(width: constants.width, height: constants.height)
         .background {
             RoundedRectangle(cornerRadius: tokens.borderRadius.sm)
                 .foregroundColor(tokens.color.background.primary)
@@ -40,7 +30,7 @@ struct AnswerLetterView: View {
 }
 
 #Preview {
-    AnswerLetterView(letter: "A", size: .big)
+    AnswerLetterView(letter: "A")
 }
 
 enum LetterSize {
@@ -50,7 +40,4 @@ enum LetterSize {
 struct AnswerLetterViewConstants {
     let width: CGFloat = 20
     let height: CGFloat = 20
-    
-    let biggerWidth: CGFloat = 55
-    let biggerHeight: CGFloat = 55
 }

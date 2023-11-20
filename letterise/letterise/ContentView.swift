@@ -12,7 +12,7 @@ struct ContentView: View {
         VStack {
             LetterPackView(
                 letterPack: try! LetterPack(
-                    letters: ["c", "a", "r", "o"],
+                    letters: [Letter(char: "c"), Letter(char: "a"), Letter(char: "r"), Letter(char: "o")],
                     answers: ["caro", "ar", "aro", "arco", "ra"]))
         }
         .padding()
