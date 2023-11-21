@@ -9,18 +9,35 @@ import SwiftUI
 
 struct KeyboardWordView: View {
     @Environment(\.designTokens) var tokens
-    
-    let word: Word
+
+    let type: KeyboardWordViewType
+    @ObservedObject var viewModel: KeyboardViewModel
     
     var body: some View {
         HStack(spacing: tokens.padding.xquarck) {
-            ForEach(word.word) { letter in
-                KeyboardLetterView(letter: letter)
+            ForEach(0..<wordArray.count, id: \.self) { index in
+                KeyboardLetterView(letter: wordArray[index])
+                    .onTapGesture {
+                        if type == .keyboard {
+                            viewModel.type(index: index)
+                        }
+                        else if type == .textField {
+                            viewModel.removeLetter(index: index)
+                        }
+                    }
             }
         }
     }
+    
+    private var wordArray: [Letter] {
+        type == .keyboard ? viewModel.keyboardConfiguration : viewModel.displayedWord
+    }
+}
+
+enum KeyboardWordViewType {
+    case keyboard, textField
 }
 
 #Preview {
-    KeyboardWordView(word: Word(word: "DOG"))
+    KeyboardWordView(type: .textField, viewModel: KeyboardViewModel(letters: [Letter(char: "D"), Letter(char: "O"), Letter(char: "G")]))
 }

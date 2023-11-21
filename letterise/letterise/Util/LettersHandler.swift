@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StringHandler {
+struct LettersHandler {
     static func stringToLetters(from string: String) -> [Letter] {
         var letters: [Letter] = []
 
@@ -40,7 +40,7 @@ struct StringHandler {
     }
     
     static func hide(letters: [Letter]) -> [Letter] {
-        var hiddenLetters: [Letter] = letters.map { letter in
+        let hiddenLetters: [Letter] = letters.map { letter in
             Letter(id: letter.id, char: letter.char, isEmpty: true)
         }
         

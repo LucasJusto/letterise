@@ -21,11 +21,13 @@ struct KeyboardView: View {
     var body: some View {
         VStack {
             KeyboardWordView(
-                word: Word(word: viewModel.typed))
+                type: .textField,
+                viewModel: viewModel)
             .padding(.bottom, tokens.padding.xxxs)
             
             KeyboardWordView(
-                word: Word(word: viewModel.options))
+                type: .keyboard,
+                viewModel: viewModel)
             .padding(tokens.padding.xxxs)
             .background {
                 Image("KeyboardBackground")

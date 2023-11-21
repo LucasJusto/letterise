@@ -7,18 +7,28 @@
 
 import Foundation
 
-protocol KeyboardViewModelProtocol: ObservableObject {
-    func toWord(letters: [Letter]) -> Word
-    func hideAllTyped()
+protocol KeyboardWordKeyboardProtocol {
+    var keyboardConfiguration: [Letter] { get set }
+    func type(index: Int)
+    func untype(letterID: Int)
 }
 
-final class KeyboardViewModel: KeyboardViewModelProtocol {
-    @Published var options: [Letter]
-    @Published var typed: [Letter] = []
+protocol KeyboardWordTextField {
+    var displayedWord: [Letter] { get set }
+    var currentIndex: Int { get set }
+    func insertLetter(letter: Letter)
+    func removeLetter(index: Int)
+}
+
+final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextField, ObservableObject {
+    @Published var keyboardConfiguration: [Letter]
+    @Published var displayedWord: [Letter] = []
+    var currentIndex: Int
     
     init(letters: [Letter]) {
-        self._options = Published(initialValue: letters)
-        self._typed = Published(initialValue: letters)
+        self._keyboardConfiguration = Published(initialValue: LettersHandler.lettersWithID(from: letters))
+        self._displayedWord = Published(initialValue: LettersHandler.lettersWithID(from: letters))
+        self.currentIndex = 0
         hideAllTyped()
     }
     
@@ -33,6 +43,53 @@ final class KeyboardViewModel: KeyboardViewModelProtocol {
     }
     
     func hideAllTyped() {
-        typed = StringHandler.hide(letters: typed)
+        displayedWord = LettersHandler.hide(letters: displayedWord)
+    }
+    
+    // MARK: - Keyboard
+    
+    func type(index: Int) {
+        if !keyboardConfiguration[index].isEmpty {
+            keyboardConfiguration[index].isEmpty = true
+            insertLetter(letter: keyboardConfiguration[index])
+        }
+    }
+    
+    func untype(letterID: Int) {
+        let index = getIndexForKeyboard(id: letterID)
+        keyboardConfiguration[index].isEmpty = false
+    }
+    
+    private func getIndexForKeyboard(id: Int) -> Int {
+        for index in 0..<keyboardConfiguration.count {
+            if keyboardConfiguration[index].id == id {
+                return index
+            }
+        }
+        
+        return 0
+    }
+    
+    // MARK: - TextField
+    
+    func insertLetter(letter: Letter) {
+        displayedWord[currentIndex] = Letter(id: letter.id, char: letter.char, isEmpty: false)
+        currentIndex = calculateNextIndex()
+    }
+    
+    func removeLetter(index: Int) {
+        displayedWord[index].isEmpty = true
+        untype(letterID: displayedWord[index].id)
+        currentIndex = calculateNextIndex()
+    }
+    
+    private func calculateNextIndex() -> Int {
+        for index in 0..<displayedWord.count {
+            if displayedWord[index].isEmpty {
+                return index
+            }
+        }
+        
+        return 0
     }
 }

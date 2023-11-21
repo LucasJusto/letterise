@@ -10,7 +10,7 @@
 		F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD74292B09A7740062ED5F /* DSButton.swift */; };
 		F5AD742C2B0ACAE50062ED5F /* KeyboardWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD742B2B0ACAE50062ED5F /* KeyboardWordView.swift */; };
 		F5AD742E2B0ACB1B0062ED5F /* KeyboardLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD742D2B0ACB1B0062ED5F /* KeyboardLetterView.swift */; };
-		F5AD74342B0AD56F0062ED5F /* StringHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD74332B0AD56F0062ED5F /* StringHandler.swift */; };
+		F5AD74342B0AD56F0062ED5F /* LettersHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD74332B0AD56F0062ED5F /* LettersHandler.swift */; };
 		F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15AE2B092FF80027422A /* letteriseApp.swift */; };
 		F5AF15B12B092FF80027422A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15B02B092FF80027422A /* ContentView.swift */; };
 		F5AF15B32B092FFB0027422A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AF15B22B092FFB0027422A /* Assets.xcassets */; };
@@ -47,7 +47,7 @@
 		F5AD74292B09A7740062ED5F /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
 		F5AD742B2B0ACAE50062ED5F /* KeyboardWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardWordView.swift; sourceTree = "<group>"; };
 		F5AD742D2B0ACB1B0062ED5F /* KeyboardLetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLetterView.swift; sourceTree = "<group>"; };
-		F5AD74332B0AD56F0062ED5F /* StringHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHandler.swift; sourceTree = "<group>"; };
+		F5AD74332B0AD56F0062ED5F /* LettersHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersHandler.swift; sourceTree = "<group>"; };
 		F5AF15AB2B092FF80027422A /* letterise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = letterise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AF15AE2B092FF80027422A /* letteriseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = letteriseApp.swift; sourceTree = "<group>"; };
 		F5AF15B02B092FF80027422A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				F5AF15D92B0951FA0027422A /* DesignSystem */,
-				F5AD74332B0AD56F0062ED5F /* StringHandler.swift */,
+				F5AD74332B0AD56F0062ED5F /* LettersHandler.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -313,7 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5AF15B12B092FF80027422A /* ContentView.swift in Sources */,
-				F5AD74342B0AD56F0062ED5F /* StringHandler.swift in Sources */,
+				F5AD74342B0AD56F0062ED5F /* LettersHandler.swift in Sources */,
 				F5AF15E22B0957280027422A /* Border.swift in Sources */,
 				F5AF15EB2B09602F0027422A /* Padding.swift in Sources */,
 				F5AF15E92B095CF10027422A /* AnswerWordView.swift in Sources */,

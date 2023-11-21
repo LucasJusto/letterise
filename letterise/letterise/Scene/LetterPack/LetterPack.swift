@@ -23,17 +23,17 @@ struct Word: Equatable, Identifiable {
     let id: Int
     let word: [Letter]
     var asString: String {
-        StringHandler.lettersToString(from: word)
+        LettersHandler.lettersToString(from: word)
     }
     
     init(id: Int = 0, word: String) {
         self.id = id
-        self.word = StringHandler.stringToLetters(from: word)
+        self.word = LettersHandler.stringToLetters(from: word)
     }
     
     init(id: Int = 0, word: [Letter]) {
         self.id = id
-        self.word = StringHandler.lettersWithID(from: word)
+        self.word = LettersHandler.lettersWithID(from: word)
     }
     
     static func ==(lhs: Word, rhs: Word) -> Bool {
