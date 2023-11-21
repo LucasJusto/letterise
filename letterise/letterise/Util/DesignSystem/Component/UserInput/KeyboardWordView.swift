@@ -18,6 +18,10 @@ struct KeyboardWordView: View {
             ForEach(0..<wordArray.count, id: \.self) { index in
                 KeyboardLetterView(letter: wordArray[index])
                     .onTapGesture {
+                        if !wordArray[index].isEmpty {
+                            viewModel.playSound(sound: .tap)
+                        }
+                        
                         if type == .keyboard {
                             viewModel.type(index: index)
                         }

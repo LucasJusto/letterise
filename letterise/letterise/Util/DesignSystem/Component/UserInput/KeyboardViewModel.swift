@@ -35,6 +35,11 @@ final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextFie
         hideAllTyped()
     }
     
+    func playSound(sound: SoundOption) {
+        let player: SoundPlayer = SoundPlayer()
+        player.playSound(sound: sound)
+    }
+    
     func tryWord() {
         let word: String = getWordFromTextField()
         

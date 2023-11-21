@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F55AB75F2B0D366C00FEB14F /* Incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75C2B0D366C00FEB14F /* Incorrect.mp3 */; };
+		F55AB7602B0D366C00FEB14F /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75D2B0D366C00FEB14F /* Correct.mp3 */; };
+		F55AB7612B0D366C00FEB14F /* Tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75E2B0D366C00FEB14F /* Tap.mp3 */; };
 		F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD74292B09A7740062ED5F /* DSButton.swift */; };
 		F5AD742C2B0ACAE50062ED5F /* KeyboardWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD742B2B0ACAE50062ED5F /* KeyboardWordView.swift */; };
 		F5AD742E2B0ACB1B0062ED5F /* KeyboardLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD742D2B0ACB1B0062ED5F /* KeyboardLetterView.swift */; };
 		F5AD74342B0AD56F0062ED5F /* LettersHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD74332B0AD56F0062ED5F /* LettersHandler.swift */; };
 		F5AD74362B0D13860062ED5F /* AnswerFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD74352B0D13860062ED5F /* AnswerFeedbackView.swift */; };
+		F5AD74382B0D21310062ED5F /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD74372B0D21310062ED5F /* SoundPlayer.swift */; };
 		F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15AE2B092FF80027422A /* letteriseApp.swift */; };
 		F5AF15B12B092FF80027422A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15B02B092FF80027422A /* ContentView.swift */; };
 		F5AF15B32B092FFB0027422A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AF15B22B092FFB0027422A /* Assets.xcassets */; };
@@ -45,11 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F55AB75C2B0D366C00FEB14F /* Incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Incorrect.mp3; sourceTree = "<group>"; };
+		F55AB75D2B0D366C00FEB14F /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
+		F55AB75E2B0D366C00FEB14F /* Tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tap.mp3; sourceTree = "<group>"; };
 		F5AD74292B09A7740062ED5F /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
 		F5AD742B2B0ACAE50062ED5F /* KeyboardWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardWordView.swift; sourceTree = "<group>"; };
 		F5AD742D2B0ACB1B0062ED5F /* KeyboardLetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLetterView.swift; sourceTree = "<group>"; };
 		F5AD74332B0AD56F0062ED5F /* LettersHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersHandler.swift; sourceTree = "<group>"; };
 		F5AD74352B0D13860062ED5F /* AnswerFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerFeedbackView.swift; sourceTree = "<group>"; };
+		F5AD74372B0D21310062ED5F /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		F5AF15AB2B092FF80027422A /* letterise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = letterise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AF15AE2B092FF80027422A /* letteriseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = letteriseApp.swift; sourceTree = "<group>"; };
 		F5AF15B02B092FF80027422A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +101,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F55AB75A2B0D364700FEB14F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F55AB75B2B0D365100FEB14F /* Sound */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F55AB75B2B0D365100FEB14F /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				F55AB75D2B0D366C00FEB14F /* Correct.mp3 */,
+				F55AB75C2B0D366C00FEB14F /* Incorrect.mp3 */,
+				F55AB75E2B0D366C00FEB14F /* Tap.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		F5AF15A22B092FF80027422A = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +140,7 @@
 		F5AF15AD2B092FF80027422A /* letterise */ = {
 			isa = PBXGroup;
 			children = (
+				F55AB75A2B0D364700FEB14F /* Resource */,
 				F5AF15DE2B09552D0027422A /* Info.plist */,
 				F5AF15BD2B09313A0027422A /* Scene */,
 				F5AF15BC2B0931300027422A /* Util */,
@@ -138,6 +165,7 @@
 			children = (
 				F5AF15D92B0951FA0027422A /* DesignSystem */,
 				F5AD74332B0AD56F0062ED5F /* LettersHandler.swift */,
+				F5AD74372B0D21310062ED5F /* SoundPlayer.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -296,8 +324,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55AB75F2B0D366C00FEB14F /* Incorrect.mp3 in Resources */,
 				F5AF15B62B092FFB0027422A /* Preview Assets.xcassets in Resources */,
 				F5AF15B32B092FFB0027422A /* Assets.xcassets in Resources */,
+				F55AB7602B0D366C00FEB14F /* Correct.mp3 in Resources */,
+				F55AB7612B0D366C00FEB14F /* Tap.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +357,7 @@
 				F5AD742E2B0ACB1B0062ED5F /* KeyboardLetterView.swift in Sources */,
 				F5AF15D82B09519E0027422A /* AnswerLetterView.swift in Sources */,
 				F5AF15DB2B09521A0027422A /* BorderRadius.swift in Sources */,
+				F5AD74382B0D21310062ED5F /* SoundPlayer.swift in Sources */,
 				F5AF15EE2B0992030027422A /* KeyboardView.swift in Sources */,
 				F5AF15E72B095B370027422A /* Fonts.swift in Sources */,
 				F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */,

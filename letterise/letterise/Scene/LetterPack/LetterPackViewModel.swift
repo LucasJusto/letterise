@@ -66,15 +66,23 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
         case .correct:
             answerFeedbackTitle = constants.correctAnswerTitle
             answerFeedbackMessage = constants.correctAnswerMessage
+            playSound(sound: .correctAnswer)
             
         case .incorrect:
             answerFeedbackTitle = constants.incorretAnswerTitle
             answerFeedbackMessage = constants.incorrectAnswerMessage
+            playSound(sound: .incorrectAnswer)
             
         case .alreadyGuessed:
             answerFeedbackTitle = constants.alreadyGuessedAnswerTitle
             answerFeedbackMessage = constants.alreadyGuessedAnswerMessage
+            playSound(sound: .incorrectAnswer)
         }
+    }
+    
+    private func playSound(sound: SoundOption) {
+        let player: SoundPlayer = SoundPlayer()
+        player.playSound(sound: sound)
     }
     
     private func sortAnswers() {
