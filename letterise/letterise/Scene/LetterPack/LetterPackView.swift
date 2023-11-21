@@ -10,17 +10,32 @@ import SwiftUI
 struct LetterPackView: View {
     @Environment(\.designTokens) var tokens
     
-    @ObservedObject var viewModel: LetterPackViewModel
+    @StateObject var viewModel: LetterPackViewModel
     
     init(letterPack: LetterPack) {
-        self._viewModel = ObservedObject(initialValue: LetterPackViewModel(letterPack: letterPack))
+        self._viewModel = StateObject(wrappedValue: LetterPackViewModel(letterPack: letterPack))
     }
     
     var body: some View {
-        VStack {
-            AnswersView(answers: viewModel.answered)
+        ZStack {
+            VStack {
+                AnswersView(answers: viewModel.answered)
+                
+                KeyboardView(
+                    letters: viewModel.letterPack.letters,
+                    letterPackViewModelRef: viewModel)
+            }
             
-            KeyboardView(letters: viewModel.letterPack.letters, letterPackViewModelRef: viewModel)
+            if viewModel.isPresentingAnswerFeedback {
+                AnswerFeedbackView(
+                    title: viewModel.answerFeedbackTitle,
+                    message: viewModel.answerFeedbackMessage)
+                .onTapGesture {
+                    DispatchQueue.main.async {
+                        self.viewModel.isPresentingAnswerFeedback = false
+                    }
+                }
+            }
         }
     }
 }

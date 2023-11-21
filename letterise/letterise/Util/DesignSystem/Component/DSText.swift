@@ -9,13 +9,16 @@ import SwiftUI
 public struct DSText: View {
     
     private let text: String
+    private let multilineTextAlignment: TextAlignment
     
-    public init(_ text: String) {
+    public init(_ text: String, multilineTextAlignment: TextAlignment = .leading) {
         self.text = text
+        self.multilineTextAlignment = multilineTextAlignment
     }
     
     public var body: some View {
         Text(LocalizedStringKey(text))
+            .multilineTextAlignment(multilineTextAlignment)
     }
     
     func textStyle(_ style: FontStyle, withColor color: Color? = nil) -> some View {

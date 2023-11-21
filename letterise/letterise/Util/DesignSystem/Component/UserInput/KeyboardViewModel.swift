@@ -18,6 +18,7 @@ protocol KeyboardWordTextField {
     var currentIndex: Int { get set }
     func insertLetter(letter: Letter)
     func removeLetter(index: Int)
+    func resetTextField()
 }
 
 final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextField, ObservableObject {
@@ -42,6 +43,8 @@ final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextFie
         } else {
             print("At KeyboardViewModel tried to access LetterPackViewModelRef without holding a reference")
         }
+        
+        resetTextField()
     }
     
     private func getWordFromTextField() -> String {
@@ -97,6 +100,16 @@ final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextFie
         displayedWord[index].isEmpty = true
         untype(letterID: displayedWord[index].id)
         currentIndex = calculateNextIndex()
+    }
+    
+    func resetTextField() {
+        for index in 0..<displayedWord.count {
+            if !displayedWord[index].isEmpty {
+                removeLetter(index: index)
+            } else {
+                break
+            }
+        }
     }
     
     private func calculateNextIndex() -> Int {

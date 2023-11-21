@@ -11,11 +11,11 @@ struct KeyboardView: View {
     @Environment(\.designTokens) var tokens
     let letters: [Letter]
     
-    @ObservedObject var viewModel: KeyboardViewModel
+    @StateObject var viewModel: KeyboardViewModel
     
     init(letters: [Letter], letterPackViewModelRef: LetterPackViewModel? = nil) {
         self.letters = letters
-        self.viewModel = KeyboardViewModel(letters: letters, letterPackViewModelRef: letterPackViewModelRef)
+        self._viewModel = StateObject(wrappedValue:KeyboardViewModel(letters: letters, letterPackViewModelRef: letterPackViewModelRef))
     }
     
     var body: some View {

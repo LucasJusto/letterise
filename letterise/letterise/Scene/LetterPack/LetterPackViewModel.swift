@@ -10,6 +10,9 @@ import Foundation
 protocol LetterPackViewModelProtocol {
     var answered: [Word] { get set }
     var lastTriedWordResult: AnswerPossibility { get set }
+    var isPresentingAnswerFeedback: Bool { get set }
+    var answerFeedbackTitle: String { get set }
+    var answerFeedbackMessage: String { get set }
     func tryWord(word: String)
 }
 
@@ -18,28 +21,81 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     
     @Published var answered: [Word]
     @Published var lastTriedWordResult: AnswerPossibility
+    @Published var isPresentingAnswerFeedback: Bool
+    var answerFeedbackTitle: String = ""
+    var answerFeedbackMessage: String = ""
+    private var lastTriedWord: String = ""
+    private let answerFeedbackDisplayTime: CGFloat = 3
+    
+    private let constants: LetterPackViewConstants = LetterPackViewConstants()
     
     init(letterPack: LetterPack) {
         self.letterPack = letterPack
         self.answered = []
-        self.lastTriedWordResult = .alreadyFound
+        self.lastTriedWordResult = .alreadyGuessed
+        self.isPresentingAnswerFeedback = false
         
         initEmptyPlaceholders(letterPack: letterPack)
+        sortAnswers()
     }
     
     func tryWord(word: String) {
-        if let foundWordIndex =  tryFindingWordIndexAtAnswers(wordToFind: word) {
-            let foundWord: Word = answered[foundWordIndex]
-            
-            if !foundWord.isDiscovered {
-                revealWordAtIndex(index: foundWordIndex)
-                checkCompletedPack()
-                lastTriedWordResult = .correct
+        lastTriedWord = word
+        if !word.isEmpty {
+            if let foundWordIndex =  tryFindingWordIndexAtAnswers(wordToFind: word) {
+                let foundWord: Word = answered[foundWordIndex]
+                
+                if !foundWord.isDiscovered {
+                    revealWordAtIndex(index: foundWordIndex)
+                    checkCompletedPack()
+                    setLastTriedWordResult(result: .correct)
+                } else {
+                    setLastTriedWordResult(result: .alreadyGuessed)
+                }
             } else {
-                lastTriedWordResult = .alreadyFound
+                setLastTriedWordResult(result: .incorrect)
             }
-        } else {
-            lastTriedWordResult = .incorrect
+            displayAnswerFeedback(word: word)
+        }
+    }
+    
+    private func setLastTriedWordResult(result: AnswerPossibility) {
+        lastTriedWordResult = result
+        
+        switch result {
+        case .correct:
+            answerFeedbackTitle = constants.correctAnswerTitle
+            answerFeedbackMessage = constants.correctAnswerMessage
+            
+        case .incorrect:
+            answerFeedbackTitle = constants.incorretAnswerTitle
+            answerFeedbackMessage = constants.incorrectAnswerMessage
+            
+        case .alreadyGuessed:
+            answerFeedbackTitle = constants.alreadyGuessedAnswerTitle
+            answerFeedbackMessage = constants.alreadyGuessedAnswerMessage
+        }
+    }
+    
+    private func sortAnswers() {
+        answered.sort { word1, word2 in
+            return word1.word.count < word2.word.count
+        }
+    }
+    
+    private func displayAnswerFeedback(word: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.isPresentingAnswerFeedback = true
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + answerFeedbackDisplayTime) { [weak self] in
+                guard let self = self else { return }
+                
+                if self.isPresentingAnswerFeedback && self.lastTriedWord == word {
+                    self.isPresentingAnswerFeedback = false
+                }
+            }
         }
     }
     
@@ -87,5 +143,14 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
 }
 
 enum AnswerPossibility {
-    case correct, incorrect, alreadyFound
+    case correct, incorrect, alreadyGuessed
+}
+
+struct LetterPackViewConstants {
+    let correctAnswerTitle: String = "Correct"
+    let correctAnswerMessage: String = "You guessed a word"
+    let incorretAnswerTitle: String = "Incorrect"
+    let incorrectAnswerMessage: String = "This word is not expected in the answers' list"
+    let alreadyGuessedAnswerTitle: String = "Already Guessed"
+    let alreadyGuessedAnswerMessage: String = "You already guessed this word"
 }
