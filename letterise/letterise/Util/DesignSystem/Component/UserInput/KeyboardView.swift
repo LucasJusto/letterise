@@ -35,7 +35,7 @@ struct KeyboardView: View {
             }
             
             DSButton(label: "Try word") {
-                print("Tried")
+                viewModel.tryWord()
             }
             .frame(maxHeight: 50)
             .padding(.top, tokens.padding.xxs)

@@ -32,6 +32,24 @@ final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextFie
         hideAllTyped()
     }
     
+    func tryWord() {
+        print("tried: \(getWordFromTextField())")
+    }
+    
+    private func getWordFromTextField() -> String {
+        var word: String = ""
+        
+        for letter in displayedWord {
+            if !letter.isEmpty {
+                word += "\(letter.char)"
+            } else {
+                break
+            }
+        }
+        
+        return word
+    }
+    
     func toWord(letters: [Letter]) -> Word {
         var string: String = ""
         
@@ -92,4 +110,8 @@ final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextFie
         
         return 0
     }
+}
+
+enum AnswerPossibility {
+    case correct, incorrect, alreadyFound
 }
