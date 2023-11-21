@@ -13,9 +13,9 @@ struct KeyboardView: View {
     
     @ObservedObject var viewModel: KeyboardViewModel
     
-    init(letters: [Letter]) {
+    init(letters: [Letter], letterPackViewModelRef: LetterPackViewModel? = nil) {
         self.letters = letters
-        self.viewModel = KeyboardViewModel(letters: letters)
+        self.viewModel = KeyboardViewModel(letters: letters, letterPackViewModelRef: letterPackViewModelRef)
     }
     
     var body: some View {

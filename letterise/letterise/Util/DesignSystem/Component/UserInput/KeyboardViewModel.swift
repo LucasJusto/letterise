@@ -24,16 +24,24 @@ final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextFie
     @Published var keyboardConfiguration: [Letter]
     @Published var displayedWord: [Letter] = []
     var currentIndex: Int
+    weak var letterPackViewModelRef: LetterPackViewModel?
     
-    init(letters: [Letter]) {
+    init(letters: [Letter], letterPackViewModelRef: LetterPackViewModel? = nil) {
         self._keyboardConfiguration = Published(initialValue: LettersHandler.lettersWithID(from: letters))
         self._displayedWord = Published(initialValue: LettersHandler.lettersWithID(from: letters))
         self.currentIndex = 0
+        self.letterPackViewModelRef = letterPackViewModelRef
         hideAllTyped()
     }
     
     func tryWord() {
-        print("tried: \(getWordFromTextField())")
+        let word: String = getWordFromTextField()
+        
+        if let letterPackVM = self.letterPackViewModelRef {
+            letterPackVM.tryWord(word: word)
+        } else {
+            print("At KeyboardViewModel tried to access LetterPackViewModelRef without holding a reference")
+        }
     }
     
     private func getWordFromTextField() -> String {
@@ -48,16 +56,6 @@ final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextFie
         }
         
         return word
-    }
-    
-    func toWord(letters: [Letter]) -> Word {
-        var string: String = ""
-        
-        for letter in letters {
-            string += "\(letter.char)"
-        }
-        
-        return Word(word: string)
     }
     
     func hideAllTyped() {

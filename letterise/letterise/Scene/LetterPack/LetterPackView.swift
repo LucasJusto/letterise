@@ -10,17 +10,17 @@ import SwiftUI
 struct LetterPackView: View {
     @Environment(\.designTokens) var tokens
     
-    private var viewModel: LetterPackViewModelProtocol
+    @ObservedObject var viewModel: LetterPackViewModel
     
     init(letterPack: LetterPack) {
-        self.viewModel = LetterPackViewModel(letterPack: letterPack)
+        self._viewModel = ObservedObject(initialValue: LetterPackViewModel(letterPack: letterPack))
     }
     
     var body: some View {
         VStack {
             AnswersView(answers: viewModel.answered)
             
-            KeyboardView(letters: viewModel.letterOptions)
+            KeyboardView(letters: viewModel.letterPack.letters, letterPackViewModelRef: viewModel)
         }
     }
 }
