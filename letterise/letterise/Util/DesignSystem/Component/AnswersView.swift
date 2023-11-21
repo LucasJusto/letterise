@@ -17,16 +17,16 @@ struct AnswersView: View {
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 0)
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8)
     ]
     
     var body: some View {
