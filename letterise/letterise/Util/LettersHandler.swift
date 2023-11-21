@@ -46,4 +46,12 @@ struct LettersHandler {
         
         return hiddenLetters
     }
+    
+    static func reveal(letters: [Letter]) -> [Letter] {
+        let hiddenLetters: [Letter] = letters.map { letter in
+            Letter(id: letter.id, char: letter.char, isEmpty: false)
+        }
+        
+        return hiddenLetters
+    }
 }

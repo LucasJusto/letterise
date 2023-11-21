@@ -10,7 +10,7 @@ import SwiftUI
 struct AnswersView: View {
     @Environment(\.designTokens) var tokens
     
-    var answers: [String]
+    var answers: [Word]
     let rows: [GridItem] = [
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
@@ -43,9 +43,8 @@ struct AnswersView: View {
                         spacing: tokens.padding.micro,
                         content:
                     {
-                        // ignore the warning. it is safe in this case and id: \.self will break the code because of the strings that are equal (empty ones).
-                        ForEach(0..<answers.count) { index in
-                            AnswerWordView(word: answers[index])
+                        ForEach(answers) { answer in
+                            AnswerWordView(word: answer)
                                 .padding(1)
                         }
                     })
@@ -59,18 +58,18 @@ struct AnswersView: View {
     }
 }
 
-#Preview {
-    AnswersView(answers: AnswersPreviewGenerator.generateAnswersForPreview())
-}
-
-struct AnswersPreviewGenerator {
-    static func generateAnswersForPreview() -> [String] {
-        var answers: [String] = ["  ", "ra", "   ", "caro", "arco"]
-        
-        for i in 1...50 {
-            answers.append("arco\(i)")
-        }
-        
-        return answers
-    }
-}
+//#Preview {
+//    AnswersView(answers: AnswersPreviewGenerator.generateAnswersForPreview())
+//}
+//
+//struct AnswersPreviewGenerator {
+//    static func generateAnswersForPreview() -> [String] {
+//        var answers: [String] = ["  ", "ra", "   ", "caro", "arco"]
+//        
+//        for i in 1...50 {
+//            answers.append("arco\(i)")
+//        }
+//        
+//        return answers
+//    }
+//}

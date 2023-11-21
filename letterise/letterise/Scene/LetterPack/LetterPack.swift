@@ -21,7 +21,8 @@ struct LetterPack {
 
 struct Word: Equatable, Identifiable {
     let id: Int
-    let word: [Letter]
+    var word: [Letter]
+    var isDiscovered: Bool = false
     var asString: String {
         LettersHandler.lettersToString(from: word)
     }

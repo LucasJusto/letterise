@@ -10,17 +10,17 @@ import SwiftUI
 struct AnswerWordView: View {
     @Environment(\.designTokens) var tokens
     
-    let word: String
+    let word: Word
     
     var body: some View {
         HStack(spacing: tokens.padding.xquarck) {
-            ForEach(0..<word.count, id: \.self) { index in
-                AnswerLetterView(letter: Array(word)[index])
+            ForEach(0..<word.word.count, id: \.self) { index in
+                AnswerLetterView(letter: word.word[index])
             }
         }
     }
 }
 
 #Preview {
-    AnswerWordView(word: "Dog")
+    AnswerWordView(word: Word(word: "DOG"))
 }

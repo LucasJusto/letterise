@@ -109,7 +109,3 @@ final class KeyboardViewModel: KeyboardWordKeyboardProtocol, KeyboardWordTextFie
         return 0
     }
 }
-
-enum AnswerPossibility {
-    case correct, incorrect, alreadyFound
-}
