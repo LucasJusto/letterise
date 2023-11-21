@@ -46,6 +46,7 @@ struct AnswersView: View {
                         // ignore the warning. it is safe in this case and id: \.self will break the code because of the strings that are equal (empty ones).
                         ForEach(0..<answers.count) { index in
                             AnswerWordView(word: answers[index])
+                                .padding(1)
                         }
                     })
                 }
