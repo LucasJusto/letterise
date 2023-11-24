@@ -22,6 +22,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     @Published var answered: [Word]
     @Published var lastTriedWordResult: AnswerPossibility
     @Published var isPresentingAnswerFeedback: Bool
+    @Published var isPresentingCongratulations: Bool
     var answerFeedbackTitle: String = ""
     var answerFeedbackMessage: String = ""
     private var lastTriedWord: String = ""
@@ -34,6 +35,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
         self.answered = []
         self.lastTriedWordResult = .alreadyGuessed
         self.isPresentingAnswerFeedback = false
+        self.isPresentingCongratulations = false
         
         initEmptyPlaceholders(letterPack: letterPack)
         sortAnswers()
@@ -47,8 +49,11 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
                 
                 if !foundWord.isDiscovered {
                     revealWordAtIndex(index: foundWordIndex)
-                    checkCompletedPack()
                     setLastTriedWordResult(result: .correct)
+                    
+                    if isPackCompleted() {
+                        endPack()
+                    }
                 } else {
                     setLastTriedWordResult(result: .alreadyGuessed)
                 }
@@ -57,6 +62,14 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
             }
             displayAnswerFeedback(word: word)
         }
+    }
+    
+    private func endPack() {
+        #warning("Implement")
+        //save progress
+        
+        //Display congratulations message and option to navigate to main menu
+        self.isPresentingCongratulations = true
     }
     
     private func setLastTriedWordResult(result: AnswerPossibility) {
@@ -107,8 +120,14 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
         }
     }
     
-    private func checkCompletedPack() {
-        #warning("implement")
+    private func isPackCompleted() -> Bool {
+        for word in answered {
+            if !word.isDiscovered {
+                return false
+            }
+        }
+        
+        return true
     }
     
     private func revealWordAtIndex(index: Int) {

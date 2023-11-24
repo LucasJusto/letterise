@@ -10,11 +10,7 @@ import AVFoundation
 class SoundPlayer: NSObject, AVAudioPlayerDelegate {
     var player: AVAudioPlayer?
     let id: Int
-    static var players: [SoundPlayer] = [] {
-        didSet {
-            print(SoundPlayer.players)
-        }
-    }
+    static var players: [SoundPlayer] = []
     static var semaphore: DispatchSemaphore = DispatchSemaphore(value: 1)
     
     override init() {

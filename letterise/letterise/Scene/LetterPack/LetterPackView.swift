@@ -17,22 +17,26 @@ struct LetterPackView: View {
     }
     
     var body: some View {
-        ZStack {
-            VStack {
-                AnswersView(answers: viewModel.answered)
+        if viewModel.isPresentingCongratulations {
+            CongratulationsView()
+        } else {
+            ZStack {
+                VStack {
+                    AnswersView(answers: viewModel.answered)
+                    
+                    KeyboardView(
+                        letters: viewModel.letterPack.letters,
+                        letterPackViewModelRef: viewModel)
+                }
                 
-                KeyboardView(
-                    letters: viewModel.letterPack.letters,
-                    letterPackViewModelRef: viewModel)
-            }
-            
-            if viewModel.isPresentingAnswerFeedback {
-                AnswerFeedbackView(
-                    title: viewModel.answerFeedbackTitle,
-                    message: viewModel.answerFeedbackMessage)
-                .onTapGesture {
-                    DispatchQueue.main.async {
-                        self.viewModel.isPresentingAnswerFeedback = false
+                if viewModel.isPresentingAnswerFeedback {
+                    AnswerFeedbackView(
+                        title: viewModel.answerFeedbackTitle,
+                        message: viewModel.answerFeedbackMessage)
+                    .onTapGesture {
+                        DispatchQueue.main.async {
+                            self.viewModel.isPresentingAnswerFeedback = false
+                        }
                     }
                 }
             }
