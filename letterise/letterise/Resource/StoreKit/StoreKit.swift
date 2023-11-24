@@ -17,13 +17,6 @@ class StoreKitViewModel: ObservableObject {
     @Published private(set) var purchasedSubscriptions: [Product] = []
     @Published private(set) var subscriptionGroupStatus: RenewalState?
     
-    @Published var unlockALl: Bool = false
-    @Published var airport: Bool = false
-    @Published var work: Bool = false
-    @Published var home: Bool = false
-    @Published var clothes: Bool = false
-    @Published var showAds: Bool = true
-    
     //TODO: - paste here all products identifiers
     private let productIds: [String] = ["com.letterise.credits1"]
     
