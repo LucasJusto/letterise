@@ -8,7 +8,7 @@
 import SwiftUI
 import StoreKit
 
-struct ProductsView: View {
+struct ExempleStoreKitView: View {
     @EnvironmentObject var storeVM: StoreKitViewModel
     @Environment(\.dismiss) var dismiss
     @State var isLoadingPurchase = false
@@ -115,5 +115,5 @@ struct ProductsView: View {
 }
 
 #Preview {
-    ProductsView().environmentObject(StoreKitViewModel())
+    ExempleStoreKitView().environmentObject(StoreKitViewModel())
 }
