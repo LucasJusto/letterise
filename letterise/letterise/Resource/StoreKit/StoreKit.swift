@@ -116,21 +116,15 @@ class StoreKitViewModel: ObservableObject {
                 //TODO: - here stay the logic to unlock featers to user
                 switch transaction.productType {
                 case .nonRenewable:
-                    if transaction.productID == "" {
-                        //TODO: - Deliver content to the user.
-                    }
+                    if transaction.productID == "" {}
                 case .consumable:
-                    if transaction.productID == "" {
-                        //TODO: - Deliver content to the user.
-                    }
+                    if transaction.productID == "" {}
                 case .nonConsumable:
                     if transaction.productID == "com.letterise.credits1" {
-                        //TODO: - Deliver content to the user.
+                        #warning("Deliver content to user")
                     }
                 case .autoRenewable:
-                    if transaction.productID == "" {
-                        //TODO: - Deliver content to the user.
-                    }
+                    if transaction.productID == "" {}
                 default:
                     break
                 }
