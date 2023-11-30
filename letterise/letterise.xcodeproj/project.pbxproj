@@ -11,6 +11,8 @@
 		F55AB7602B0D366C00FEB14F /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75D2B0D366C00FEB14F /* Correct.mp3 */; };
 		F55AB7612B0D366C00FEB14F /* Tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75E2B0D366C00FEB14F /* Tap.mp3 */; };
 		F55AB7642B111A3300FEB14F /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7632B111A3300FEB14F /* CongratulationsView.swift */; };
+		F55AB7672B138CAE00FEB14F /* PacksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7662B138CAE00FEB14F /* PacksListView.swift */; };
+		F55AB7692B138CFE00FEB14F /* LetteriseTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7682B138CFE00FEB14F /* LetteriseTopView.swift */; };
 		F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD74292B09A7740062ED5F /* DSButton.swift */; };
 		F5AD742C2B0ACAE50062ED5F /* KeyboardWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD742B2B0ACAE50062ED5F /* KeyboardWordView.swift */; };
 		F5AD742E2B0ACB1B0062ED5F /* KeyboardLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD742D2B0ACB1B0062ED5F /* KeyboardLetterView.swift */; };
@@ -37,6 +39,10 @@
 		F5AF15EB2B09602F0027422A /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15EA2B09602F0027422A /* Padding.swift */; };
 		F5AF15EE2B0992030027422A /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15ED2B0992030027422A /* KeyboardView.swift */; };
 		F5AF15F02B0993080027422A /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15EF2B0993080027422A /* KeyboardViewModel.swift */; };
+		F5F50B2E2B165BC7003F7B68 /* LetterPackRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B2D2B165BC7003F7B68 /* LetterPackRowView.swift */; };
+		F5F50B302B165D1E003F7B68 /* PacksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B2F2B165D1E003F7B68 /* PacksListViewModel.swift */; };
+		F5F50B322B165D71003F7B68 /* LetterPackDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B312B165D71003F7B68 /* LetterPackDisplay.swift */; };
+		F5F50B342B1663B4003F7B68 /* DSDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B332B1663B4003F7B68 /* DSDisclosureGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,8 @@
 		F55AB75D2B0D366C00FEB14F /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
 		F55AB75E2B0D366C00FEB14F /* Tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tap.mp3; sourceTree = "<group>"; };
 		F55AB7632B111A3300FEB14F /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
+		F55AB7662B138CAE00FEB14F /* PacksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksListView.swift; sourceTree = "<group>"; };
+		F55AB7682B138CFE00FEB14F /* LetteriseTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetteriseTopView.swift; sourceTree = "<group>"; };
 		F5AD74292B09A7740062ED5F /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
 		F5AD742B2B0ACAE50062ED5F /* KeyboardWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardWordView.swift; sourceTree = "<group>"; };
 		F5AD742D2B0ACB1B0062ED5F /* KeyboardLetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLetterView.swift; sourceTree = "<group>"; };
@@ -83,6 +91,10 @@
 		F5AF15EA2B09602F0027422A /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		F5AF15ED2B0992030027422A /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		F5AF15EF2B0993080027422A /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
+		F5F50B2D2B165BC7003F7B68 /* LetterPackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackRowView.swift; sourceTree = "<group>"; };
+		F5F50B2F2B165D1E003F7B68 /* PacksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksListViewModel.swift; sourceTree = "<group>"; };
+		F5F50B312B165D71003F7B68 /* LetterPackDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackDisplay.swift; sourceTree = "<group>"; };
+		F5F50B332B1663B4003F7B68 /* DSDisclosureGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDisclosureGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +139,16 @@
 				F55AB7632B111A3300FEB14F /* CongratulationsView.swift */,
 			);
 			path = Congratulation;
+			sourceTree = "<group>";
+		};
+		F55AB7652B138C7F00FEB14F /* PacksList */ = {
+			isa = PBXGroup;
+			children = (
+				F55AB7662B138CAE00FEB14F /* PacksListView.swift */,
+				F5F50B2F2B165D1E003F7B68 /* PacksListViewModel.swift */,
+				F5F50B312B165D71003F7B68 /* LetterPackDisplay.swift */,
+			);
+			path = PacksList;
 			sourceTree = "<group>";
 		};
 		F5AF15A22B092FF80027422A = {
@@ -183,6 +205,7 @@
 		F5AF15BD2B09313A0027422A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				F55AB7652B138C7F00FEB14F /* PacksList */,
 				F55AB7622B111A0100FEB14F /* Congratulation */,
 				F5AF15BE2B09317D0027422A /* LetterPack */,
 			);
@@ -210,13 +233,12 @@
 		F5AF15D42B09504E0027422A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F5F50B352B1663CC003F7B68 /* Base */,
+				F5F50B2C2B165A3B003F7B68 /* LetterPacksList */,
+				F5F50B2B2B165989003F7B68 /* Answer */,
 				F5AF15EC2B098E700027422A /* UserInput */,
-				F5AF15D52B0950980027422A /* AnswersView.swift */,
-				F5AF15D72B09519E0027422A /* AnswerLetterView.swift */,
-				F5AF15E42B0959F60027422A /* DSText.swift */,
-				F5AF15E82B095CF10027422A /* AnswerWordView.swift */,
-				F5AD74292B09A7740062ED5F /* DSButton.swift */,
 				F5AD74352B0D13860062ED5F /* AnswerFeedbackView.swift */,
+				F55AB7682B138CFE00FEB14F /* LetteriseTopView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -252,6 +274,34 @@
 				F5AD742D2B0ACB1B0062ED5F /* KeyboardLetterView.swift */,
 			);
 			path = UserInput;
+			sourceTree = "<group>";
+		};
+		F5F50B2B2B165989003F7B68 /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF15D52B0950980027422A /* AnswersView.swift */,
+				F5AF15D72B09519E0027422A /* AnswerLetterView.swift */,
+				F5AF15E82B095CF10027422A /* AnswerWordView.swift */,
+			);
+			path = Answer;
+			sourceTree = "<group>";
+		};
+		F5F50B2C2B165A3B003F7B68 /* LetterPacksList */ = {
+			isa = PBXGroup;
+			children = (
+				F5F50B2D2B165BC7003F7B68 /* LetterPackRowView.swift */,
+			);
+			path = LetterPacksList;
+			sourceTree = "<group>";
+		};
+		F5F50B352B1663CC003F7B68 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF15E42B0959F60027422A /* DSText.swift */,
+				F5AD74292B09A7740062ED5F /* DSButton.swift */,
+				F5F50B332B1663B4003F7B68 /* DSDisclosureGroup.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +407,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F50B2E2B165BC7003F7B68 /* LetterPackRowView.swift in Sources */,
+				F5F50B302B165D1E003F7B68 /* PacksListViewModel.swift in Sources */,
 				F5AF15B12B092FF80027422A /* ContentView.swift in Sources */,
 				F5AD74342B0AD56F0062ED5F /* LettersHandler.swift in Sources */,
 				F5AF15E22B0957280027422A /* Border.swift in Sources */,
@@ -365,6 +417,7 @@
 				F5AF15E92B095CF10027422A /* AnswerWordView.swift in Sources */,
 				F5AF15E02B09555C0027422A /* Colors.swift in Sources */,
 				F5AF15E52B0959F70027422A /* DSText.swift in Sources */,
+				F55AB7672B138CAE00FEB14F /* PacksListView.swift in Sources */,
 				F5AF15D32B094E230027422A /* LetterPackView.swift in Sources */,
 				F5AD742E2B0ACB1B0062ED5F /* KeyboardLetterView.swift in Sources */,
 				F5AF15D82B09519E0027422A /* AnswerLetterView.swift in Sources */,
@@ -374,11 +427,14 @@
 				F5AF15E72B095B370027422A /* Fonts.swift in Sources */,
 				F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */,
 				F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */,
+				F55AB7692B138CFE00FEB14F /* LetteriseTopView.swift in Sources */,
 				F5AD74362B0D13860062ED5F /* AnswerFeedbackView.swift in Sources */,
 				F5AF15F02B0993080027422A /* KeyboardViewModel.swift in Sources */,
+				F5F50B322B165D71003F7B68 /* LetterPackDisplay.swift in Sources */,
 				F5AF15D62B0950980027422A /* AnswersView.swift in Sources */,
 				F5AF15D12B09490D0027422A /* LetterPackViewModel.swift in Sources */,
 				F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */,
+				F5F50B342B1663B4003F7B68 /* DSDisclosureGroup.swift in Sources */,
 				F5AD742C2B0ACAE50062ED5F /* KeyboardWordView.swift in Sources */,
 				F5AF15DD2B0952790027422A /* Tokens.swift in Sources */,
 			);

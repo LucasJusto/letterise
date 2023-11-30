@@ -8,12 +8,14 @@
 import Foundation
 
 struct LetterPack {
+    let id: Int
     let letters: [Letter]
     let answers: [String]
     
-    init(letters: [Letter], answers: [String]) throws {
+    init(id: Int = 0, letters: [Letter], answers: [String]) throws {
         try LetterPackChecker.validate(letters: letters, answers: answers)
         
+        self.id = id
         self.letters = letters
         self.answers = answers
     }
