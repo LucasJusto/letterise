@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0E22A72B0F7D8600DD4FAF /* StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E22A62B0F7D8600DD4FAF /* StoreKit.swift */; };
+		DF6019732B10BE9D00B5B08F /* ExempleStoreKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6019722B10BE9D00B5B08F /* ExempleStoreKitView.swift */; };
 		F55AB75F2B0D366C00FEB14F /* Incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75C2B0D366C00FEB14F /* Incorrect.mp3 */; };
 		F55AB7602B0D366C00FEB14F /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75D2B0D366C00FEB14F /* Correct.mp3 */; };
 		F55AB7612B0D366C00FEB14F /* Tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75E2B0D366C00FEB14F /* Tap.mp3 */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF0E22A62B0F7D8600DD4FAF /* StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit.swift; sourceTree = "<group>"; };
+		DF6019722B10BE9D00B5B08F /* ExempleStoreKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleStoreKitView.swift; sourceTree = "<group>"; };
 		F55AB75C2B0D366C00FEB14F /* Incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Incorrect.mp3; sourceTree = "<group>"; };
 		F55AB75D2B0D366C00FEB14F /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
 		F55AB75E2B0D366C00FEB14F /* Tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tap.mp3; sourceTree = "<group>"; };
@@ -115,9 +119,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF0E22A52B0F7D7D00DD4FAF /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E22A62B0F7D8600DD4FAF /* StoreKit.swift */,
+				DF6019722B10BE9D00B5B08F /* ExempleStoreKitView.swift */,
+			);
+			path = StoreKit;
+			sourceTree = "<group>";
+		};
 		F55AB75A2B0D364700FEB14F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				DF0E22A52B0F7D7D00DD4FAF /* StoreKit */,
 				F55AB75B2B0D365100FEB14F /* Sound */,
 			);
 			path = Resource;
@@ -416,8 +430,10 @@
 				F55AB7642B111A3300FEB14F /* CongratulationsView.swift in Sources */,
 				F5AF15E92B095CF10027422A /* AnswerWordView.swift in Sources */,
 				F5AF15E02B09555C0027422A /* Colors.swift in Sources */,
+				DF0E22A72B0F7D8600DD4FAF /* StoreKit.swift in Sources */,
 				F5AF15E52B0959F70027422A /* DSText.swift in Sources */,
 				F55AB7672B138CAE00FEB14F /* PacksListView.swift in Sources */,
+				DF6019732B10BE9D00B5B08F /* ExempleStoreKitView.swift in Sources */,
 				F5AF15D32B094E230027422A /* LetterPackView.swift in Sources */,
 				F5AD742E2B0ACB1B0062ED5F /* KeyboardLetterView.swift in Sources */,
 				F5AF15D82B09519E0027422A /* AnswerLetterView.swift in Sources */,
