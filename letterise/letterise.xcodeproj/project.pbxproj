@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4BA2B1B43A2009E625D /* LoginView.swift */; };
+		9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */; };
+		9DE3E4C52B1B56C6009E625D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C42B1B56C6009E625D /* UserModel.swift */; };
 		DF0E22A72B0F7D8600DD4FAF /* StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E22A62B0F7D8600DD4FAF /* StoreKit.swift */; };
 		DF6019732B10BE9D00B5B08F /* ExempleStoreKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6019722B10BE9D00B5B08F /* ExempleStoreKitView.swift */; };
 		F55AB75F2B0D366C00FEB14F /* Incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75C2B0D366C00FEB14F /* Incorrect.mp3 */; };
@@ -58,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9DE3E4BA2B1B43A2009E625D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9DE3E4BC2B1B486B009E625D /* letterise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = letterise.entitlements; sourceTree = "<group>"; };
+		9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSingleton.swift; sourceTree = "<group>"; };
+		9DE3E4C42B1B56C6009E625D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DF0E22A62B0F7D8600DD4FAF /* StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit.swift; sourceTree = "<group>"; };
 		DF6019722B10BE9D00B5B08F /* ExempleStoreKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleStoreKitView.swift; sourceTree = "<group>"; };
 		F55AB75C2B0D366C00FEB14F /* Incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Incorrect.mp3; sourceTree = "<group>"; };
@@ -119,6 +126,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DE3E4B92B1B4373009E625D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9DE3E4BA2B1B43A2009E625D /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9DE3E4C02B1B5594009E625D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9DE3E4C32B1B56BE009E625D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9DE3E4C42B1B56C6009E625D /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DF0E22A52B0F7D7D00DD4FAF /* StoreKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +162,8 @@
 		F55AB75A2B0D364700FEB14F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9DE3E4C32B1B56BE009E625D /* Model */,
+				9DE3E4C02B1B5594009E625D /* Auth */,
 				DF0E22A52B0F7D7D00DD4FAF /* StoreKit */,
 				F55AB75B2B0D365100FEB14F /* Sound */,
 			);
@@ -186,6 +219,7 @@
 		F5AF15AD2B092FF80027422A /* letterise */ = {
 			isa = PBXGroup;
 			children = (
+				9DE3E4BC2B1B486B009E625D /* letterise.entitlements */,
 				F55AB75A2B0D364700FEB14F /* Resource */,
 				F5AF15DE2B09552D0027422A /* Info.plist */,
 				F5AF15BD2B09313A0027422A /* Scene */,
@@ -219,6 +253,7 @@
 		F5AF15BD2B09313A0027422A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				9DE3E4B92B1B4373009E625D /* Login */,
 				F55AB7652B138C7F00FEB14F /* PacksList */,
 				F55AB7622B111A0100FEB14F /* Congratulation */,
 				F5AF15BE2B09317D0027422A /* LetterPack */,
@@ -429,6 +464,7 @@
 				F5AF15EB2B09602F0027422A /* Padding.swift in Sources */,
 				F55AB7642B111A3300FEB14F /* CongratulationsView.swift in Sources */,
 				F5AF15E92B095CF10027422A /* AnswerWordView.swift in Sources */,
+				9DE3E4C52B1B56C6009E625D /* UserModel.swift in Sources */,
 				F5AF15E02B09555C0027422A /* Colors.swift in Sources */,
 				DF0E22A72B0F7D8600DD4FAF /* StoreKit.swift in Sources */,
 				F5AF15E52B0959F70027422A /* DSText.swift in Sources */,
@@ -450,7 +486,9 @@
 				F5AF15D62B0950980027422A /* AnswersView.swift in Sources */,
 				F5AF15D12B09490D0027422A /* LetterPackViewModel.swift in Sources */,
 				F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */,
+				9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */,
 				F5F50B342B1663B4003F7B68 /* DSDisclosureGroup.swift in Sources */,
+				9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */,
 				F5AD742C2B0ACAE50062ED5F /* KeyboardWordView.swift in Sources */,
 				F5AF15DD2B0952790027422A /* Tokens.swift in Sources */,
 			);
@@ -599,10 +637,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = letterise/letterise.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"letterise/Preview Content\"";
-				DEVELOPMENT_TEAM = 6GD2RK7JQN;
+				DEVELOPMENT_TEAM = 6525BU9D84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = letterise/Info.plist;
@@ -622,7 +661,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.letterise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.game.letterise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -638,10 +677,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = letterise/letterise.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"letterise/Preview Content\"";
-				DEVELOPMENT_TEAM = 6GD2RK7JQN;
+				DEVELOPMENT_TEAM = 6525BU9D84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = letterise/Info.plist;
@@ -661,7 +701,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.letterise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.game.letterise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

@@ -8,12 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var authManager = AuthSingleton.shared
+    
+    init() {
+        authManager.checkCredentials()
+    }
+    
     var body: some View {
-        VStack {
-            LetterPackView(
-                letterPack: try! LetterPack(
-                    letters: [Letter(char: "c"), Letter(char: "a"), Letter(char: "r"), Letter(char: "o")],
-                    answers: ["caro", "ar", "aro", "arco", "ra"]))
+        ZStack {
+            if authManager.isAuthenticating {
+                ProgressView()
+            } else {
+                if authManager.isLogged {
+                    LetterPackView(
+                        letterPack: try! LetterPack(
+                            letters: [Letter(char: "c"), Letter(char: "a"), Letter(char: "r"), Letter(char: "o")],
+                            answers: ["caro", "ar", "aro", "arco", "ra"]))
+                } else {
+                    LoginView(isAuthenticated: $authManager.isLogged)
+                }
+            }
         }
         .padding()
     }
