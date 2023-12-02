@@ -13,16 +13,28 @@ struct LetterPackRowView: View {
     let letterPack: LetterPackDisplay
     
     var body: some View {
-        HStack {
-            ForEach(0..<letterPack.letters.count, id: \.self) { index in
-                KeyboardLetterView(letter: letterPack.letters[index])
+        ZStack {
+            HStack(spacing: 4) {
+                Spacer()
+                ForEach(0..<letterPack.letters.count, id: \.self) { index in
+                    KeyboardLetterView(letter: letterPack.letters[index])
+                }
+                .padding(.vertical, 16)
+                Spacer()
             }
         }
-        .padding(tokens.padding.xxxs)
         .background {
-            Image("KeyboardBackground")
-                .resizable()
+            LinearGradient(gradient: Gradient(colors: [.orange, .yellow]), startPoint: .bottomLeading, endPoint: .topTrailing)
         }
+//        .background(.black)
+//        .background {
+//            Image("KeyboardBackground")
+//                .resizable()
+//                .scaledToFill()
+//                .frame(maxWidth: .infinity)
+//        }
+        .frame(maxWidth: UIScreen.main.bounds.width)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 }
 

@@ -49,7 +49,6 @@ class AuthSingleton: ObservableObject {
     
     func checkCredentials() {
         if let userCredential = UserDefaults.standard.string(forKey: "userCredential") {
-            
             doAuth(email: "nil", userId: userCredential) { result in
                 switch result {
                 case .success(let responseString):
@@ -70,8 +69,17 @@ class AuthSingleton: ObservableObject {
                                         AuthSingleton.shared.actualUser = UserModel(id: id, iCloudID: userCredential, credits: credits, email: email)
                                         self.isLogged = true
                                         self.isAuthenticating = false
+                                    } else {
+                                        self.isLogged = false
+                                        self.isAuthenticating = false
                                     }
+                                } else {
+                                    self.isLogged = false
+                                    self.isAuthenticating = false
                                 }
+                            } else {
+                                self.isLogged = false
+                                self.isAuthenticating = false
                             }
                         } catch {
                             print("Erro ao decodificar JSON: \(error)")

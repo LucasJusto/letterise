@@ -15,8 +15,6 @@ struct DSDisclosureGroup<Content: View>: View {
     @ViewBuilder let content: Content
     @State var isExpanded: Bool
 
-    
-
     init(_ title: String,
          isExpanded: Bool = false,
          @ViewBuilder content: () -> Content) {
@@ -31,16 +29,18 @@ struct DSDisclosureGroup<Content: View>: View {
         } label: {
             HStack(spacing: tokens.padding.quarck) {
                 DSText(title.capitalized)
-                    .textStyle(tokens.font.title2, withColor: tokens.color.label.primary)
-                    .padding(.bottom, tokens.padding.nano)
+                    .textStyle(tokens.font.caption, withColor: tokens.color.label.primary)
                 
-                Text(Image(systemName: isExpanded ? "chevron.down" : "chevron.left"))
-                    .foregroundStyle(tokens.color.label.primary)
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .offset(y: -2)
+                Spacer()
+//                
+//                Text(Image(systemName: isExpanded ? "chevron.down" : "chevron.left"))
+//                    .foregroundStyle(tokens.color.label.primary)
+//                    .font(.caption)
+//                    .fontWeight(.bold)
+                    
             }
-        }
+            .padding(.bottom, tokens.padding.quarck)
+        }.foregroundColor(.black)
     }
 }
 

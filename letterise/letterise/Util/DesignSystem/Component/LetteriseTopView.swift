@@ -12,15 +12,19 @@ struct LetteriseTopView: View {
     
     var body: some View {
         ZStack {
-            Image("LetteriseBackground")
-                .resizable()
-                .frame(height: 150)
-                .padding(.horizontal, tokens.padding.xxxs)
+            HStack {
+                
+            }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 0.35)
+                .background(
+                    Image("LetteriseBackground")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                )
             
             DSText("letterise")
                 .textStyle(tokens.font.big, withColor: tokens.color.label.counterPrimary)
+                .padding(.top, tokens.padding.xxxs)
         }
-        
     }
 }
 
