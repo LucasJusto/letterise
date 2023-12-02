@@ -29,11 +29,15 @@ struct AnswersView: View {
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8)
     ]
     
+    init(answers: [Word]) {
+        self.answers = answers
+        UIScrollView.appearance().bounces = false
+    }
+    
     var body: some View {
         ZStack {
             Image("AnswersBackground")
                 .resizable()
-                .offset(y: -tokens.padding.xs)
             
             VStack(alignment: .leading) {
                 ScrollView(.horizontal) {

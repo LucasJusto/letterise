@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LetterPackView: View {
     @Environment(\.designTokens) var tokens
+    @Environment(\.dismiss) var dismiss
     
     @StateObject var viewModel: LetterPackViewModel
     
@@ -18,11 +19,15 @@ struct LetterPackView: View {
     
     var body: some View {
         if viewModel.isPresentingCongratulations {
-            CongratulationsView()
+            CongratulationsView(backToMenuAction: {
+                dismiss()
+            })
         } else {
             ZStack {
                 VStack {
                     AnswersView(answers: viewModel.answered)
+                        .padding(.bottom, UIScreen.main.bounds.height * 0.01)
+                        .padding(.horizontal)
                     
                     KeyboardView(
                         letters: viewModel.letterPack.letters,
@@ -39,7 +44,7 @@ struct LetterPackView: View {
                         }
                     }
                 }
-            }
+            }.ignoresSafeArea()
         }
     }
 }
@@ -47,7 +52,7 @@ struct LetterPackView: View {
 #Preview {
     LetterPackView(
         letterPack: try! LetterPack(
-            letters: [Letter(char: "c"), Letter(char: "a"), Letter(char: "r"), Letter(char: "o")],
+            letters: [Letter(char: "c"), Letter(char: "c"), Letter(char: "a"), Letter(char: "r"), Letter(char: "o")],
             answers: ["caro", "ar", "aro", "arco", "ra"]))
 }
 

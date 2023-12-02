@@ -10,6 +10,8 @@ import SwiftUI
 struct CongratulationsView: View {
     @Environment(\.designTokens) var tokens
     
+    let backToMenuAction: () -> Void
+    
     var body: some View {
         VStack(alignment: .center, spacing: tokens.padding.md) {
             Spacer()
@@ -17,7 +19,7 @@ struct CongratulationsView: View {
             youDidItView
             
             DSButton(label: "Back to menu") {
-                print("ta")
+                backToMenuAction()
             }
             .frame(height: 60)
             .padding(.bottom, tokens.padding.md)
@@ -45,5 +47,5 @@ struct CongratulationsView: View {
 }
 
 #Preview {
-    CongratulationsView()
+    CongratulationsView(backToMenuAction: {})
 }

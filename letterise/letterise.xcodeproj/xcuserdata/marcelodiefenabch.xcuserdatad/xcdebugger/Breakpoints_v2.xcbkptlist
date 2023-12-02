@@ -39,54 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "24293556-07A3-46AE-82A8-7B011A9A06B9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "letterise/Resource/Auth/AuthSingleton.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "checkCredentials()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "24293556-07A3-46AE-82A8-7B011A9A06B9 - 87ac64e4601de7c7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "letterise.AuthSingleton.checkCredentials() -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "562">
-               </Location>
-               <Location
-                  uuid = "24293556-07A3-46AE-82A8-7B011A9A06B9 - 87ac64e4601de7c7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "letterise.AuthSingleton.checkCredentials() -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "597">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "63C6C492-0989-42B8-8D96-417D73F6DD1B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

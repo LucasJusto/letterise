@@ -30,9 +30,13 @@ struct KeyboardView: View {
                 viewModel: viewModel)
             .padding(tokens.padding.xxxs)
             .background {
-                Image("KeyboardBackground")
-                    .resizable()
+                LinearGradient(gradient: Gradient(colors: [.orange, .yellow]), startPoint: .bottomLeading, endPoint: .topTrailing)
             }
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+//            .background {
+//                Image("KeyboardBackground")
+//                    .resizable()
+//            }
             
             DSButton(label: "Try word") {
                 viewModel.tryWord()
