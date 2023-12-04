@@ -49,7 +49,8 @@ class AuthSingleton: ObservableObject {
     
     func checkCredentials() {
         if let userCredential = UserDefaults.standard.string(forKey: "userCredential") {
-            doAuth(email: "nil", userId: userCredential) { result in
+            doAuth(email: "nil", userId: userCredential) { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case .success(let responseString):
                     // Convertendo a string para Data
@@ -67,38 +68,50 @@ class AuthSingleton: ObservableObject {
                                         print("Id: \(id)")
                                         print("Credits: \(credits)")
                                         AuthSingleton.shared.actualUser = UserModel(id: id, iCloudID: userCredential, credits: credits, email: email)
-                                        self.isLogged = true
-                                        self.isAuthenticating = false
+                                        self.setIsLogged(bool: true)
                                     } else {
-                                        self.isLogged = false
-                                        self.isAuthenticating = false
+                                        self.setIsLogged(bool: false)
                                     }
                                 } else {
-                                    self.isLogged = false
-                                    self.isAuthenticating = false
+                                    self.setIsLogged(bool: false)
                                 }
                             } else {
-                                self.isLogged = false
-                                self.isAuthenticating = false
+                                self.setIsLogged(bool: false)
                             }
+                            self.setIsAuthenticating(bool: false)
                         } catch {
                             print("Erro ao decodificar JSON: \(error)")
-                            self.isLogged = false
-                            self.isAuthenticating = false
+                            self.setIsLogged(bool: false)
+                            self.setIsAuthenticating(bool: false)
                         }
                     }
                     
                     
                 case .failure(let error):
                     print("Erro ao adicionar usuário: \(error.localizedDescription)")
-                    self.isLogged = false
-                    self.isAuthenticating = false
-                    
+                    setIsLogged(bool: false)
+                    setIsAuthenticating(bool: false)
                 }
             }
             
         } else {
-            isAuthenticating = false
+            setIsAuthenticating(bool: false)
+        }
+    }
+    
+    private func setIsAuthenticating(bool: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.isAuthenticating = bool
+        }
+    }
+    
+    private func setIsLogged(bool: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.isLogged = bool
         }
     }
 }
