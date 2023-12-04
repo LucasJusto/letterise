@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DAAFC512B1E2B3300F86B79 /* GetCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAFC502B1E2B3300F86B79 /* GetCoinsView.swift */; };
+		9DAAFC532B1E2B4100F86B79 /* GetCoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAFC522B1E2B4100F86B79 /* GetCoinsViewModel.swift */; };
 		9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4BA2B1B43A2009E625D /* LoginView.swift */; };
 		9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */; };
 		9DE3E4C52B1B56C6009E625D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C42B1B56C6009E625D /* UserModel.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9DAAFC502B1E2B3300F86B79 /* GetCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinsView.swift; sourceTree = "<group>"; };
+		9DAAFC522B1E2B4100F86B79 /* GetCoinsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinsViewModel.swift; sourceTree = "<group>"; };
 		9DE3E4BA2B1B43A2009E625D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9DE3E4BC2B1B486B009E625D /* letterise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = letterise.entitlements; sourceTree = "<group>"; };
 		9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSingleton.swift; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DAAFC4F2B1E2B2700F86B79 /* GetCoins */ = {
+			isa = PBXGroup;
+			children = (
+				9DAAFC502B1E2B3300F86B79 /* GetCoinsView.swift */,
+				9DAAFC522B1E2B4100F86B79 /* GetCoinsViewModel.swift */,
+			);
+			path = GetCoins;
+			sourceTree = "<group>";
+		};
 		9DE3E4B92B1B4373009E625D /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +266,7 @@
 		F5AF15BD2B09313A0027422A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				9DAAFC4F2B1E2B2700F86B79 /* GetCoins */,
 				9DE3E4B92B1B4373009E625D /* Login */,
 				F55AB7652B138C7F00FEB14F /* PacksList */,
 				F55AB7622B111A0100FEB14F /* Congratulation */,
@@ -482,12 +496,14 @@
 				F55AB7692B138CFE00FEB14F /* LetteriseTopView.swift in Sources */,
 				F5AD74362B0D13860062ED5F /* AnswerFeedbackView.swift in Sources */,
 				F5AF15F02B0993080027422A /* KeyboardViewModel.swift in Sources */,
+				9DAAFC532B1E2B4100F86B79 /* GetCoinsViewModel.swift in Sources */,
 				F5F50B322B165D71003F7B68 /* LetterPackDisplay.swift in Sources */,
 				F5AF15D62B0950980027422A /* AnswersView.swift in Sources */,
 				F5AF15D12B09490D0027422A /* LetterPackViewModel.swift in Sources */,
 				F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */,
 				9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */,
 				F5F50B342B1663B4003F7B68 /* DSDisclosureGroup.swift in Sources */,
+				9DAAFC512B1E2B3300F86B79 /* GetCoinsView.swift in Sources */,
 				9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */,
 				F5AD742C2B0ACAE50062ED5F /* KeyboardWordView.swift in Sources */,
 				F5AF15DD2B0952790027422A /* Tokens.swift in Sources */,
