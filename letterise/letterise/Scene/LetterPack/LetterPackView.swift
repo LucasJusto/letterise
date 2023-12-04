@@ -25,7 +25,7 @@ struct LetterPackView: View {
         } else {
             ZStack {
                 VStack {
-                    AnswersView(answers: viewModel.answered)
+                    AnswersView(answers: viewModel.answered, isLoading: $viewModel.isLoadingAnswers)
                         .padding(.bottom, UIScreen.main.bounds.height * 0.01)
                         .padding(.horizontal)
                     
@@ -44,7 +44,13 @@ struct LetterPackView: View {
                         }
                     }
                 }
-            }.ignoresSafeArea()
+            }
+            .ignoresSafeArea()
+            .onChange(of: viewModel.shouldDismiss) { shouldDismiss in
+                if shouldDismiss {
+                    dismiss()
+                }
+            }
         }
     }
 }

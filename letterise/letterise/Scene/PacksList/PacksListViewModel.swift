@@ -11,6 +11,7 @@ final class PacksListViewModel: ObservableObject {
     @Published var packsDict: [String: [LetterPackDisplay]] = [:]
     @Published var isLoadingAnswers = false
     @Published var isShowingPlayView = false
+    @Published var chosenLetterPack: LetterPack? = nil
     
     var url: String = "https://gpt-treinador.herokuapp.com"
     
@@ -101,6 +102,35 @@ final class PacksListViewModel: ObservableObject {
             }
         } catch {
             return .failure(error)
+        }
+    }
+    
+    func navigateToLetterPackView(letterPackDisplay: LetterPackDisplay) {
+        setChosenLetterPack(letterpackDisplay: letterPackDisplay)
+        setIsShowingPlayView(bool: true)
+    }
+    
+    private func setChosenLetterPack(letterpackDisplay: LetterPackDisplay) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.chosenLetterPack = LetterPack(id: letterpackDisplay.id, letters: letterpackDisplay.letters)
+        }
+    }
+    
+    private func setIsLoadingAnswers(bool: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.isLoadingAnswers = bool
+        }
+    }
+    
+    private func setIsShowingPlayView(bool: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.isShowingPlayView = bool
         }
     }
     

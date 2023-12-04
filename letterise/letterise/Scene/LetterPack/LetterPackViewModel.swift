@@ -18,11 +18,14 @@ protocol LetterPackViewModelProtocol {
 
 final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     var letterPack: LetterPack
+    private let url: String = "https://gpt-treinador.herokuapp.com"
     
-    @Published var answered: [Word]
-    @Published var lastTriedWordResult: AnswerPossibility
-    @Published var isPresentingAnswerFeedback: Bool
-    @Published var isPresentingCongratulations: Bool
+    @Published var answered: [Word] = []
+    @Published var lastTriedWordResult: AnswerPossibility = .alreadyGuessed
+    @Published var isPresentingAnswerFeedback: Bool = false
+    @Published var isPresentingCongratulations: Bool = false
+    @Published var isLoadingAnswers: Bool = true
+    @Published var shouldDismiss: Bool = false
     var answerFeedbackTitle: String = ""
     var answerFeedbackMessage: String = ""
     private var lastTriedWord: String = ""
@@ -32,13 +35,36 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     
     init(letterPack: LetterPack) {
         self.letterPack = letterPack
-        self.answered = []
-        self.lastTriedWordResult = .alreadyGuessed
-        self.isPresentingAnswerFeedback = false
-        self.isPresentingCongratulations = false
+        Task { [weak self] in
+            guard let self = self else { return }
+            await loadAnswers()
+        }
+    }
+    
+    private func loadAnswers() async {
+        let result = await fetchAnswers(letterPackID: letterPack.id)
         
-        initEmptyPlaceholders(letterPack: letterPack)
-        sortAnswers()
+        switch result {
+        case .success(let answers):
+            do {
+                self.letterPack = try LetterPack(id: letterPack.id, letters: letterPack.letters, answers: answers)
+                
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    
+                    self.isLoadingAnswers = false
+                    self.initEmptyPlaceholders(letterPack: letterPack)
+                    self.sortAnswers()
+                }
+            } catch {
+                print(error)
+                shouldDismiss = true
+            }
+            
+        case .failure(let error):
+            print(error)
+            shouldDismiss = true
+        }
     }
     
     func tryWord(word: String) {
@@ -61,6 +87,26 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
                 setLastTriedWordResult(result: .incorrect)
             }
             displayAnswerFeedback(word: word)
+        }
+    }
+    
+    private func fetchAnswers(letterPackID: Int) async -> Result<[String], Error> {
+        guard let url = URL(string: "\(url)/letterise/getAnswers?letterPackID=\(letterPackID)") else {
+            return .failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"]))
+        }
+
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+
+            if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+               let answers = jsonResponse["answers"] as? [[String: Any]] {
+                let extractedAnswers = answers.compactMap { $0["answer"] as? String }
+                return .success(extractedAnswers)
+            } else {
+                return .failure(NSError(domain: "", code: -2, userInfo: [NSLocalizedDescriptionKey: "Invalid JSON structure"]))
+            }
+        } catch {
+            return .failure(error)
         }
     }
     
@@ -156,13 +202,15 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
         var answered: [Word] = []
         var index = 0
         
-        for answer in letterPack.answers {
-            var word: Word = Word(id: index, word: answer)
-            index += 1
-            
-            word.word = LettersHandler.hide(letters: word.word)
-            
-            answered.append(word)
+        if let answers = letterPack.answers {
+            for answer in answers {
+                var word: Word = Word(id: index, word: answer)
+                index += 1
+                
+                word.word = LettersHandler.hide(letters: word.word)
+                
+                answered.append(word)
+            }
         }
         
         return answered

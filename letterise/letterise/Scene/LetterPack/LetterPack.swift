@@ -10,7 +10,7 @@ import Foundation
 struct LetterPack {
     let id: Int
     let letters: [Letter]
-    let answers: [String]
+    let answers: [String]?
     
     init(id: Int = 0, letters: [Letter], answers: [String]) throws {
         try LetterPackChecker.validate(letters: letters, answers: answers)
@@ -18,6 +18,12 @@ struct LetterPack {
         self.id = id
         self.letters = letters
         self.answers = answers
+    }
+    
+    init(id: Int = 0, letters: [Letter]) {
+        self.id = id
+        self.letters = letters
+        self.answers = nil
     }
 }
 

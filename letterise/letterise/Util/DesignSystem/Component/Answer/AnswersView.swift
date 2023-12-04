@@ -10,6 +10,8 @@ import SwiftUI
 struct AnswersView: View {
     @Environment(\.designTokens) var tokens
     
+    @Binding var isLoading: Bool
+    
     var answers: [Word]
     let rows: [GridItem] = [
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
@@ -29,8 +31,9 @@ struct AnswersView: View {
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8)
     ]
     
-    init(answers: [Word]) {
+    init(answers: [Word], isLoading: Binding<Bool>) {
         self.answers = answers
+        self._isLoading = isLoading
         UIScrollView.appearance().bounces = false
     }
     
@@ -39,25 +42,30 @@ struct AnswersView: View {
             Image("AnswersBackground")
                 .resizable()
             
-            VStack(alignment: .leading) {
-                ScrollView(.horizontal) {
-                    LazyHGrid(
-                        rows: rows,
-                        alignment: .top,
-                        spacing: tokens.padding.micro,
-                        content:
-                    {
-                        ForEach(answers) { answer in
-                            AnswerWordView(word: answer)
-                                .padding(1)
-                        }
-                    })
+            if isLoading {
+                ProgressView()
+                    .scaleEffect(CGSize(width: 2, height: 2))
+            } else {
+                VStack(alignment: .leading) {
+                    ScrollView(.horizontal) {
+                        LazyHGrid(
+                            rows: rows,
+                            alignment: .top,
+                            spacing: tokens.padding.micro,
+                            content:
+                        {
+                            ForEach(answers) { answer in
+                                AnswerWordView(word: answer)
+                                    .padding(1)
+                            }
+                        })
+                    }
+                    
+                    Spacer()
                 }
-                
-                Spacer()
+                    .padding(.horizontal, tokens.padding.xs)
+                    .padding(.top, tokens.padding.sm)
             }
-            .padding(.horizontal, tokens.padding.xs)
-            .padding(.top, tokens.padding.sm)
         }
     }
 }

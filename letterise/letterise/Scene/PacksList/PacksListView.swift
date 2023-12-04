@@ -11,7 +11,6 @@ struct PacksListView: View {
     @Environment(\.designTokens) var tokens
     
     @StateObject var viewModel: PacksListViewModel = PacksListViewModel()
-    @State var letterPack: LetterPack?
     
     init() {
         UIScrollView.appearance().bounces = false
@@ -33,24 +32,7 @@ struct PacksListView: View {
                             ForEach(viewModel.packsDict[category]!) { letterPack in
                                 LetterPackRowView(letterPack: letterPack)
                                     .onTapGesture {
-                                        viewModel.isLoadingAnswers = true
-                                        Task {
-                                            let letterPackDisplay = letterPack
-                                            let result = await viewModel.getLetterPack(from: letterPackDisplay)
-                                            
-                                            switch result {
-                                            case .success(let letterPack):
-                                                print("LetterPack obtido com sucesso: \(letterPack)")
-                                                self.letterPack = letterPack
-                                                viewModel.isLoadingAnswers = false
-                                                viewModel.isShowingPlayView = true
-                                                #warning("navegar para tela do jogo LETTERPACKVIEW. tem que converter LetterPackDisplay para LetterPack")
-                                            case .failure(let error):
-                                                print("Erro ao obter LetterPack: \(error)")
-                                                viewModel.isLoadingAnswers = true
-                                                #warning("show error alert")
-                                            }
-                                        }
+                                        viewModel.navigateToLetterPackView(letterPackDisplay: letterPack)
                                     }
                             }
                         }.padding(.horizontal)
@@ -64,7 +46,7 @@ struct PacksListView: View {
             viewModel.fetchPacks()
         }
         .fullScreenCover(isPresented: $viewModel.isShowingPlayView){
-            LetterPackView(letterPack: self.letterPack!)
+            LetterPackView(letterPack: viewModel.chosenLetterPack!)
         }
     }
 }
