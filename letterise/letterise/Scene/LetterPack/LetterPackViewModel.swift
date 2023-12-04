@@ -35,13 +35,9 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     
     init(letterPack: LetterPack) {
         self.letterPack = letterPack
-        Task { [weak self] in
-            guard let self = self else { return }
-            await loadAnswers()
-        }
     }
     
-    private func loadAnswers() async {
+    func loadAnswers() async {
         let result = await fetchAnswers(letterPackID: letterPack.id)
         
         switch result {

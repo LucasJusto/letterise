@@ -51,6 +51,11 @@ struct LetterPackView: View {
                     dismiss()
                 }
             }
+            .onAppear {
+                Task {
+                    await viewModel.loadAnswers()
+                }
+            }
         }
     }
 }
