@@ -49,7 +49,7 @@ struct PacksListView: View {
             LetterPackView(letterPack: viewModel.chosenLetterPack!)
         }
         .sheet(isPresented: $viewModel.isShowingGetCoinsView){
-            LetterPackView(letterPack: viewModel.chosenLetterPack!)
+            GetCoinsView()
         }
     }
 }

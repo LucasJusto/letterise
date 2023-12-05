@@ -113,4 +113,8 @@ class AuthSingleton: ObservableObject {
             self.isLogged = bool
         }
     }
+    
+    func addCredits(amount: String, completion: @escaping (Bool) -> Void) {
+        completion(true)
+    }
 }
