@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1D2D912C-672B-41FC-B43B-7778D7100BC5"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "656B433F-85B3-44A4-A901-2D28C52EF800"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/AdMob 2/BannerAd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "bannerViewDidReceiveAd(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "656B433F-85B3-44A4-A901-2D28C52EF800 - 83f1099e948c0c62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidReceiveAd(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "198">
+               </Location>
+               <Location
+                  uuid = "656B433F-85B3-44A4-A901-2D28C52EF800 - 83f1099e948c0c62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidReceiveAd(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "656B433F-85B3-44A4-A901-2D28C52EF800 - 83f1099e948c0c62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidReceiveAd(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "82">
+               </Location>
+               <Location
+                  uuid = "656B433F-85B3-44A4-A901-2D28C52EF800 - 83f1099e948c0c62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidReceiveAd(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "362CE0B7-28A9-49F1-BF44-BBD061C3B3AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/AdMob 2/BannerAd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "bannerView(_:didFailToReceiveAdWithError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "362CE0B7-28A9-49F1-BF44-BBD061C3B3AF - 19b59ff0016bbecc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerView(_: __C.GADBannerView, didFailToReceiveAdWithError: Swift.Error) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "687">
+               </Location>
+               <Location
+                  uuid = "362CE0B7-28A9-49F1-BF44-BBD061C3B3AF - 19b59ff0016bbecc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerView(_: __C.GADBannerView, didFailToReceiveAdWithError: Swift.Error) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "640">
+               </Location>
+               <Location
+                  uuid = "362CE0B7-28A9-49F1-BF44-BBD061C3B3AF - 19b59ff0016bbecc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerView(_: __C.GADBannerView, didFailToReceiveAdWithError: Swift.Error) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "141">
+               </Location>
+               <Location
+                  uuid = "362CE0B7-28A9-49F1-BF44-BBD061C3B3AF - 19b59ff0016bbecc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerView(_: __C.GADBannerView, didFailToReceiveAdWithError: Swift.Error) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8E83C97-98D0-4DFF-9C3E-EE44B9A7E64F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/AdMob 2/BannerAd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "bannerViewDidRecordImpression(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A8E83C97-98D0-4DFF-9C3E-EE44B9A7E64F - d764907761c18293"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidRecordImpression(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "198">
+               </Location>
+               <Location
+                  uuid = "A8E83C97-98D0-4DFF-9C3E-EE44B9A7E64F - d764907761c18293"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidRecordImpression(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "A8E83C97-98D0-4DFF-9C3E-EE44B9A7E64F - d764907761c18293"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidRecordImpression(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "82">
+               </Location>
+               <Location
+                  uuid = "A8E83C97-98D0-4DFF-9C3E-EE44B9A7E64F - d764907761c18293"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidRecordImpression(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47CD0991-0123-4C97-BEE6-E1D556560116"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/AdMob 2/BannerAd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "bannerViewWillPresentScreen(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "47CD0991-0123-4C97-BEE6-E1D556560116 - adb94e63fa06ad55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewWillPresentScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "198">
+               </Location>
+               <Location
+                  uuid = "47CD0991-0123-4C97-BEE6-E1D556560116 - adb94e63fa06ad55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewWillPresentScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "47CD0991-0123-4C97-BEE6-E1D556560116 - adb94e63fa06ad55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewWillPresentScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "82">
+               </Location>
+               <Location
+                  uuid = "47CD0991-0123-4C97-BEE6-E1D556560116 - adb94e63fa06ad55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewWillPresentScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E046D07-8F0A-4F0A-A1EE-C4F4F9A47E6D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/AdMob 2/BannerAd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "bannerViewWillDismissScreen(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3E046D07-8F0A-4F0A-A1EE-C4F4F9A47E6D - 49e19d57f30a89f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewWillDismissScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "198">
+               </Location>
+               <Location
+                  uuid = "3E046D07-8F0A-4F0A-A1EE-C4F4F9A47E6D - 49e19d57f30a89f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewWillDismissScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "3E046D07-8F0A-4F0A-A1EE-C4F4F9A47E6D - 49e19d57f30a89f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewWillDismissScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "82">
+               </Location>
+               <Location
+                  uuid = "3E046D07-8F0A-4F0A-A1EE-C4F4F9A47E6D - 49e19d57f30a89f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewWillDismissScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24B6F76D-0D2A-4656-A065-9AB282722571"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/AdMob 2/BannerAd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "bannerViewDidDismissScreen(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "24B6F76D-0D2A-4656-A065-9AB282722571 - c876086a99b496fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidDismissScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "198">
+               </Location>
+               <Location
+                  uuid = "24B6F76D-0D2A-4656-A065-9AB282722571 - c876086a99b496fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidDismissScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "24B6F76D-0D2A-4656-A065-9AB282722571 - c876086a99b496fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidDismissScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "82">
+               </Location>
+               <Location
+                  uuid = "24B6F76D-0D2A-4656-A065-9AB282722571 - c876086a99b496fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.BannerAd.Coordinator.bannerViewDidDismissScreen(__C.GADBannerView) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/BannerAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54D00BE9-FC0D-4D17-A39D-16E82F6BFA9A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/AdMob 2/RewardedAd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "displayReward()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54D00BE9-FC0D-4D17-A39D-16E82F6BFA9A - b09c3db823cb123"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in letterise.RewardAdsManager.displayReward() -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "75">
+               </Location>
+               <Location
+                  uuid = "54D00BE9-FC0D-4D17-A39D-16E82F6BFA9A - b09c3db823cb123"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in letterise.RewardAdsManager.displayReward() -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "54D00BE9-FC0D-4D17-A39D-16E82F6BFA9A - b09c3db823cb142"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in letterise.RewardAdsManager.displayReward() -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "75">
+               </Location>
+               <Location
+                  uuid = "54D00BE9-FC0D-4D17-A39D-16E82F6BFA9A - b09c3db823cb142"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in letterise.RewardAdsManager.displayReward() -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B15393A-BDEF-4D5B-B19A-F0836597DDBD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/AdMob 2/RewardedAd.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "displayReward()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8B15393A-BDEF-4D5B-B19A-F0836597DDBD - 7c4be67d225f1a32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.RewardAdsManager.displayReward() -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "996">
+               </Location>
+               <Location
+                  uuid = "8B15393A-BDEF-4D5B-B19A-F0836597DDBD - 7c4be67d225f1a32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.RewardAdsManager.displayReward() -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "880">
+               </Location>
+               <Location
+                  uuid = "8B15393A-BDEF-4D5B-B19A-F0836597DDBD - 7c4be67d225f1a32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.RewardAdsManager.displayReward() -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "817">
+               </Location>
+               <Location
+                  uuid = "8B15393A-BDEF-4D5B-B19A-F0836597DDBD - 7c4be67d225f1a32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.RewardAdsManager.displayReward() -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1034">
+               </Location>
+               <Location
+                  uuid = "8B15393A-BDEF-4D5B-B19A-F0836597DDBD - 7c4be67d225f1a32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "letterise.RewardAdsManager.displayReward() -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "932">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

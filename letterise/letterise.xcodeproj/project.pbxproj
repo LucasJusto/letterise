@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4207D39A74061564F4B6EC6A /* Pods_letterise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B9F2594994A99E2BE5A00D /* Pods_letterise.framework */; };
+		9D95ED4E2B1FBD1500565340 /* GetCoinsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */; };
+		9D95ED512B1FBD4300565340 /* GetCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED4F2B1FBD4300565340 /* GetCoinsView.swift */; };
+		9D95ED522B1FBD4300565340 /* GetCoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED502B1FBD4300565340 /* GetCoinsViewModel.swift */; };
+		9D95ED5B2B1FBD7D00565340 /* RewardedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED592B1FBD7C00565340 /* RewardedAd.swift */; };
+		9D95ED5C2B1FBD7D00565340 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */; };
 		9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4BA2B1B43A2009E625D /* LoginView.swift */; };
 		9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */; };
 		9DE3E4C52B1B56C6009E625D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C42B1B56C6009E625D /* UserModel.swift */; };
@@ -69,6 +74,11 @@
 		65B9F2594994A99E2BE5A00D /* Pods_letterise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_letterise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CD69482BF20E23DBBE7D54 /* Pods-letteriseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letteriseTests.debug.xcconfig"; path = "Target Support Files/Pods-letteriseTests/Pods-letteriseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		75E94C3BBE3DBECC77DEEAE5 /* Pods-letteriseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letteriseTests.release.xcconfig"; path = "Target Support Files/Pods-letteriseTests/Pods-letteriseTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinsRow.swift; sourceTree = "<group>"; };
+		9D95ED4F2B1FBD4300565340 /* GetCoinsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCoinsView.swift; path = ../../../../../../Desktop/GetCoinsView.swift; sourceTree = "<group>"; };
+		9D95ED502B1FBD4300565340 /* GetCoinsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCoinsViewModel.swift; path = ../../../../../../Desktop/GetCoinsViewModel.swift; sourceTree = "<group>"; };
+		9D95ED592B1FBD7C00565340 /* RewardedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAd.swift; sourceTree = "<group>"; };
+		9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		9DE3E4BA2B1B43A2009E625D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9DE3E4BC2B1B486B009E625D /* letterise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = letterise.entitlements; sourceTree = "<group>"; };
 		9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSingleton.swift; sourceTree = "<group>"; };
@@ -156,6 +166,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9D95ED482B1FBD0600565340 /* GetCoins */ = {
+			isa = PBXGroup;
+			children = (
+				9D95ED532B1FBD4500565340 /* Components */,
+				9D95ED4F2B1FBD4300565340 /* GetCoinsView.swift */,
+				9D95ED502B1FBD4300565340 /* GetCoinsViewModel.swift */,
+			);
+			path = GetCoins;
+			sourceTree = "<group>";
+		};
+		9D95ED532B1FBD4500565340 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9D95ED542B1FBD5200565340 /* AdMob 2 */ = {
+			isa = PBXGroup;
+			children = (
+				9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */,
+				9D95ED592B1FBD7C00565340 /* RewardedAd.swift */,
+			);
+			path = "AdMob 2";
+			sourceTree = "<group>";
+		};
 		9DE3E4B92B1B4373009E625D /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +229,7 @@
 		F55AB75A2B0D364700FEB14F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9D95ED542B1FBD5200565340 /* AdMob 2 */,
 				9DE3E4C32B1B56BE009E625D /* Model */,
 				9DE3E4C02B1B5594009E625D /* Auth */,
 				DF0E22A52B0F7D7D00DD4FAF /* StoreKit */,
@@ -285,6 +323,7 @@
 		F5AF15BD2B09313A0027422A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				9D95ED482B1FBD0600565340 /* GetCoins */,
 				9DE3E4B92B1B4373009E625D /* Login */,
 				F55AB7652B138C7F00FEB14F /* PacksList */,
 				F55AB7622B111A0100FEB14F /* Congratulation */,
@@ -569,6 +608,7 @@
 				F5AF15E52B0959F70027422A /* DSText.swift in Sources */,
 				F55AB7672B138CAE00FEB14F /* PacksListView.swift in Sources */,
 				DF6019732B10BE9D00B5B08F /* ExempleStoreKitView.swift in Sources */,
+				9D95ED5B2B1FBD7D00565340 /* RewardedAd.swift in Sources */,
 				F5AF15D32B094E230027422A /* LetterPackView.swift in Sources */,
 				F5AD742E2B0ACB1B0062ED5F /* KeyboardLetterView.swift in Sources */,
 				F5AF15D82B09519E0027422A /* AnswerLetterView.swift in Sources */,
@@ -579,14 +619,18 @@
 				F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */,
 				F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */,
 				F55AB7692B138CFE00FEB14F /* LetteriseTopView.swift in Sources */,
+				9D95ED522B1FBD4300565340 /* GetCoinsViewModel.swift in Sources */,
+				9D95ED4E2B1FBD1500565340 /* GetCoinsRow.swift in Sources */,
 				F5AD74362B0D13860062ED5F /* AnswerFeedbackView.swift in Sources */,
 				F5AF15F02B0993080027422A /* KeyboardViewModel.swift in Sources */,
 				F5F50B322B165D71003F7B68 /* LetterPackDisplay.swift in Sources */,
 				F5AF15D62B0950980027422A /* AnswersView.swift in Sources */,
 				F5AF15D12B09490D0027422A /* LetterPackViewModel.swift in Sources */,
+				9D95ED512B1FBD4300565340 /* GetCoinsView.swift in Sources */,
 				F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */,
 				9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */,
 				F5F50B342B1663B4003F7B68 /* DSDisclosureGroup.swift in Sources */,
+				9D95ED5C2B1FBD7D00565340 /* BannerAd.swift in Sources */,
 				9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */,
 				F5AD742C2B0ACAE50062ED5F /* KeyboardWordView.swift in Sources */,
 				F5AF15DD2B0952790027422A /* Tokens.swift in Sources */,
