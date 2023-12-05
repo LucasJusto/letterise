@@ -11,6 +11,7 @@ final class PacksListViewModel: ObservableObject {
     @Published var packsDict: [String: [LetterPackDisplay]] = [:]
     @Published var isLoadingAnswers = false
     @Published var isShowingPlayView = false
+    @Published var isShowingGetCoinsView = false
     @Published var chosenLetterPack: LetterPack? = nil
     
     var url: String = "https://gpt-treinador.herokuapp.com"

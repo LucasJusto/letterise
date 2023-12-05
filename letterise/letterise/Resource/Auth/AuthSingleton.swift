@@ -46,7 +46,6 @@ class AuthSingleton: ObservableObject {
         }.resume()
     }
     
-    
     func checkCredentials() {
         if let userCredential = UserDefaults.standard.string(forKey: "userCredential") {
             doAuth(email: "nil", userId: userCredential) { [weak self] result in
@@ -91,7 +90,7 @@ class AuthSingleton: ObservableObject {
                     print("Erro ao adicionar usuário: \(error.localizedDescription)")
                     setIsLogged(bool: false)
                     setIsAuthenticating(bool: false)
-                }
+  }
             }
             
         } else {
@@ -113,5 +112,9 @@ class AuthSingleton: ObservableObject {
             
             self.isLogged = bool
         }
+    }
+    
+    func addCredits(amount: String, completion: @escaping (Bool) -> Void) {
+        completion(true)
     }
 }

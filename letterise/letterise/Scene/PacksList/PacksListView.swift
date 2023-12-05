@@ -20,7 +20,7 @@ struct PacksListView: View {
         VStack {
             ScrollView {
                 VStack(alignment: .center) {
-                    LetteriseTopView()
+                    LetteriseTopView(openGetCoins: { viewModel.isShowingGetCoinsView = true })
                     
                     DSText("Letter packs:")
                         .textStyle(tokens.font.title, withColor: tokens.color.label.primary)
@@ -47,6 +47,9 @@ struct PacksListView: View {
         }
         .fullScreenCover(isPresented: $viewModel.isShowingPlayView){
             LetterPackView(letterPack: viewModel.chosenLetterPack!)
+        }
+        .sheet(isPresented: $viewModel.isShowingGetCoinsView){
+            GetCoinsView()
         }
     }
 }

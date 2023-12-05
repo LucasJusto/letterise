@@ -1,0 +1,115 @@
+{
+  "identifier" : "A11B62C1",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "6473753986",
+      "localizations" : [
+        {
+          "description" : "Use coins to unlock new anagrams",
+          "displayName" : "100 coins",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.letterise.coins.100",
+      "referenceName" : "100 coins",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "6473754099",
+      "localizations" : [
+        {
+          "description" : "Use coins to unlock new anagrams",
+          "displayName" : "300 coins",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.letterise.coins.300",
+      "referenceName" : "300 coins",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6473753905",
+      "localizations" : [
+        {
+          "description" : "Use coins to unlock new anagrams",
+          "displayName" : "50 coins",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.letterise.coins.50",
+      "referenceName" : "50 coins",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6472668630",
+    "_developerTeamID" : "6525BU9D84",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 723421601.822227,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
