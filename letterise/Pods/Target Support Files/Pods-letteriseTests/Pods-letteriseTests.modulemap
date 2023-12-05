@@ -1,0 +1,6 @@
+framework module Pods_letteriseTests {
+  umbrella header "Pods-letteriseTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
