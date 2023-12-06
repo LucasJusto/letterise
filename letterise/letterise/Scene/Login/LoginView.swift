@@ -75,7 +75,7 @@ struct LoginView: View {
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 16)
                 .frame(width: UIScreen.main.bounds.width * 0.5)
-            Text("Your data will be saved with iCloud ID to you access in other devices")
+            Text("Your data in this app will be related to your iCloud ID to make possible accessing it in other devices")
                 .font(.system(size: 12, weight: .light))
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 16)
@@ -102,7 +102,7 @@ struct LoginView: View {
             .onTapGesture {
                 performAppleSignIn()
             }
-            .padding(.bottom, 24)
+            .padding(.bottom, 32)
             .alert(isPresented: $showAlert) {
                 Alert(
                     title: Text("Login error"),
