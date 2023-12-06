@@ -41,7 +41,7 @@ final class PacksListViewModel: ObservableObject {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let body: [String: Any] = ["iCloudID": iCloudID]
+        let body: [String: Any] = ["userID": iCloudID]
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
 
         URLSession.shared.dataTask(with: request) { data, response, error in

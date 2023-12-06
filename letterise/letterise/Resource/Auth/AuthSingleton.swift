@@ -28,6 +28,7 @@ class AuthSingleton: ObservableObject {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
+        print(userId)
         let body: [String: Any] = ["iCloudID": userId]
         request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
 
@@ -41,6 +42,7 @@ class AuthSingleton: ObservableObject {
                 completion(.failure(NSError(domain: "", code: 2, userInfo: [NSLocalizedDescriptionKey: "Nenhum dado recebido"])))
                 return
             }
+            print(responseString)
             completion(.success(responseString))
         }.resume()
     }

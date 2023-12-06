@@ -119,7 +119,7 @@ struct LoginView: View {
     private func performAppleSignIn() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.fullName, .email]
+        request.requestedScopes = [.fullName]
 
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = signInManager
