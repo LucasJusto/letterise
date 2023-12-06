@@ -10,6 +10,6 @@ import Foundation
 struct UserModel: Identifiable {
     let id: Int
     let iCloudID: String
-    let credits: Int
-    let email: String
+    var credits: Int
+    var email: String
 }

@@ -13,6 +13,7 @@
 		9D95ED522B1FBD4300565340 /* GetCoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED502B1FBD4300565340 /* GetCoinsViewModel.swift */; };
 		9D95ED5B2B1FBD7D00565340 /* RewardedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED592B1FBD7C00565340 /* RewardedAd.swift */; };
 		9D95ED5C2B1FBD7D00565340 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */; };
+		9D95ED5E2B1FE86100565340 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95ED5D2B1FE86100565340 /* StoreKit.framework */; };
 		9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4BA2B1B43A2009E625D /* LoginView.swift */; };
 		9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */; };
 		9DE3E4C52B1B56C6009E625D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C42B1B56C6009E625D /* UserModel.swift */; };
@@ -79,6 +80,8 @@
 		9D95ED502B1FBD4300565340 /* GetCoinsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCoinsViewModel.swift; path = ../../../../../../Desktop/GetCoinsViewModel.swift; sourceTree = "<group>"; };
 		9D95ED592B1FBD7C00565340 /* RewardedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAd.swift; sourceTree = "<group>"; };
 		9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		9D95ED5D2B1FE86100565340 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9D95ED5F2B1FE86E00565340 /* Letterise - Anagram game.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Letterise - Anagram game.storekit"; sourceTree = "<group>"; };
 		9DE3E4BA2B1B43A2009E625D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9DE3E4BC2B1B486B009E625D /* letterise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = letterise.entitlements; sourceTree = "<group>"; };
 		9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSingleton.swift; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4207D39A74061564F4B6EC6A /* Pods_letterise.framework in Frameworks */,
+				9D95ED5E2B1FE86100565340 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +153,7 @@
 		0E28DAC3F60DA5C105C2C8CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D95ED5D2B1FE86100565340 /* StoreKit.framework */,
 				65B9F2594994A99E2BE5A00D /* Pods_letterise.framework */,
 				5CFDE7C0AA3206B9539ADE95 /* Pods_letteriseTests.framework */,
 			);
@@ -269,6 +274,7 @@
 		F5AF15A22B092FF80027422A = {
 			isa = PBXGroup;
 			children = (
+				9D95ED5F2B1FE86E00565340 /* Letterise - Anagram game.storekit */,
 				F5AF15AD2B092FF80027422A /* letterise */,
 				F5AF15C62B0944010027422A /* letteriseTests */,
 				F5AF15AC2B092FF80027422A /* Products */,
@@ -805,7 +811,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.letterise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -847,7 +853,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.letterise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

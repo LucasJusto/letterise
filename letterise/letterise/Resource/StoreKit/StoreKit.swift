@@ -111,19 +111,20 @@ class StoreKitViewModel: ObservableObject {
                 case .nonRenewable:
                     if transaction.productID == "" {}
                 case .consumable:
-                    if transaction.productID == "com.letterise.coins.50" {
-                        AuthSingleton.shared.addCredits(amount: "50") { status in
-                            print(status)
-                        }
-                    } else if transaction.productID == "com.letterise.coins.100" {
-                        AuthSingleton.shared.addCredits(amount: "100") { status in
-                            print(status)
-                        }
-                    } else if transaction.productID == "com.letterise.coins.300" {
-                        AuthSingleton.shared.addCredits(amount: "300") { status in
-                            print(status)
-                        }
-                    }
+                    print("consumivel")
+//                    if transaction.productID == "com.letterise.coins.50" {
+//                        AuthSingleton.shared.addCredits(amount: "50") { status in
+//                            print(status)
+//                        }
+//                    } else if transaction.productID == "com.letterise.coins.100" {
+//                        AuthSingleton.shared.addCredits(amount: "100") { status in
+//                            print(status)
+//                        }
+//                    } else if transaction.productID == "com.letterise.coins.300" {
+//                        AuthSingleton.shared.addCredits(amount: "300") { status in
+//                            print(status)
+//                        }
+//                    }
                 case .nonConsumable:
                     if transaction.productID == "" {}
                 case .autoRenewable:

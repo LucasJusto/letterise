@@ -21,16 +21,11 @@ struct ContentView: View {
             } else {
                 if authManager.isLogged {
                     PacksListView()
-//                    LetterPackView(
-//                        letterPack: try! LetterPack(
-//                            letters: [Letter(char: "c"), Letter(char: "a"), Letter(char: "r"), Letter(char: "o")],
-//                            answers: ["caro", "ar", "aro", "arco", "ra"]))
                 } else {
                     LoginView(isAuthenticated: $authManager.isLogged)
                 }
             }
         }
-        .padding()
     }
 }
 

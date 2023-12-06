@@ -15,7 +15,7 @@ class AdMobService {
 
     let get10FreeCoins = "ca-app-pub-7490663355066325/4568653596"
     let test = "ca-app-pub-7490663355066325/4568653596"
-    let list = "ca-app-pub-7490663355066325~7158377669"
+    let list = "ca-app-pub-7490663355066325/2912845046"
     
 }
 
