@@ -15,10 +15,7 @@ class AppleSignInManager: NSObject, ASAuthorizationControllerDelegate, ASAuthori
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             UserDefaults.standard.set(appleIDCredential.user, forKey: "userCredential")
-            if let userEmail = appleIDCredential.email {
-                UserDefaults.standard.set(userEmail, forKey: "email")
-            }
-            AuthSingleton.shared.doAuth(email: UserDefaults.standard.string(forKey: "email") ?? "nil", userId: appleIDCredential.user) { result in
+            AuthSingleton.shared.doAuth(userId: appleIDCredential.user) { result in
                 switch result {
                 case .success(let responseString):
                     // Convertendo a string para Data
@@ -28,9 +25,7 @@ class AppleSignInManager: NSObject, ASAuthorizationControllerDelegate, ASAuthori
                             if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
                                 // Acessa o dicionário aninhado 'user'
                                 if let user = json["user"] as? [String: Any] {
-                                    // Extrai o email e os créditos
-                                    if let email = user["email"] as? String, let credits = user["credits"] as? Int {
-                                        print("Email: \(email)")
+                                    if let credits = user["credits"] as? Int {
                                         print("Credits: \(credits)")
                                     }
                                 }
@@ -75,12 +70,12 @@ struct LoginView: View {
             Image(systemName: "icloud")
                 .font(.system(size: 120, weight: .regular))
                 .padding(.bottom, 32)
-            Text("Vamos salvar seu progresso no jogo")
+            Text("We will save your game progress")
                 .font(.system(size: 32, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 16)
                 .frame(width: UIScreen.main.bounds.width * 0.5)
-            Text("Seus dados são salvos com iCloud para você acessar em outros dispositivos")
+            Text("Your data in this app will be related to your iCloud ID to make possible accessing it in other devices")
                 .font(.system(size: 12, weight: .light))
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 16)
@@ -95,7 +90,7 @@ struct LoginView: View {
                     .font(.system(size: 20, weight: .regular))
                     .foregroundStyle(.white)
                     .padding(.trailing, 4)
-                Text("Login com Apple")
+                Text("Login with Apple")
                     .font(.system(size: 20, weight: .regular))
                     .foregroundStyle(.white)
                 Spacer()
@@ -107,11 +102,11 @@ struct LoginView: View {
             .onTapGesture {
                 performAppleSignIn()
             }
-            .padding(.bottom, 24)
+            .padding(.bottom, 32)
             .alert(isPresented: $showAlert) {
                 Alert(
-                    title: Text("Erro de login"),
-                    message: Text("Você precisa fazer login com iCloud para continuar"),
+                    title: Text("Login error"),
+                    message: Text("You need to login in with iCLoud to continue"),
                     dismissButton: .default(Text("Ok"))
                 )
             }
@@ -124,7 +119,7 @@ struct LoginView: View {
     private func performAppleSignIn() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.fullName, .email]
+        request.requestedScopes = [.fullName]
 
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = signInManager

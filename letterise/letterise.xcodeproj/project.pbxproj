@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4207D39A74061564F4B6EC6A /* Pods_letterise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B9F2594994A99E2BE5A00D /* Pods_letterise.framework */; };
+		9D95ED4E2B1FBD1500565340 /* GetCoinsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */; };
+		9D95ED512B1FBD4300565340 /* GetCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED4F2B1FBD4300565340 /* GetCoinsView.swift */; };
+		9D95ED522B1FBD4300565340 /* GetCoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED502B1FBD4300565340 /* GetCoinsViewModel.swift */; };
+		9D95ED5B2B1FBD7D00565340 /* RewardedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED592B1FBD7C00565340 /* RewardedAd.swift */; };
+		9D95ED5C2B1FBD7D00565340 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */; };
+		9D95ED5E2B1FE86100565340 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95ED5D2B1FE86100565340 /* StoreKit.framework */; };
 		9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4BA2B1B43A2009E625D /* LoginView.swift */; };
 		9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */; };
 		9DE3E4C52B1B56C6009E625D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C42B1B56C6009E625D /* UserModel.swift */; };
@@ -48,6 +55,7 @@
 		F5F50B302B165D1E003F7B68 /* PacksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B2F2B165D1E003F7B68 /* PacksListViewModel.swift */; };
 		F5F50B322B165D71003F7B68 /* LetterPackDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B312B165D71003F7B68 /* LetterPackDisplay.swift */; };
 		F5F50B342B1663B4003F7B68 /* DSDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B332B1663B4003F7B68 /* DSDisclosureGroup.swift */; };
+		FCC3FA690DE1D6CCBA7DE439 /* Pods_letteriseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFDE7C0AA3206B9539ADE95 /* Pods_letteriseTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FB01FB432967F7F2A992D32 /* Pods-letterise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letterise.release.xcconfig"; path = "Target Support Files/Pods-letterise/Pods-letterise.release.xcconfig"; sourceTree = "<group>"; };
+		51DB2BE7A0ADD012EE574ACE /* Pods-letterise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letterise.debug.xcconfig"; path = "Target Support Files/Pods-letterise/Pods-letterise.debug.xcconfig"; sourceTree = "<group>"; };
+		5CFDE7C0AA3206B9539ADE95 /* Pods_letteriseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_letteriseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B9F2594994A99E2BE5A00D /* Pods_letterise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_letterise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66CD69482BF20E23DBBE7D54 /* Pods-letteriseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letteriseTests.debug.xcconfig"; path = "Target Support Files/Pods-letteriseTests/Pods-letteriseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		75E94C3BBE3DBECC77DEEAE5 /* Pods-letteriseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letteriseTests.release.xcconfig"; path = "Target Support Files/Pods-letteriseTests/Pods-letteriseTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinsRow.swift; sourceTree = "<group>"; };
+		9D95ED4F2B1FBD4300565340 /* GetCoinsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCoinsView.swift; path = ../../../../../../Desktop/GetCoinsView.swift; sourceTree = "<group>"; };
+		9D95ED502B1FBD4300565340 /* GetCoinsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetCoinsViewModel.swift; path = ../../../../../../Desktop/GetCoinsViewModel.swift; sourceTree = "<group>"; };
+		9D95ED592B1FBD7C00565340 /* RewardedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAd.swift; sourceTree = "<group>"; };
+		9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		9D95ED5D2B1FE86100565340 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9D95ED5F2B1FE86E00565340 /* Letterise - Anagram game.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Letterise - Anagram game.storekit"; sourceTree = "<group>"; };
 		9DE3E4BA2B1B43A2009E625D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9DE3E4BC2B1B486B009E625D /* letterise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = letterise.entitlements; sourceTree = "<group>"; };
 		9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSingleton.swift; sourceTree = "<group>"; };
@@ -113,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4207D39A74061564F4B6EC6A /* Pods_letterise.framework in Frameworks */,
+				9D95ED5E2B1FE86100565340 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,12 +143,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC3FA690DE1D6CCBA7DE439 /* Pods_letteriseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E28DAC3F60DA5C105C2C8CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D95ED5D2B1FE86100565340 /* StoreKit.framework */,
+				65B9F2594994A99E2BE5A00D /* Pods_letterise.framework */,
+				5CFDE7C0AA3206B9539ADE95 /* Pods_letteriseTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		646F908A6FAEB261CEDE852C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51DB2BE7A0ADD012EE574ACE /* Pods-letterise.debug.xcconfig */,
+				2FB01FB432967F7F2A992D32 /* Pods-letterise.release.xcconfig */,
+				66CD69482BF20E23DBBE7D54 /* Pods-letteriseTests.debug.xcconfig */,
+				75E94C3BBE3DBECC77DEEAE5 /* Pods-letteriseTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D95ED482B1FBD0600565340 /* GetCoins */ = {
+			isa = PBXGroup;
+			children = (
+				9D95ED532B1FBD4500565340 /* Components */,
+				9D95ED4F2B1FBD4300565340 /* GetCoinsView.swift */,
+				9D95ED502B1FBD4300565340 /* GetCoinsViewModel.swift */,
+			);
+			path = GetCoins;
+			sourceTree = "<group>";
+		};
+		9D95ED532B1FBD4500565340 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9D95ED542B1FBD5200565340 /* AdMob 2 */ = {
+			isa = PBXGroup;
+			children = (
+				9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */,
+				9D95ED592B1FBD7C00565340 /* RewardedAd.swift */,
+			);
+			path = "AdMob 2";
+			sourceTree = "<group>";
+		};
 		9DE3E4B92B1B4373009E625D /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +234,7 @@
 		F55AB75A2B0D364700FEB14F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9D95ED542B1FBD5200565340 /* AdMob 2 */,
 				9DE3E4C32B1B56BE009E625D /* Model */,
 				9DE3E4C02B1B5594009E625D /* Auth */,
 				DF0E22A52B0F7D7D00DD4FAF /* StoreKit */,
@@ -201,9 +274,12 @@
 		F5AF15A22B092FF80027422A = {
 			isa = PBXGroup;
 			children = (
+				9D95ED5F2B1FE86E00565340 /* Letterise - Anagram game.storekit */,
 				F5AF15AD2B092FF80027422A /* letterise */,
 				F5AF15C62B0944010027422A /* letteriseTests */,
 				F5AF15AC2B092FF80027422A /* Products */,
+				646F908A6FAEB261CEDE852C /* Pods */,
+				0E28DAC3F60DA5C105C2C8CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +329,7 @@
 		F5AF15BD2B09313A0027422A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				9D95ED482B1FBD0600565340 /* GetCoins */,
 				9DE3E4B92B1B4373009E625D /* Login */,
 				F55AB7652B138C7F00FEB14F /* PacksList */,
 				F55AB7622B111A0100FEB14F /* Congratulation */,
@@ -360,9 +437,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5AF15B92B092FFB0027422A /* Build configuration list for PBXNativeTarget "letterise" */;
 			buildPhases = (
+				8FF595D09F5AB32B03C432EB /* [CP] Check Pods Manifest.lock */,
 				F5AF15A72B092FF80027422A /* Sources */,
 				F5AF15A82B092FF80027422A /* Frameworks */,
 				F5AF15A92B092FF80027422A /* Resources */,
+				C1C0203AA570C0F0C0CD52B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +456,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5AF15CB2B0944010027422A /* Build configuration list for PBXNativeTarget "letteriseTests" */;
 			buildPhases = (
+				1EE43440827E2A6DB6EB5B17 /* [CP] Check Pods Manifest.lock */,
 				F5AF15C12B0944010027422A /* Sources */,
 				F5AF15C22B0944010027422A /* Frameworks */,
 				F5AF15C32B0944010027422A /* Resources */,
@@ -451,6 +531,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EE43440827E2A6DB6EB5B17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-letteriseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FF595D09F5AB32B03C432EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-letterise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1C0203AA570C0F0C0CD52B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-letterise/Pods-letterise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-letterise/Pods-letterise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-letterise/Pods-letterise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5AF15A72B092FF80027422A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -470,6 +614,7 @@
 				F5AF15E52B0959F70027422A /* DSText.swift in Sources */,
 				F55AB7672B138CAE00FEB14F /* PacksListView.swift in Sources */,
 				DF6019732B10BE9D00B5B08F /* ExempleStoreKitView.swift in Sources */,
+				9D95ED5B2B1FBD7D00565340 /* RewardedAd.swift in Sources */,
 				F5AF15D32B094E230027422A /* LetterPackView.swift in Sources */,
 				F5AD742E2B0ACB1B0062ED5F /* KeyboardLetterView.swift in Sources */,
 				F5AF15D82B09519E0027422A /* AnswerLetterView.swift in Sources */,
@@ -480,14 +625,18 @@
 				F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */,
 				F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */,
 				F55AB7692B138CFE00FEB14F /* LetteriseTopView.swift in Sources */,
+				9D95ED522B1FBD4300565340 /* GetCoinsViewModel.swift in Sources */,
+				9D95ED4E2B1FBD1500565340 /* GetCoinsRow.swift in Sources */,
 				F5AD74362B0D13860062ED5F /* AnswerFeedbackView.swift in Sources */,
 				F5AF15F02B0993080027422A /* KeyboardViewModel.swift in Sources */,
 				F5F50B322B165D71003F7B68 /* LetterPackDisplay.swift in Sources */,
 				F5AF15D62B0950980027422A /* AnswersView.swift in Sources */,
 				F5AF15D12B09490D0027422A /* LetterPackViewModel.swift in Sources */,
+				9D95ED512B1FBD4300565340 /* GetCoinsView.swift in Sources */,
 				F5AD742A2B09A7740062ED5F /* DSButton.swift in Sources */,
 				9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */,
 				F5F50B342B1663B4003F7B68 /* DSDisclosureGroup.swift in Sources */,
+				9D95ED5C2B1FBD7D00565340 /* BannerAd.swift in Sources */,
 				9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */,
 				F5AD742C2B0ACAE50062ED5F /* KeyboardWordView.swift in Sources */,
 				F5AF15DD2B0952790027422A /* Tokens.swift in Sources */,
@@ -634,15 +783,17 @@
 		};
 		F5AF15BA2B092FFB0027422A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51DB2BE7A0ADD012EE574ACE /* Pods-letterise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = letterise/letterise.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"letterise/Preview Content\"";
 				DEVELOPMENT_TEAM = 6525BU9D84;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = letterise/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = letterise;
@@ -660,7 +811,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.letterise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -674,15 +825,17 @@
 		};
 		F5AF15BB2B092FFB0027422A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FB01FB432967F7F2A992D32 /* Pods-letterise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = letterise/letterise.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"letterise/Preview Content\"";
 				DEVELOPMENT_TEAM = 6525BU9D84;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = letterise/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = letterise;
@@ -700,7 +853,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.letterise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -714,6 +867,7 @@
 		};
 		F5AF15CC2B0944010027422A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66CD69482BF20E23DBBE7D54 /* Pods-letteriseTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -732,6 +886,7 @@
 		};
 		F5AF15CD2B0944010027422A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E94C3BBE3DBECC77DEEAE5 /* Pods-letteriseTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

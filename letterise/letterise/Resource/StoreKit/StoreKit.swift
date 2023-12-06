@@ -18,7 +18,7 @@ class StoreKitViewModel: ObservableObject {
     @Published private(set) var subscriptionGroupStatus: RenewalState?
     
     //TODO: - paste here all products identifiers
-    private let productIds: [String] = ["com.letterise.credits1"]
+    private let productIds: [String] = ["com.letterise.coins.50", "com.letterise.coins.100", "com.letterise.coins.300"]
     
     var updateListenerTask : Task<Void, Error>? = nil
     
@@ -111,11 +111,22 @@ class StoreKitViewModel: ObservableObject {
                 case .nonRenewable:
                     if transaction.productID == "" {}
                 case .consumable:
-                    if transaction.productID == "" {}
+                    print("consumivel")
+//                    if transaction.productID == "com.letterise.coins.50" {
+//                        AuthSingleton.shared.addCredits(amount: "50") { status in
+//                            print(status)
+//                        }
+//                    } else if transaction.productID == "com.letterise.coins.100" {
+//                        AuthSingleton.shared.addCredits(amount: "100") { status in
+//                            print(status)
+//                        }
+//                    } else if transaction.productID == "com.letterise.coins.300" {
+//                        AuthSingleton.shared.addCredits(amount: "300") { status in
+//                            print(status)
+//                        }
+//                    }
                 case .nonConsumable:
-                    if transaction.productID == "com.letterise.credits1" {
-                        #warning("Deliver content to user")
-                    }
+                    if transaction.productID == "" {}
                 case .autoRenewable:
                     if transaction.productID == "" {}
                 default:
