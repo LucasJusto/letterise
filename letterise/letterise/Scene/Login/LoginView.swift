@@ -15,10 +15,7 @@ class AppleSignInManager: NSObject, ASAuthorizationControllerDelegate, ASAuthori
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             UserDefaults.standard.set(appleIDCredential.user, forKey: "userCredential")
-            if let userEmail = appleIDCredential.email {
-                UserDefaults.standard.set(userEmail, forKey: "email")
-            }
-            AuthSingleton.shared.doAuth(email: UserDefaults.standard.string(forKey: "email") ?? "nil", userId: appleIDCredential.user) { result in
+            AuthSingleton.shared.doAuth(userId: appleIDCredential.user) { result in
                 switch result {
                 case .success(let responseString):
                     // Convertendo a string para Data
@@ -28,9 +25,7 @@ class AppleSignInManager: NSObject, ASAuthorizationControllerDelegate, ASAuthori
                             if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
                                 // Acessa o dicionário aninhado 'user'
                                 if let user = json["user"] as? [String: Any] {
-                                    // Extrai o email e os créditos
-                                    if let email = user["email"] as? String, let credits = user["credits"] as? Int {
-                                        print("Email: \(email)")
+                                    if let credits = user["credits"] as? Int {
                                         print("Credits: \(credits)")
                                     }
                                 }
@@ -75,7 +70,7 @@ struct LoginView: View {
             Image(systemName: "icloud")
                 .font(.system(size: 120, weight: .regular))
                 .padding(.bottom, 32)
-            Text("We will save your agme progress")
+            Text("We will save your game progress")
                 .font(.system(size: 32, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 16)
