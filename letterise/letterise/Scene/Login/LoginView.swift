@@ -75,7 +75,7 @@ struct LoginView: View {
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 16)
                 .frame(width: UIScreen.main.bounds.width * 0.5)
-            Text("Your data will be saved with iCloud to you access in other devices")
+            Text("Your data will be saved with iCloud ID to you access in other devices")
                 .font(.system(size: 12, weight: .light))
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 16)
