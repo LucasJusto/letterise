@@ -11,12 +11,19 @@ struct GetCoinsRow: View {
     @Environment(\.designTokens) var tokens
     
     var label: String
+    var value: String
     var imageName: String
     
     var body: some View {
         HStack {
-            DSText(label)
-                .textStyle(tokens.font.title, withColor: tokens.color.label.primary)
+            VStack(alignment: .leading) {
+                DSText(label)
+                    .textStyle(tokens.font.title, withColor: tokens.color.label.primary)
+                if value != "" {
+                    DSText(value)
+                        .textStyle(tokens.font.callout, withColor: tokens.color.label.primary)
+                }
+            }
             
             Spacer()
             
@@ -32,5 +39,5 @@ struct GetCoinsRow: View {
 }
 
 #Preview {
-    GetCoinsRow(label: "Get 10 free coins", imageName: "coins1")
+    GetCoinsRow(label: "Get 10 free coins", value: "1,99", imageName: "coins1")
 }

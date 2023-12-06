@@ -18,8 +18,8 @@ struct PacksListView: View {
     }
     
     var body: some View {
-        ZStack {
-            NavigationStack {
+        NavigationStack {
+            ZStack {
                 VStack {
                     ScrollView {
                         VStack(alignment: .center) {
@@ -62,6 +62,11 @@ struct PacksListView: View {
                         rewardManager.displayReward()
                     })
                 }
+                VStack {
+                    Spacer()
+                    BannerAd(unitID: AdMobService.instance.list)
+                        .frame(height: 80)
+                }
             }
             .onAppear {
                 viewModel.fetchPacks()
@@ -73,11 +78,6 @@ struct PacksListView: View {
                 rewardManager.loadReward()
             }
             .disabled(!rewardManager.rewardLoaded)
-            VStack {
-                Spacer()
-                BannerAd(unitID: AdMobService.instance.list)
-                    .frame(height: 80)
-            }
         }
     }
 }
