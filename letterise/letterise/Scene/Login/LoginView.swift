@@ -128,10 +128,15 @@ struct LoginView: View {
 
         signInManager.onAuthorizationComplete = { response in
             if response != "no" {
-                self.isAuthenticated = true
+                DispatchQueue.main.async {
+                    self.isAuthenticated = true
+                }
             } else {
                 print("Erro")
-                showAlert = true
+                DispatchQueue.main.async {
+                    self.showAlert = true
+                }
+                
             }
         }
     }
