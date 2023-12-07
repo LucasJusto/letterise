@@ -9,14 +9,12 @@ import SwiftUI
 
 struct AnswersView: View {
     @Environment(\.designTokens) var tokens
+    @EnvironmentObject var viewModel: LetterPackViewModel
     
     @Binding var isLoading: Bool
     
     var answers: [Word]
     let rows: [GridItem] = [
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
         GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
@@ -40,6 +38,23 @@ struct AnswersView: View {
             Image("AnswersBackground")
                 .resizable()
             
+            VStack {
+                HStack(spacing: tokens.padding.xquarck) {
+                    Image(systemName: "chevron.left")
+                        .fontWeight(.bold)
+                        .padding(.leading, tokens.padding.xxs)
+                        
+                    DSText("Back")
+                        .textStyle(tokens.font.standard, withColor: tokens.color.label.primary)
+                    Spacer()
+                }
+                .onTapGesture {
+                    viewModel.dismiss()
+                }
+                Spacer()
+            }
+            .padding(.top, tokens.padding.sm)
+            
             if isLoading {
                 ProgressView()
                     .scaleEffect(CGSize(width: 2, height: 2))
@@ -62,24 +77,8 @@ struct AnswersView: View {
                     Spacer()
                 }
                     .padding(.horizontal, tokens.padding.xs)
-                    .padding(.top, tokens.padding.sm)
+                    .padding(.top, tokens.padding.hundred)
             }
         }
     }
 }
-
-//#Preview {
-//    AnswersView(answers: AnswersPreviewGenerator.generateAnswersForPreview())
-//}
-//
-//struct AnswersPreviewGenerator {
-//    static func generateAnswersForPreview() -> [String] {
-//        var answers: [String] = ["  ", "ra", "   ", "caro", "arco"]
-//        
-//        for i in 1...50 {
-//            answers.append("arco\(i)")
-//        }
-//        
-//        return answers
-//    }
-//}

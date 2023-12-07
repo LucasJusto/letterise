@@ -38,5 +38,9 @@ struct Padding {
     /// 64
     let sm: CGFloat = 64.0
     
-    let md: CGFloat = 128
+    /// 100
+    let hundred: CGFloat = 100.0
+    
+    /// 128
+    let md: CGFloat = 128.0
 }

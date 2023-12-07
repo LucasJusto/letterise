@@ -63,6 +63,14 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
         }
     }
     
+    func dismiss() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.shouldDismiss = true
+        }
+    }
+    
     func tryWord(word: String) {
         lastTriedWord = word
         if !word.isEmpty {

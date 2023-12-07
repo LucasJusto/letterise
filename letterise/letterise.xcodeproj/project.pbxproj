@@ -18,7 +18,6 @@
 		9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */; };
 		9DE3E4C52B1B56C6009E625D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3E4C42B1B56C6009E625D /* UserModel.swift */; };
 		DF0E22A72B0F7D8600DD4FAF /* StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E22A62B0F7D8600DD4FAF /* StoreKit.swift */; };
-		DF6019732B10BE9D00B5B08F /* ExempleStoreKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6019722B10BE9D00B5B08F /* ExempleStoreKitView.swift */; };
 		F55AB75F2B0D366C00FEB14F /* Incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75C2B0D366C00FEB14F /* Incorrect.mp3 */; };
 		F55AB7602B0D366C00FEB14F /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75D2B0D366C00FEB14F /* Correct.mp3 */; };
 		F55AB7612B0D366C00FEB14F /* Tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F55AB75E2B0D366C00FEB14F /* Tap.mp3 */; };
@@ -87,7 +86,6 @@
 		9DE3E4C12B1B55A0009E625D /* AuthSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSingleton.swift; sourceTree = "<group>"; };
 		9DE3E4C42B1B56C6009E625D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DF0E22A62B0F7D8600DD4FAF /* StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit.swift; sourceTree = "<group>"; };
-		DF6019722B10BE9D00B5B08F /* ExempleStoreKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleStoreKitView.swift; sourceTree = "<group>"; };
 		F55AB75C2B0D366C00FEB14F /* Incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Incorrect.mp3; sourceTree = "<group>"; };
 		F55AB75D2B0D366C00FEB14F /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
 		F55AB75E2B0D366C00FEB14F /* Tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tap.mp3; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				DF0E22A62B0F7D8600DD4FAF /* StoreKit.swift */,
-				DF6019722B10BE9D00B5B08F /* ExempleStoreKitView.swift */,
 			);
 			path = StoreKit;
 			sourceTree = "<group>";
@@ -613,7 +610,6 @@
 				DF0E22A72B0F7D8600DD4FAF /* StoreKit.swift in Sources */,
 				F5AF15E52B0959F70027422A /* DSText.swift in Sources */,
 				F55AB7672B138CAE00FEB14F /* PacksListView.swift in Sources */,
-				DF6019732B10BE9D00B5B08F /* ExempleStoreKitView.swift in Sources */,
 				9D95ED5B2B1FBD7D00565340 /* RewardedAd.swift in Sources */,
 				F5AF15D32B094E230027422A /* LetterPackView.swift in Sources */,
 				9D3DC8B42B2233E100AB1B68 /* GetCoinsViewModel.swift in Sources */,

@@ -28,16 +28,11 @@ struct LetterPackView: View {
                     AnswersView(answers: viewModel.answered, isLoading: $viewModel.isLoadingAnswers)
                         .padding(.bottom, UIScreen.main.bounds.height * 0.01)
                         .padding(.horizontal)
+                        .environmentObject(viewModel)
                     
                     KeyboardView(
                         letters: viewModel.letterPack.letters,
                         letterPackViewModelRef: viewModel)
-                    
-                    Text("Back to list")
-                        .padding(.bottom, UIScreen.main.bounds.height * 0.05)
-                        .onTapGesture {
-                            dismiss()
-                        }
                 }
                 
                 if viewModel.isPresentingAnswerFeedback {
