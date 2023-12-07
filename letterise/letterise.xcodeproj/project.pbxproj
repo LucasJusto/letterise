@@ -50,6 +50,9 @@
 		F5AF15EB2B09602F0027422A /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15EA2B09602F0027422A /* Padding.swift */; };
 		F5AF15EE2B0992030027422A /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15ED2B0992030027422A /* KeyboardView.swift */; };
 		F5AF15F02B0993080027422A /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF15EF2B0993080027422A /* KeyboardViewModel.swift */; };
+		F5D564B42B2246E00061D4FB /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D564B32B2246E00061D4FB /* TipView.swift */; };
+		F5D564B62B224B490061D4FB /* CoinCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D564B52B224B490061D4FB /* CoinCountView.swift */; };
+		F5D564B82B22510C0061D4FB /* TipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D564B72B22510C0061D4FB /* TipButtonView.swift */; };
 		F5F50B2E2B165BC7003F7B68 /* LetterPackRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B2D2B165BC7003F7B68 /* LetterPackRowView.swift */; };
 		F5F50B302B165D1E003F7B68 /* PacksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B2F2B165D1E003F7B68 /* PacksListViewModel.swift */; };
 		F5F50B322B165D71003F7B68 /* LetterPackDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B312B165D71003F7B68 /* LetterPackDisplay.swift */; };
@@ -121,6 +124,9 @@
 		F5AF15EA2B09602F0027422A /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		F5AF15ED2B0992030027422A /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		F5AF15EF2B0993080027422A /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
+		F5D564B32B2246E00061D4FB /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		F5D564B52B224B490061D4FB /* CoinCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCountView.swift; sourceTree = "<group>"; };
+		F5D564B72B22510C0061D4FB /* TipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipButtonView.swift; sourceTree = "<group>"; };
 		F5F50B2D2B165BC7003F7B68 /* LetterPackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackRowView.swift; sourceTree = "<group>"; };
 		F5F50B2F2B165D1E003F7B68 /* PacksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksListViewModel.swift; sourceTree = "<group>"; };
 		F5F50B312B165D71003F7B68 /* LetterPackDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackDisplay.swift; sourceTree = "<group>"; };
@@ -356,12 +362,14 @@
 		F5AF15D42B09504E0027422A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F5D564B22B2246CD0061D4FB /* Tip */,
 				F5F50B352B1663CC003F7B68 /* Base */,
 				F5F50B2C2B165A3B003F7B68 /* LetterPacksList */,
 				F5F50B2B2B165989003F7B68 /* Answer */,
 				F5AF15EC2B098E700027422A /* UserInput */,
 				F5AD74352B0D13860062ED5F /* AnswerFeedbackView.swift */,
 				F55AB7682B138CFE00FEB14F /* LetteriseTopView.swift */,
+				F5D564B52B224B490061D4FB /* CoinCountView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -397,6 +405,15 @@
 				F5AD742D2B0ACB1B0062ED5F /* KeyboardLetterView.swift */,
 			);
 			path = UserInput;
+			sourceTree = "<group>";
+		};
+		F5D564B22B2246CD0061D4FB /* Tip */ = {
+			isa = PBXGroup;
+			children = (
+				F5D564B32B2246E00061D4FB /* TipView.swift */,
+				F5D564B72B22510C0061D4FB /* TipButtonView.swift */,
+			);
+			path = Tip;
 			sourceTree = "<group>";
 		};
 		F5F50B2B2B165989003F7B68 /* Answer */ = {
@@ -602,8 +619,10 @@
 				F5AF15B12B092FF80027422A /* ContentView.swift in Sources */,
 				F5AD74342B0AD56F0062ED5F /* LettersHandler.swift in Sources */,
 				F5AF15E22B0957280027422A /* Border.swift in Sources */,
+				F5D564B62B224B490061D4FB /* CoinCountView.swift in Sources */,
 				F5AF15EB2B09602F0027422A /* Padding.swift in Sources */,
 				F55AB7642B111A3300FEB14F /* CongratulationsView.swift in Sources */,
+				F5D564B82B22510C0061D4FB /* TipButtonView.swift in Sources */,
 				F5AF15E92B095CF10027422A /* AnswerWordView.swift in Sources */,
 				9DE3E4C52B1B56C6009E625D /* UserModel.swift in Sources */,
 				F5AF15E02B09555C0027422A /* Colors.swift in Sources */,
@@ -621,6 +640,7 @@
 				F5AF15E72B095B370027422A /* Fonts.swift in Sources */,
 				F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */,
 				F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */,
+				F5D564B42B2246E00061D4FB /* TipView.swift in Sources */,
 				F55AB7692B138CFE00FEB14F /* LetteriseTopView.swift in Sources */,
 				9D95ED4E2B1FBD1500565340 /* GetCoinsRow.swift in Sources */,
 				F5AD74362B0D13860062ED5F /* AnswerFeedbackView.swift in Sources */,

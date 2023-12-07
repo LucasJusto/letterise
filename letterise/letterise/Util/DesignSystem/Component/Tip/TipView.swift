@@ -1,0 +1,40 @@
+//
+//  TipView.swift
+//  letterise
+//
+//  Created by Lucas Justo on 07/12/23.
+//
+
+import SwiftUI
+
+struct TipView: View {
+    @Environment(\.designTokens) var tokens
+    @EnvironmentObject var viewModel: LetterPackViewModel
+    
+    var body: some View {
+        HStack(spacing: tokens.padding.micro) {
+            Button(action: {
+                print("letter")
+            }, label: {
+                TipButtonView(
+                    image: Image("RandomLetterTip"),
+                    price: 10)
+            })
+            #warning("based on words left")
+            Button(action: {
+                print("word")
+            }, label: {
+                TipButtonView(
+                    image: Image("RandomWordTip"),
+                    price: 10)
+            })
+            
+            
+        }
+        .frame(height: 50)
+    }
+}
+
+#Preview {
+    TipView()
+}

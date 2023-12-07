@@ -8,6 +8,7 @@ import SwiftUI
 
 struct Fonts {
     let standard: FontStyle = FontStyle(textStyle: .body, weight: .regular)
+    let standardBold: FontStyle = FontStyle(textStyle: .body, weight: .bold)
     let big: FontStyle = FontStyle(textStyle: .largeTitle, weight: .bold)
     let title: FontStyle = FontStyle(textStyle: .title, weight: .bold)
     let title2: FontStyle = FontStyle(textStyle: .title2, weight: .bold)

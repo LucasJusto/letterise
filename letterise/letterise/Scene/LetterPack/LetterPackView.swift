@@ -30,6 +30,11 @@ struct LetterPackView: View {
                         .padding(.horizontal)
                         .environmentObject(viewModel)
                     
+                    TipView()
+                        .padding(.vertical, tokens.padding.xxxs)
+                        .padding(.horizontal)
+                        .environmentObject(viewModel)
+                    
                     KeyboardView(
                         letters: viewModel.letterPack.letters,
                         letterPackViewModelRef: viewModel)
