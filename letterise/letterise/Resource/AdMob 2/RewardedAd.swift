@@ -47,6 +47,7 @@ class RewardAdsManager: NSObject,GADFullScreenContentDelegate,ObservableObject{
                 }
                 print("🟢: Earned a reward")
                 self.rewardLoaded = false
+                self.loadReward()
             }
         } else {
             print("🔵: Ad wasn't ready")
