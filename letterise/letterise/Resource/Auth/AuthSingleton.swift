@@ -119,8 +119,8 @@ class AuthSingleton: ObservableObject {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         let body: [String: Any] = [
-            "iCloudID": actualUser.iCloudID,
-            "credits": Int(amount) ?? 0
+            "userID": "\(actualUser.id)",
+            "credits": amount
         ]
 
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
@@ -132,6 +132,31 @@ class AuthSingleton: ObservableObject {
             }
             self.actualUser.credits = self.actualUser.credits + Int(amount)!
 
+            completion(true)
+        }
+
+        task.resume()
+    }
+    
+    func spendCredits(amount: String, completion: @escaping (Bool) -> Void) {
+        let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/subtract_credits")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let body: [String: Any] = [
+            "userID": "\(actualUser.id)",
+            "credits": amount
+        ]
+
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                completion(false)
+                return
+            }
+            self.actualUser.credits = self.actualUser.credits - Int(amount)!
             completion(true)
         }
 

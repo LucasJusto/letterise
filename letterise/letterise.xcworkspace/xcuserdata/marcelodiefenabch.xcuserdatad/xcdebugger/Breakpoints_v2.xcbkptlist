@@ -482,13 +482,13 @@
             filePath = "letterise/Resource/AdMob 2/RewardedAd.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "displayReward()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B94D3A39-3453-42F7-901F-EF7161ECDBC7 - 7c4be67d225f1a32"
+                  uuid = "B94D3A39-3453-42F7-901F-EF7161ECDBC7 - 7c4be67d225f1a11"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -498,9 +498,9 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "932">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "996">
                </Location>
                <Location
                   uuid = "B94D3A39-3453-42F7-901F-EF7161ECDBC7 - 7c4be67d225f1a11"
@@ -515,36 +515,6 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
                   endingLineNumber = "53"
-                  offsetFromSymbolStart = "1049">
-               </Location>
-               <Location
-                  uuid = "B94D3A39-3453-42F7-901F-EF7161ECDBC7 - 7c4be67d225f1a32"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "letterise.RewardAdsManager.displayReward() -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "748">
-               </Location>
-               <Location
-                  uuid = "B94D3A39-3453-42F7-901F-EF7161ECDBC7 - 7c4be67d225f1a32"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "letterise.RewardAdsManager.displayReward() -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/AdMob%202/RewardedAd.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
                   offsetFromSymbolStart = "817">
                </Location>
             </Locations>
@@ -611,6 +581,38 @@
             startingLineNumber = "37"
             endingLineNumber = "37"
             landmarkName = "doAuth(userId:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3AE9B141-DC64-4B43-9AC5-143CF186A090"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/Auth/AuthSingleton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "addCredits(amount:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CC2DDE4-44DE-4C31-8D05-49137F2AC767"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "letterise/Resource/Auth/AuthSingleton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "addCredits(amount:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
