@@ -23,14 +23,13 @@ struct TipView: View {
             })
             .disabled(viewModel.isProcessingLetterTip)
             
-            #warning("based on words left")
             Button(action: {
-                print("word")
+                viewModel.wordsTipAction()
             }, label: {
                 TipButtonView(
                     image: Image("RandomWordTip"),
-                    price: 10,
-                    processing: .constant(false))
+                    price: viewModel.getWordsTipPrice(),
+                    processing: $viewModel.isProcessingWordTip)
             })
             
             
