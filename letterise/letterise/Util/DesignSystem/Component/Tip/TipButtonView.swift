@@ -13,23 +13,33 @@ struct TipButtonView: View {
     let image: Image
     let price: Int
     
+    @Binding var processing: Bool
+    
     var body: some View {
-        HStack(spacing: tokens.padding.micro) {
-            image
-                .resizable()
-                .frame(width: 40, height: 40)
+        ZStack {
+            HStack(spacing: tokens.padding.micro) {
+                image
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                
+                CoinCountView(count: price)
+                    .padding(.trailing, tokens.padding.quarck)
+            }
+            .padding(tokens.padding.nano)
+            .background {
+                RoundedRectangle(cornerRadius: tokens.borderRadius.md)
+                    .foregroundStyle(tokens.color.background.counterPrimary.opacity(0.1))
+            }
+            .opacity(processing ? 0.5 : 1)
             
-            CoinCountView(count: price)
-                .padding(.trailing, tokens.padding.quarck)
+            if processing {
+                ProgressView()
+            }
         }
-        .padding(tokens.padding.nano)
-        .background {
-            RoundedRectangle(cornerRadius: tokens.borderRadius.md)
-                .foregroundStyle(tokens.color.background.counterPrimary.opacity(0.1))
-        }
+        
     }
 }
 
 #Preview {
-    TipButtonView(image: Image("RandomLetterTip"), price: 20)
+    TipButtonView(image: Image("RandomLetterTip"), price: 20, processing: .constant(false))
 }

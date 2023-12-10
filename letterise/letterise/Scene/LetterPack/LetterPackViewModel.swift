@@ -20,11 +20,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     var letterPack: LetterPack
     private let url: String = "https://gpt-treinador.herokuapp.com"
     
-    @Published var answered: [Word] = [] {
-        didSet {
-            print(answered)
-        }
-    }
+    @Published var answered: [Word] = []
     @Published var lastTriedWordResult: AnswerPossibility = .alreadyGuessed
     @Published var isPresentingAnswerFeedback: Bool = false
     @Published var isPresentingCongratulations: Bool = false
@@ -42,7 +38,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     private let lettersTipPriceMultiplier: Int = 3
     private let letterTipsAskedLimit = 2
     private var letterTipsAsked: Int = 0
-    private var isProcessingLetterTip: Bool = false
+    @Published var isProcessingLetterTip: Bool = false
     
     init(letterPack: LetterPack) {
         self.letterPack = letterPack
@@ -116,7 +112,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     
     func lettersTipAction() {
         if canAskLetterTip() && !isProcessingLetterTip {
-            isProcessingLetterTip = true
+            setIsProcessingLetterTip(bool: true)
             let price = getLettersTipPrice()
             
             AuthSingleton.shared.spendCredits(amount: "\(price)") { [weak self] worked in
@@ -126,8 +122,16 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
                     letterTipsAsked += 1
                     displayLetterTip()
                 }
-                self.isProcessingLetterTip = false
+                self.setIsProcessingLetterTip(bool: false)
             }
+        }
+    }
+    
+    private func setIsProcessingLetterTip(bool: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.isProcessingLetterTip = bool
         }
     }
     

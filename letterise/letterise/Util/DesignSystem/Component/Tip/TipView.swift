@@ -18,15 +18,19 @@ struct TipView: View {
             }, label: {
                 TipButtonView(
                     image: Image("RandomLetterTip"),
-                    price: 10)
+                    price: 10,
+                    processing: $viewModel.isProcessingLetterTip)
             })
+            .disabled(viewModel.isProcessingLetterTip)
+            
             #warning("based on words left")
             Button(action: {
                 print("word")
             }, label: {
                 TipButtonView(
                     image: Image("RandomWordTip"),
-                    price: 10)
+                    price: 10,
+                    processing: .constant(false))
             })
             
             
