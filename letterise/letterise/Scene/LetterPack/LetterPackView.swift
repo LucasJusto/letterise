@@ -18,51 +18,50 @@ struct LetterPackView: View {
     }
     
     var body: some View {
-        if viewModel.isPresentingCongratulations {
-            CongratulationsView(backToMenuAction: {
-                dismiss()
-            })
-        } else {
-            ZStack {
-                VStack {
-                    AnswersView(answers: viewModel.answered, isLoading: $viewModel.isLoadingAnswers)
-                        .padding(.bottom, UIScreen.main.bounds.height * 0.01)
-                        .padding(.horizontal)
-                        .environmentObject(viewModel)
-                    
-                    TipView()
-                        .padding(.vertical, tokens.padding.xxxs)
-                        .padding(.horizontal)
-                        .environmentObject(viewModel)
-                    
-                    KeyboardView(
-                        letters: viewModel.letterPack.letters,
-                        letterPackViewModelRef: viewModel)
-                }
+        ZStack {
+            VStack(spacing: tokens.padding.none) {
+                AnswersView(answers: viewModel.answered, isLoading: $viewModel.isLoadingAnswers)
+                    .padding(.bottom, UIScreen.main.bounds.height * 0.01)
+                    .padding(.horizontal)
+                    .environmentObject(viewModel)
                 
-                if viewModel.isPresentingAnswerFeedback {
-                    AnswerFeedbackView(
-                        title: viewModel.answerFeedbackTitle,
-                        message: viewModel.answerFeedbackMessage)
-                    .onTapGesture {
-                        DispatchQueue.main.async {
-                            self.viewModel.isPresentingAnswerFeedback = false
-                        }
+                TipView()
+                    .padding(.vertical, tokens.padding.xxxs)
+                    .padding(.horizontal)
+                    .environmentObject(viewModel)
+                
+                KeyboardView(
+                    letters: viewModel.letterPack.letters,
+                    letterPackViewModelRef: viewModel)
+            }
+            
+            if viewModel.isPresentingAnswerFeedback {
+                AnswerFeedbackView(
+                    title: viewModel.answerFeedbackTitle,
+                    message: viewModel.answerFeedbackMessage)
+                .onTapGesture {
+                    DispatchQueue.main.async {
+                        self.viewModel.isPresentingAnswerFeedback = false
                     }
                 }
             }
-            .ignoresSafeArea()
-            .onChange(of: viewModel.shouldDismiss) { shouldDismiss in
-                if shouldDismiss {
-                    dismiss()
-                }
-            }
-            .onAppear {
-                Task {
-                    await viewModel.loadAnswers()
-                }
+        }
+        .ignoresSafeArea()
+        .onChange(of: viewModel.shouldDismiss) { shouldDismiss in
+            if shouldDismiss {
+                dismiss()
             }
         }
+        .onAppear {
+            Task {
+                await viewModel.loadAnswers()
+            }
+        }
+        .sheet(isPresented: $viewModel.isPresentingCongratulations, content: {
+            CongratulationsView(backToMenuAction: {
+                dismiss()
+            })
+        })
     }
 }
 

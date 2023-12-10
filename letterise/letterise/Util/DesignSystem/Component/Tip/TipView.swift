@@ -14,22 +14,26 @@ struct TipView: View {
     var body: some View {
         HStack(spacing: tokens.padding.micro) {
             Button(action: {
-                print("letter")
+                viewModel.lettersTipAction()
             }, label: {
                 TipButtonView(
                     image: Image("RandomLetterTip"),
-                    price: 10)
+                    price: viewModel.getLettersTipPrice(),
+                    blocked: !viewModel.canAskLetterTip(),
+                    processing: $viewModel.isProcessingLetterTip)
             })
-            #warning("based on words left")
+            .disabled(viewModel.isProcessingLetterTip || !viewModel.canAskLetterTip())
+            
             Button(action: {
-                print("word")
+                viewModel.wordsTipAction()
             }, label: {
                 TipButtonView(
                     image: Image("RandomWordTip"),
-                    price: 10)
+                    price: viewModel.getWordsTipPrice(),
+                    blocked: false,
+                    processing: $viewModel.isProcessingWordTip)
             })
-            
-            
+            .disabled(viewModel.isProcessingWordTip)
         }
         .frame(height: 50)
     }
