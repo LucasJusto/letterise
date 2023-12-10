@@ -19,9 +19,10 @@ struct TipView: View {
                 TipButtonView(
                     image: Image("RandomLetterTip"),
                     price: viewModel.getLettersTipPrice(),
+                    blocked: !viewModel.canAskLetterTip(),
                     processing: $viewModel.isProcessingLetterTip)
             })
-            .disabled(viewModel.isProcessingLetterTip)
+            .disabled(viewModel.isProcessingLetterTip || !viewModel.canAskLetterTip())
             
             Button(action: {
                 viewModel.wordsTipAction()
@@ -29,8 +30,10 @@ struct TipView: View {
                 TipButtonView(
                     image: Image("RandomWordTip"),
                     price: viewModel.getWordsTipPrice(),
+                    blocked: false,
                     processing: $viewModel.isProcessingWordTip)
             })
+            .disabled(viewModel.isProcessingWordTip)
         }
         .frame(height: 50)
     }

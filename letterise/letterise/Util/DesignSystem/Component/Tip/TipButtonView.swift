@@ -12,6 +12,7 @@ struct TipButtonView: View {
     
     let image: Image
     let price: Int
+    let blocked: Bool
     
     @Binding var processing: Bool
     
@@ -30,7 +31,7 @@ struct TipButtonView: View {
                 RoundedRectangle(cornerRadius: tokens.borderRadius.md)
                     .foregroundStyle(tokens.color.background.counterPrimary.opacity(0.1))
             }
-            .opacity(processing ? 0.5 : 1)
+            .opacity((processing || blocked) ? 0.5 : 1)
             
             if processing {
                 ProgressView()
@@ -41,5 +42,5 @@ struct TipButtonView: View {
 }
 
 #Preview {
-    TipButtonView(image: Image("RandomLetterTip"), price: 20, processing: .constant(false))
+    TipButtonView(image: Image("RandomLetterTip"), price: 20, blocked: false, processing: .constant(false))
 }
