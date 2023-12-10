@@ -23,7 +23,6 @@ struct KeyboardView: View {
             KeyboardWordView(
                 type: .textField,
                 viewModel: viewModel)
-            .padding(.bottom, tokens.padding.xxxs)
             
             KeyboardWordView(
                 type: .keyboard,
@@ -33,17 +32,12 @@ struct KeyboardView: View {
                 LinearGradient(gradient: Gradient(colors: [.orange, .yellow]), startPoint: .bottomLeading, endPoint: .topTrailing)
             }
             .clipShape(RoundedRectangle(cornerRadius: 16))
-//            .background {
-//                Image("KeyboardBackground")
-//                    .resizable()
-//            }
             
             DSButton(label: "Try word") {
                 viewModel.tryWord()
             }
             .frame(maxHeight: 50)
-            .padding(.top, tokens.padding.xxs)
-            .padding(.bottom, tokens.padding.xs)
+            .padding(.bottom, tokens.padding.xxs)
             .padding(.horizontal, tokens.padding.sm)
         }
         .padding(.horizontal, 16)

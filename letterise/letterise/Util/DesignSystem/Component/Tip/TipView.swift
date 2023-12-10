@@ -31,8 +31,6 @@ struct TipView: View {
                     price: viewModel.getWordsTipPrice(),
                     processing: $viewModel.isProcessingWordTip)
             })
-            
-            
         }
         .frame(height: 50)
     }

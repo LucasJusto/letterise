@@ -15,16 +15,16 @@ struct AnswersView: View {
     
     var answers: [Word]
     let rows: [GridItem] = [
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4),
-        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 4)
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8),
+        GridItem(.flexible(minimum: 0, maximum: 25), spacing: 8)
     ]
     
     init(answers: [Word], isLoading: Binding<Bool>) {
