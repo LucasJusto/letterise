@@ -14,7 +14,7 @@ struct TipView: View {
     var body: some View {
         HStack(spacing: tokens.padding.micro) {
             Button(action: {
-                print("letter")
+                viewModel.lettersTipAction()
             }, label: {
                 TipButtonView(
                     image: Image("RandomLetterTip"),

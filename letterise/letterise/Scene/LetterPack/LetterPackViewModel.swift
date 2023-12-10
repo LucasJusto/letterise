@@ -20,7 +20,11 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     var letterPack: LetterPack
     private let url: String = "https://gpt-treinador.herokuapp.com"
     
-    @Published var answered: [Word] = []
+    @Published var answered: [Word] = [] {
+        didSet {
+            print(answered)
+        }
+    }
     @Published var lastTriedWordResult: AnswerPossibility = .alreadyGuessed
     @Published var isPresentingAnswerFeedback: Bool = false
     @Published var isPresentingCongratulations: Bool = false
@@ -32,6 +36,13 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     private let answerFeedbackDisplayTime: CGFloat = 3
     
     private let constants: LetterPackViewConstants = LetterPackViewConstants()
+    
+    // MARK: - TIPS
+    private let lettersTipPriceBase: Int = 15
+    private let lettersTipPriceMultiplier: Int = 3
+    private let letterTipsAskedLimit = 2
+    private var letterTipsAsked: Int = 0
+    private var isProcessingLetterTip: Bool = false
     
     init(letterPack: LetterPack) {
         self.letterPack = letterPack
@@ -91,6 +102,63 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
                 setLastTriedWordResult(result: .incorrect)
             }
             displayAnswerFeedback(word: word)
+        }
+    }
+    
+    func getLettersTipPrice() -> Int {
+        let multiplier: Int = letterTipsAsked == 0 ? 1 : lettersTipPriceMultiplier * letterTipsAsked
+        return lettersTipPriceBase * multiplier
+    }
+    
+    func canAskLetterTip() -> Bool {
+        return letterTipsAsked < letterTipsAskedLimit
+    }
+    
+    func lettersTipAction() {
+        if canAskLetterTip() && !isProcessingLetterTip {
+            isProcessingLetterTip = true
+            let price = getLettersTipPrice()
+            
+            AuthSingleton.shared.spendCredits(amount: "\(price)") { [weak self] worked in
+                guard let self = self else { return }
+                
+                if worked {
+                    letterTipsAsked += 1
+                    displayLetterTip()
+                }
+                self.isProcessingLetterTip = false
+            }
+        }
+    }
+    
+    private func displayLetterTip() {
+        for index in 0..<answered.count {
+            let word = answered[index]
+            
+            if !word.isDiscovered {
+                let size: Int = word.word.count
+                
+                var randomLetterIndex: Int = Int.random(in: 0..<size)
+                
+                while !word.word[randomLetterIndex].isEmpty {
+                    randomLetterIndex = Int.random(in: 0..<size)
+                }
+                
+                let letter = word.word[randomLetterIndex]
+                
+                var updatedWordLetters: [Letter] = word.word
+                
+                
+                updatedWordLetters[randomLetterIndex] = Letter(id: letter.id, char: letter.char , isEmpty: false)
+                var updatedWord: Word = Word(id: word.id, word: updatedWordLetters)
+                updatedWord.checkIsDiscovered()
+                
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    
+                    self.answered[index] = updatedWord
+                }
+            }
         }
     }
     

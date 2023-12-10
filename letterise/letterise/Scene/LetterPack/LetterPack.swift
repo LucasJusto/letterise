@@ -45,6 +45,19 @@ struct Word: Equatable, Identifiable {
         self.word = LettersHandler.lettersWithID(from: word)
     }
     
+    mutating func checkIsDiscovered() {
+        var isDisc: Bool = true
+        
+        for letter in word {
+            if letter.isEmpty {
+                isDisc = false
+                break
+            }
+        }
+        
+        self.isDiscovered = isDisc
+    }
+    
     static func ==(lhs: Word, rhs: Word) -> Bool {
         return lhs.id == rhs.id &&
         lhs.word == rhs.word
