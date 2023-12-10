@@ -46,7 +46,11 @@ struct AnswersView: View {
                         
                     DSText("Back")
                         .textStyle(tokens.font.standard, withColor: tokens.color.label.primary)
+                    
                     Spacer()
+                    
+                    CoinCountView(count: AuthSingleton.shared.actualUser.credits)
+                        .padding(.trailing, tokens.padding.xxs)
                 }
                 .onTapGesture {
                     viewModel.dismiss()

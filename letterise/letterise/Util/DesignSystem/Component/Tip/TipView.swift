@@ -18,7 +18,7 @@ struct TipView: View {
             }, label: {
                 TipButtonView(
                     image: Image("RandomLetterTip"),
-                    price: 10,
+                    price: viewModel.getLettersTipPrice(),
                     processing: $viewModel.isProcessingLetterTip)
             })
             .disabled(viewModel.isProcessingLetterTip)
