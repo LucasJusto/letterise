@@ -56,6 +56,9 @@
 		F5D564B42B2246E00061D4FB /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D564B32B2246E00061D4FB /* TipView.swift */; };
 		F5D564B62B224B490061D4FB /* CoinCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D564B52B224B490061D4FB /* CoinCountView.swift */; };
 		F5D564B82B22510C0061D4FB /* TipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D564B72B22510C0061D4FB /* TipButtonView.swift */; };
+		F5D564BB2B2754320061D4FB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D564BA2B2754320061D4FB /* HomeView.swift */; };
+		F5D564BD2B2754ED0061D4FB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D564BC2B2754ED0061D4FB /* HomeViewModel.swift */; };
+		F5D564BF2B275BAD0061D4FB /* OrangeWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D564BE2B275BAD0061D4FB /* OrangeWordView.swift */; };
 		F5F50B2E2B165BC7003F7B68 /* LetterPackRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B2D2B165BC7003F7B68 /* LetterPackRowView.swift */; };
 		F5F50B302B165D1E003F7B68 /* PacksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B2F2B165D1E003F7B68 /* PacksListViewModel.swift */; };
 		F5F50B322B165D71003F7B68 /* LetterPackDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F50B312B165D71003F7B68 /* LetterPackDisplay.swift */; };
@@ -133,6 +136,9 @@
 		F5D564B32B2246E00061D4FB /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		F5D564B52B224B490061D4FB /* CoinCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCountView.swift; sourceTree = "<group>"; };
 		F5D564B72B22510C0061D4FB /* TipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipButtonView.swift; sourceTree = "<group>"; };
+		F5D564BA2B2754320061D4FB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F5D564BC2B2754ED0061D4FB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F5D564BE2B275BAD0061D4FB /* OrangeWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeWordView.swift; sourceTree = "<group>"; };
 		F5F50B2D2B165BC7003F7B68 /* LetterPackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackRowView.swift; sourceTree = "<group>"; };
 		F5F50B2F2B165D1E003F7B68 /* PacksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksListViewModel.swift; sourceTree = "<group>"; };
 		F5F50B312B165D71003F7B68 /* LetterPackDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPackDisplay.swift; sourceTree = "<group>"; };
@@ -356,6 +362,7 @@
 		F5AF15BD2B09313A0027422A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				F5D564B92B27541F0061D4FB /* Home */,
 				9DB152132B27404A00C33DD0 /* Ranking */,
 				9D95ED482B1FBD0600565340 /* GetCoins */,
 				9DE3E4B92B1B4373009E625D /* Login */,
@@ -395,6 +402,7 @@
 				F5AD74352B0D13860062ED5F /* AnswerFeedbackView.swift */,
 				F55AB7682B138CFE00FEB14F /* LetteriseTopView.swift */,
 				F5D564B52B224B490061D4FB /* CoinCountView.swift */,
+				F5D564BE2B275BAD0061D4FB /* OrangeWordView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -439,6 +447,15 @@
 				F5D564B72B22510C0061D4FB /* TipButtonView.swift */,
 			);
 			path = Tip;
+			sourceTree = "<group>";
+		};
+		F5D564B92B27541F0061D4FB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F5D564BA2B2754320061D4FB /* HomeView.swift */,
+				F5D564BC2B2754ED0061D4FB /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		F5F50B2B2B165989003F7B68 /* Answer */ = {
@@ -657,9 +674,11 @@
 				9DD9C2EA2B2551E300852291 /* SetNicknameView.swift in Sources */,
 				F5AF15E52B0959F70027422A /* DSText.swift in Sources */,
 				F55AB7672B138CAE00FEB14F /* PacksListView.swift in Sources */,
+				F5D564BF2B275BAD0061D4FB /* OrangeWordView.swift in Sources */,
 				9D95ED5B2B1FBD7D00565340 /* RewardedAd.swift in Sources */,
 				F5AF15D32B094E230027422A /* LetterPackView.swift in Sources */,
 				9D3DC8B42B2233E100AB1B68 /* GetCoinsViewModel.swift in Sources */,
+				F5D564BB2B2754320061D4FB /* HomeView.swift in Sources */,
 				F5AD742E2B0ACB1B0062ED5F /* KeyboardLetterView.swift in Sources */,
 				F5AF15D82B09519E0027422A /* AnswerLetterView.swift in Sources */,
 				F5AF15DB2B09521A0027422A /* BorderRadius.swift in Sources */,
@@ -680,6 +699,7 @@
 				9DE3E4C22B1B55A0009E625D /* AuthSingleton.swift in Sources */,
 				F5F50B342B1663B4003F7B68 /* DSDisclosureGroup.swift in Sources */,
 				9D95ED5C2B1FBD7D00565340 /* BannerAd.swift in Sources */,
+				F5D564BD2B2754ED0061D4FB /* HomeViewModel.swift in Sources */,
 				9D3DC8B52B2233E100AB1B68 /* GetCoinsView.swift in Sources */,
 				9DE3E4BB2B1B43A2009E625D /* LoginView.swift in Sources */,
 				F5AD742C2B0ACAE50062ED5F /* KeyboardWordView.swift in Sources */,

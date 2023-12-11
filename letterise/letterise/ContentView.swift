@@ -20,7 +20,7 @@ struct ContentView: View {
             case .dontHaveInGameNickName:
                 SetNicknameView()
             case .logged:
-                PacksListView()
+                HomeView()
             case .invalidURL:
                 LoginView(isAuthenticated: $authManager.isLogged)
             case .error:
