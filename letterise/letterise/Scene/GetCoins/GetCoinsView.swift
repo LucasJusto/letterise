@@ -11,13 +11,12 @@ import StoreKit
 struct GetCoinsView: View {
     @Environment(\.designTokens) var tokens
     @StateObject var storeVM: StoreKitViewModel = StoreKitViewModel()
+    @StateObject private var rewardManager = RewardAdsManager()
     
     @State var isLoadingPurchase = false
     @State var isShowingAlert = false
     @State var alertTitle = ""
     @State var alertSubtitle = ""
-    
-    let showAd: () -> Void
     
     var body: some View {
         ZStack {
@@ -26,7 +25,7 @@ struct GetCoinsView: View {
                     
                     GetCoinsRow(label: "Get 10 free coins", value: "", imageName: "coins1")
                         .onTapGesture {
-                            showAd()
+                            rewardManager.displayReward()
                         }
                     
                     ForEach(storeVM.products) { product in
@@ -107,6 +106,10 @@ struct GetCoinsView: View {
                 }.background(.black.opacity(0.6))
             }
         }
+        .onAppear{
+            rewardManager.loadReward()
+        }
+        .disabled(!rewardManager.rewardLoaded)
     }
     
     func startBuy(product: Product) {
@@ -176,5 +179,5 @@ struct GetCoinsView: View {
 }
 
 #Preview {
-    GetCoinsView(showAd: {})
+    GetCoinsView()
 }
