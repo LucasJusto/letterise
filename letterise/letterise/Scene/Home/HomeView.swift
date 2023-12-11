@@ -55,7 +55,9 @@ struct HomeView: View {
                     .onTapGesture {
                         viewModel.setIsShowingSettingsView(bool: true)
                     }
-                    #warning("add navigation to settings")
+                    .navigationDestination(isPresented: $viewModel.isShowingSettingsView) {
+                        SettingsView()
+                    }
                 
                 Spacer()
             }

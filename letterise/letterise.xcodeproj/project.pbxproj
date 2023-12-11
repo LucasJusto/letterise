@@ -11,6 +11,7 @@
 		9D3DC8B42B2233E100AB1B68 /* GetCoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DC8B22B2233E100AB1B68 /* GetCoinsViewModel.swift */; };
 		9D3DC8B52B2233E100AB1B68 /* GetCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DC8B32B2233E100AB1B68 /* GetCoinsView.swift */; };
 		9D77C43F2B278BDA001586B1 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D77C43E2B278BDA001586B1 /* RankingView.swift */; };
+		9D77C4422B279563001586B1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D77C4412B279563001586B1 /* SettingsView.swift */; };
 		9D95ED4E2B1FBD1500565340 /* GetCoinsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */; };
 		9D95ED5B2B1FBD7D00565340 /* RewardedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED592B1FBD7C00565340 /* RewardedAd.swift */; };
 		9D95ED5C2B1FBD7D00565340 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */; };
@@ -87,6 +88,7 @@
 		9D3DC8B22B2233E100AB1B68 /* GetCoinsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCoinsViewModel.swift; sourceTree = "<group>"; };
 		9D3DC8B32B2233E100AB1B68 /* GetCoinsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCoinsView.swift; sourceTree = "<group>"; };
 		9D77C43E2B278BDA001586B1 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		9D77C4412B279563001586B1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinsRow.swift; sourceTree = "<group>"; };
 		9D95ED592B1FBD7C00565340 /* RewardedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAd.swift; sourceTree = "<group>"; };
 		9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
@@ -187,6 +189,14 @@
 				75E94C3BBE3DBECC77DEEAE5 /* Pods-letteriseTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D77C4402B279557001586B1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9D77C4412B279563001586B1 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		9D95ED482B1FBD0600565340 /* GetCoins */ = {
@@ -365,6 +375,7 @@
 		F5AF15BD2B09313A0027422A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				9D77C4402B279557001586B1 /* Settings */,
 				F5D564B92B27541F0061D4FB /* Home */,
 				9DB152132B27404A00C33DD0 /* Ranking */,
 				9D95ED482B1FBD0600565340 /* GetCoins */,
@@ -674,6 +685,7 @@
 				9DE3E4C52B1B56C6009E625D /* UserModel.swift in Sources */,
 				9DB152152B27405300C33DD0 /* RankingViewModel.swift in Sources */,
 				F5AF15E02B09555C0027422A /* Colors.swift in Sources */,
+				9D77C4422B279563001586B1 /* SettingsView.swift in Sources */,
 				DF0E22A72B0F7D8600DD4FAF /* StoreKit.swift in Sources */,
 				9DD9C2EA2B2551E300852291 /* SetNicknameView.swift in Sources */,
 				F5AF15E52B0959F70027422A /* DSText.swift in Sources */,
