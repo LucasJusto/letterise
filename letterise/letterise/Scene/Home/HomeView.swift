@@ -29,7 +29,7 @@ struct HomeView: View {
                     .resizable()
                     .frame(height: 60)
                     .padding(.horizontal, tokens.padding.sm)
-                    .padding(.top, tokens.padding.bg)
+                    .padding(.top, tokens.padding.twoHundred)
                 
                 Button(action: {
                     viewModel.setIsShowingPacksListView(bool: true)
@@ -41,7 +41,20 @@ struct HomeView: View {
                     PacksListView()
                 }
                 
+                DSButton(label: "Ranking") {
+                    viewModel.setIsShowingRankingView(bool: true)
+                }
+                .frame(height: 40)
+                .padding(.horizontal, tokens.padding.hundred)
+                #warning("add navigation to ranking")
                 
+                DSText("Settings")
+                    .textStyle(tokens.font.standard, withColor: tokens.color.label.primary)
+                    .padding(.top, tokens.padding.sm)
+                    .onTapGesture {
+                        viewModel.setIsShowingSettingsView(bool: true)
+                    }
+                    #warning("add navigation to settings")
                 
                 Spacer()
             }
