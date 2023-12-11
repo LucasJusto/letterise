@@ -16,14 +16,19 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            if authManager.isAuthenticating {
+            switch authManager.authenticationStatus {
+            case .dontHaveInGameNickName:
+                SetNicknameView()
+            case .logged:
+                PacksListView()
+            case .invalidURL:
+                LoginView(isAuthenticated: $authManager.isLogged)
+            case .error:
+                LoginView(isAuthenticated: $authManager.isLogged)
+            case .inauthenticated:
+                LoginView(isAuthenticated: $authManager.isLogged)
+            case .authenticating:
                 ProgressView()
-            } else {
-                if authManager.isLogged {
-                    PacksListView()
-                } else {
-                    LoginView(isAuthenticated: $authManager.isLogged)
-                }
             }
         }
     }

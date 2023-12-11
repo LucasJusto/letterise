@@ -15,31 +15,8 @@ class AppleSignInManager: NSObject, ASAuthorizationControllerDelegate, ASAuthori
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             UserDefaults.standard.set(appleIDCredential.user, forKey: "userCredential")
-            AuthSingleton.shared.doAuth(userId: appleIDCredential.user) { result in
-                switch result {
-                case .success(let responseString):
-                    // Convertendo a string para Data
-                    if let jsonData = responseString.data(using: .utf8) {
-                        do {
-                            // Tenta converter a resposta em um dicionário
-                            if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
-                                // Acessa o dicionário aninhado 'user'
-                                if let user = json["user"] as? [String: Any] {
-                                    if let credits = user["credits"] as? Int {
-                                        print("Credits: \(credits)")
-                                    }
-                                }
-                            }
-                        } catch {
-                            print("Erro ao decodificar JSON: \(error)")
-                        }
-                    }
-                    self.onAuthorizationComplete?(appleIDCredential.user)
-
-                case .failure(let error):
-                    print("Erro ao adicionar usuário: \(error.localizedDescription)")
-                    self.onAuthorizationComplete?(appleIDCredential.user)
-                }
+            AuthSingleton.shared.doAuth(icloudID: appleIDCredential.user) { result in
+                print(result)
             }
         }
     }
@@ -132,10 +109,10 @@ struct LoginView: View {
                     self.isAuthenticated = true
                 }
             } else {
-                print("Erro")
-                DispatchQueue.main.async {
-                    self.showAlert = true
-                }
+//                print("Erro")
+//                DispatchQueue.main.async {
+//                    self.showAlert = true
+//                }
                 
             }
         }
