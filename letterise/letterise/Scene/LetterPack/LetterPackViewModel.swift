@@ -22,7 +22,8 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     
     @Published var answered: [Word] = [] {
         didSet {
-            if self.isPackCompleted() {
+            if self.isPackCompleted() && !hasSaved {
+                hasSaved = true
                 self.endPack()
             }
         }
@@ -36,6 +37,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     var answerFeedbackMessage: String = ""
     private var lastTriedWord: String = ""
     private let answerFeedbackDisplayTime: CGFloat = 3
+    private var hasSaved: Bool = false
     
     private let constants: LetterPackViewConstants = LetterPackViewConstants()
     
