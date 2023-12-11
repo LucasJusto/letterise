@@ -11,7 +11,6 @@ struct HomeView: View {
     @Environment(\.designTokens) var tokens
     
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
-    @StateObject private var rewardManager = RewardAdsManager()
     
     var body: some View {
         NavigationStack {
@@ -20,13 +19,12 @@ struct HomeView: View {
                     viewModel.setIsShowingGetCoinsView(bool: true)
                 })
                 .navigationDestination(isPresented: $viewModel.isShowingGetCoinsView){
-                    GetCoinsView(showAd: {
-                        rewardManager.displayReward()
-                    })
+                    GetCoinsView()
                 }
                 
                 Image("letterise")
                     .resizable()
+                    .scaledToFill()
                     .frame(height: 60)
                     .padding(.horizontal, tokens.padding.sm)
                     .padding(.top, tokens.padding.twoHundred)
@@ -46,6 +44,9 @@ struct HomeView: View {
                 }
                 .frame(height: 40)
                 .padding(.horizontal, tokens.padding.hundred)
+                .navigationDestination(isPresented: $viewModel.isShowingRankingView){
+                    RankingView()
+                }
                 #warning("add navigation to ranking")
                 
                 DSText("Settings")
@@ -61,10 +62,6 @@ struct HomeView: View {
             .ignoresSafeArea()
         }
         .accentColor(tokens.color.label.primary)
-        .onAppear{
-            rewardManager.loadReward()
-        }
-        .disabled(!rewardManager.rewardLoaded)
     }
 }
 

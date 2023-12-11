@@ -13,21 +13,26 @@ struct CongratulationsView: View {
     let backToMenuAction: () -> Void
     
     var body: some View {
-        VStack(alignment: .center, spacing: tokens.padding.xs) {
-            youDidItView
-                .padding(.top, tokens.padding.sm)
-            
-            DSButton(label: "Back to menu") {
-                backToMenuAction()
+        HStack {
+            Spacer()
+            VStack(alignment: .center, spacing: tokens.padding.xs) {
+                Spacer()
+                youDidItView
+                    .padding(.top, tokens.padding.sm)
+                
+                DSButton(label: "Back to menu") {
+                    backToMenuAction()
+                }
+                .frame(height: 60)
+                .padding(.bottom, tokens.padding.sm)
+                .padding(.horizontal, tokens.padding.sm)
+                Spacer()
             }
-            .frame(height: 60)
-            .padding(.bottom, tokens.padding.sm)
-            .padding(.horizontal, tokens.padding.sm)
+            Spacer()
         }
         .background {
-            Image("CongratulationsBackground")
-                .resizable()
-                .scaledToFill()
+            LinearGradient(gradient: Gradient(colors: [.orange, .yellow]), startPoint: .bottomLeading, endPoint: .topTrailing)
+                .ignoresSafeArea()
         }
     }
     

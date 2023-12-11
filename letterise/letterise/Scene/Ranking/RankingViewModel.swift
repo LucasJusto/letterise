@@ -11,16 +11,7 @@ final class RankingViewModel: ObservableObject {
     
     var url: String = "https://gpt-treinador.herokuapp.com"
     
-//    fetchRankingList { result in
-//        switch result {
-//        case .success(let rankings):
-//            for ranking in rankings {
-//                print("\(ranking.inGameNickname) - \(ranking.rankingCount)")
-//            }
-//        case .failure(let error):
-//            print("Erro ao buscar rankings: \(error.localizedDescription)")
-//        }
-//    }
+    @Published var rankings: [Ranking] = []
     
     func fetchRankingList(completion: @escaping (Result<[Ranking], Error>) -> Void) {
         let url = URL(string: "\(url)/letterise/ranking-list")!
@@ -40,6 +31,7 @@ final class RankingViewModel: ObservableObject {
                 let rankings = try JSONDecoder().decode([Ranking].self, from: data)
                 print(rankings)
                 completion(.success(rankings))
+                self.rankings = rankings
             } catch {
                 completion(.failure(error))
             }

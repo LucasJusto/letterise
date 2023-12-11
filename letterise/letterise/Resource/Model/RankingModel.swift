@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Ranking: Codable {
+struct Ranking: Codable, Identifiable {
+    let id = UUID()
     var inGameNickname: String
     var rankingCount: Int
 
