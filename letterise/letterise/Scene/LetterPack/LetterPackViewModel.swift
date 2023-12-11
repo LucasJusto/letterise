@@ -23,7 +23,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     @Published var answered: [Word] = [] {
         didSet {
             if self.isPackCompleted() {
-                self.endPack(letterPackID: letterPack.id)
+                self.endPack()
             }
         }
     }
@@ -262,9 +262,9 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
         }
     }
     
-    private func endPack(letterPackID: Int) {
+    private func endPack() {
         //save progress
-        addToRanking(userID: "\(AuthSingleton.shared.actualUser.id)", letterPackID: "\(letterPackID)") { result in
+        addToRanking(userID: "\(AuthSingleton.shared.actualUser.id)", letterPackID: "\(letterPack.id)") { result in
             switch result {
             case .success(let responseString):
                 print("Save ranking: \(responseString)")
@@ -276,7 +276,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
         self.isPresentingCongratulations = true
     }
 
-    func addToRanking(userID: String, letterPackID: String, completionHandler: @escaping (Result<String, Error>) -> Void) {
+    private func addToRanking(userID: String, letterPackID: String, completionHandler: @escaping (Result<String, Error>) -> Void) {
         guard let url = URL(string: "\(url)/letterise/add_to_ranking") else {
             completionHandler(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "URL inválida"])))
             return
