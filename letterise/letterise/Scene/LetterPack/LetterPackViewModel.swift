@@ -23,7 +23,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     @Published var answered: [Word] = [] {
         didSet {
             if self.isPackCompleted() {
-                self.endPack()
+                self.endPack(letterPackID: letterPack.id)
             }
         }
     }
@@ -262,13 +262,65 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
         }
     }
     
-    private func endPack() {
-        #warning("Implement")
+    private func endPack(letterPackID: Int) {
         //save progress
-        
+        addToRanking(userID: "\(AuthSingleton.shared.actualUser.id)", letterPackID: "\(letterPackID)") { result in
+            switch result {
+            case .success(let responseString):
+                print("Save ranking: \(responseString)")
+            case .failure(let error):
+                print("Error saving ranking: \(error.localizedDescription)")
+            }
+        }
         //Display congratulations message and option to navigate to main menu
         self.isPresentingCongratulations = true
     }
+
+    func addToRanking(userID: String, letterPackID: String, completionHandler: @escaping (Result<String, Error>) -> Void) {
+        guard let url = URL(string: "\(url)/letterise/add_to_ranking") else {
+            completionHandler(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "URL inválida"])))
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let parameters: [String: Any] = [
+            "userID": userID,
+            "letterPackID": letterPackID
+        ]
+
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+        } catch {
+            completionHandler(.failure(error))
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completionHandler(.failure(error))
+                return
+            }
+
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode),
+                  let data = data else {
+                completionHandler(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Erro na resposta do servidor"])))
+                return
+            }
+
+            if let responseString = String(data: data, encoding: .utf8) {
+                completionHandler(.success(responseString))
+            } else {
+                completionHandler(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Não foi possível decodificar a resposta"])))
+            }
+        }
+
+        task.resume()
+    }
+
     
     private func setLastTriedWordResult(result: AnswerPossibility) {
         lastTriedWordResult = result
