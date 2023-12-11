@@ -523,54 +523,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3AE9B141-DC64-4B43-9AC5-143CF186A090"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "letterise/Resource/Auth/AuthSingleton.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
-            landmarkName = "addCredits(amount:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3AE9B141-DC64-4B43-9AC5-143CF186A090 - 6ecc0613f8beef42"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "letterise.AuthSingleton.addCredits(amount: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "271"
-                  endingLineNumber = "271"
-                  offsetFromSymbolStart = "1441">
-               </Location>
-               <Location
-                  uuid = "3AE9B141-DC64-4B43-9AC5-143CF186A090 - 1d6ed9b33287338"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in letterise.AuthSingleton.addCredits(amount: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "270"
-                  endingLineNumber = "270"
-                  offsetFromSymbolStart = "974">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0E42004B-C88F-46F7-976D-0A669AB79F25"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

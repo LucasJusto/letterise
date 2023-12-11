@@ -31,7 +31,9 @@ final class RankingViewModel: ObservableObject {
                 let rankings = try JSONDecoder().decode([Ranking].self, from: data)
                 print(rankings)
                 completion(.success(rankings))
-                self.rankings = rankings
+                DispatchQueue.main.sync {
+                    self.rankings = rankings
+                }
             } catch {
                 completion(.failure(error))
             }

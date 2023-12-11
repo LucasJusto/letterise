@@ -85,6 +85,7 @@ struct SetNicknameView: View {
                 DispatchQueue.main.async {
                     switch resultado {
                     case .success(let status):
+                        AuthSingleton.shared.actualUser.inGameNickName = nickname
                         self.handleReturn(status)
                     case .failure(let erro):
                         self.handleReturn(erro)

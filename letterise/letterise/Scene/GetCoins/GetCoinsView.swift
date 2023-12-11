@@ -30,7 +30,7 @@ struct GetCoinsView: View {
                     
                     ForEach(storeVM.products) { product in
                         if "\(product.id)" == "com.letterise.coins.50" {
-                            GetCoinsRow(label: "Buy 50 coins", value: product.displayPrice, imageName: "coins2")
+                            GetCoinsRow(label: "Buy 200 coins", value: product.displayPrice, imageName: "coins2")
                                 .onTapGesture {
                                     startBuy(product: product)
                                 }
@@ -39,7 +39,7 @@ struct GetCoinsView: View {
                     
                     ForEach(storeVM.products) { product in
                         if "\(product.id)" == "com.letterise.coins.100" {
-                            GetCoinsRow(label: "Buy 100 coins", value: product.displayPrice, imageName: "coins3")
+                            GetCoinsRow(label: "Buy 400 coins", value: product.displayPrice, imageName: "coins3")
                                 .onTapGesture {
                                     startBuy(product: product)
                                 }
@@ -48,7 +48,7 @@ struct GetCoinsView: View {
                     
                     ForEach(storeVM.products) { product in
                         if "\(product.id)" == "com.letterise.coins.300" {
-                            GetCoinsRow(label: "Buy 300 coins", value: product.displayPrice, imageName: "coins4")
+                            GetCoinsRow(label: "Buy 1200 coins", value: product.displayPrice, imageName: "coins4")
                                 .onTapGesture {
                                     startBuy(product: product)
                                 }
@@ -133,7 +133,7 @@ struct GetCoinsView: View {
         do {
             if let transaction = try await storeVM.purchase(product) {
                 if "\(transaction.productID)" == "com.letterise.coins.50" {
-                    AuthSingleton.shared.addCredits(amount: "50") { result in
+                    AuthSingleton.shared.addCredits(amount: "200") { result in
                         if result {
                             // The StoreKit already show the success alert
                             removeLoading()
@@ -144,7 +144,7 @@ struct GetCoinsView: View {
                     }
                     isLoadingPurchase = false
                 } else if "\(transaction.productID)" == "com.letterise.coins.100" {
-                    AuthSingleton.shared.addCredits(amount: "100") { result in
+                    AuthSingleton.shared.addCredits(amount: "400") { result in
                         if result {
                             // The StoreKit already show the success alert
                             removeLoading()
@@ -155,7 +155,7 @@ struct GetCoinsView: View {
                     }
                     isLoadingPurchase = false
                 } else if "\(transaction.productID)" == "com.letterise.coins.300" {
-                    AuthSingleton.shared.addCredits(amount: "300") { result in
+                    AuthSingleton.shared.addCredits(amount: "1200") { result in
                         if result {
                             removeLoading()
                         } else {

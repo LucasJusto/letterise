@@ -252,6 +252,12 @@ class AuthSingleton: ObservableObject {
         }
     }
     
+    func changeCredits(amount: Int) {
+        DispatchQueue.main.async {
+            self.actualUser.credits = amount
+        }
+    }
+    
     func addCredits(amount: String, completion: @escaping (Bool) -> Void) {
         let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/add_credits")!
         var request = URLRequest(url: url)
@@ -264,16 +270,25 @@ class AuthSingleton: ObservableObject {
         ]
         
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                completion(false)
-                return
-            }
-            self.actualUser.credits = self.actualUser.credits + Int(amount)!
             
-            completion(true)
-        }
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                    completion(false)
+                    return
+                }
+
+                do {
+                    if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                       let newCredits = jsonResponse["new_credits"] as? Int {
+                        self.changeCredits(amount: newCredits)
+                        completion(true)
+                    } else {
+                        completion(false)
+                    }
+                } catch {
+                    completion(false)
+                }
+            }
         
         task.resume()
     }
@@ -292,13 +307,23 @@ class AuthSingleton: ObservableObject {
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                completion(false)
-                return
+                guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                    completion(false)
+                    return
+                }
+
+                do {
+                    if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                       let newCredits = jsonResponse["new_credits"] as? Int {
+                        self.changeCredits(amount: newCredits)
+                        completion(true)
+                    } else {
+                        completion(false)
+                    }
+                } catch {
+                    completion(false)
+                }
             }
-            self.actualUser.credits = self.actualUser.credits - Int(amount)!
-            completion(true)
-        }
         
         task.resume()
     }
