@@ -16,6 +16,7 @@
 		9D95ED5B2B1FBD7D00565340 /* RewardedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED592B1FBD7C00565340 /* RewardedAd.swift */; };
 		9D95ED5C2B1FBD7D00565340 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */; };
 		9D95ED5E2B1FE86100565340 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D95ED5D2B1FE86100565340 /* StoreKit.framework */; };
+		9D9603CC2B287D5A00F6F3DF /* NeedToLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9603CB2B287D5A00F6F3DF /* NeedToLoginView.swift */; };
 		9DB152152B27405300C33DD0 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB152142B27405300C33DD0 /* RankingViewModel.swift */; };
 		9DB152172B27408400C33DD0 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB152162B27408400C33DD0 /* RankingModel.swift */; };
 		9DD9C2EA2B2551E300852291 /* SetNicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9C2E92B2551E300852291 /* SetNicknameView.swift */; };
@@ -94,6 +95,7 @@
 		9D95ED5A2B1FBD7C00565340 /* BannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		9D95ED5D2B1FE86100565340 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9D95ED5F2B1FE86E00565340 /* Letterise - Anagram game.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Letterise - Anagram game.storekit"; sourceTree = "<group>"; };
+		9D9603CB2B287D5A00F6F3DF /* NeedToLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedToLoginView.swift; sourceTree = "<group>"; };
 		9DB152142B27405300C33DD0 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
 		9DB152162B27408400C33DD0 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
 		9DD9C2E92B2551E300852291 /* SetNicknameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameView.swift; sourceTree = "<group>"; };
@@ -224,6 +226,14 @@
 				9D95ED592B1FBD7C00565340 /* RewardedAd.swift */,
 			);
 			path = "AdMob 2";
+			sourceTree = "<group>";
+		};
+		9D9603CA2B287D4F00F6F3DF /* NeedToLogin */ = {
+			isa = PBXGroup;
+			children = (
+				9D9603CB2B287D5A00F6F3DF /* NeedToLoginView.swift */,
+			);
+			path = NeedToLogin;
 			sourceTree = "<group>";
 		};
 		9DB152132B27404A00C33DD0 /* Ranking */ = {
@@ -375,6 +385,7 @@
 		F5AF15BD2B09313A0027422A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				9D9603CA2B287D4F00F6F3DF /* NeedToLogin */,
 				9D77C4402B279557001586B1 /* Settings */,
 				F5D564B92B27541F0061D4FB /* Home */,
 				9DB152132B27404A00C33DD0 /* Ranking */,
@@ -703,6 +714,7 @@
 				F5AF15E72B095B370027422A /* Fonts.swift in Sources */,
 				F5AF15C02B0931B60027422A /* LetterPack.swift in Sources */,
 				F5AF15AF2B092FF80027422A /* letteriseApp.swift in Sources */,
+				9D9603CC2B287D5A00F6F3DF /* NeedToLoginView.swift in Sources */,
 				F5D564B42B2246E00061D4FB /* TipView.swift in Sources */,
 				F55AB7692B138CFE00FEB14F /* LetteriseTopView.swift in Sources */,
 				9D95ED4E2B1FBD1500565340 /* GetCoinsRow.swift in Sources */,

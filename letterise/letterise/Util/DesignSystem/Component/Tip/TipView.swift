@@ -14,7 +14,7 @@ struct TipView: View {
     var body: some View {
         HStack(spacing: tokens.padding.micro) {
             Button(action: {
-                viewModel.lettersTipAction()
+                showNeedToLoginView()
             }, label: {
                 TipButtonView(
                     image: Image("RandomLetterTip"),
@@ -25,7 +25,7 @@ struct TipView: View {
             .disabled(viewModel.isProcessingLetterTip || !viewModel.canAskLetterTip())
             
             Button(action: {
-                viewModel.wordsTipAction()
+                showNeedToLoginView()
             }, label: {
                 TipButtonView(
                     image: Image("RandomWordTip"),
@@ -36,6 +36,16 @@ struct TipView: View {
             .disabled(viewModel.isProcessingWordTip)
         }
         .frame(height: 50)
+    }
+    
+    func showNeedToLoginView() {
+        DispatchQueue.main.async {
+            if AuthSingleton.shared.authenticationStatus == .inauthenticated {
+                viewModel.isPresentingNeedToLoginView = true
+            } else {
+                viewModel.lettersTipAction()
+            }
+        }
     }
 }
 

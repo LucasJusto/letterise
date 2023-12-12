@@ -39,21 +39,23 @@ struct AnswersView: View {
                 .resizable()
             
             VStack {
-                HStack(spacing: tokens.padding.xquarck) {
-                    Image(systemName: "chevron.left")
-                        .fontWeight(.bold)
-                        .padding(.leading, tokens.padding.xxs)
-                        
-                    DSText("Back")
-                        .textStyle(tokens.font.standard, withColor: tokens.color.label.primary)
+                HStack {
+                    HStack(spacing: tokens.padding.xquarck) {
+                        Image(systemName: "chevron.left")
+                            .fontWeight(.bold)
+                            .padding(.leading, tokens.padding.xxs)
+                            
+                        DSText("Back")
+                            .textStyle(tokens.font.standard, withColor: tokens.color.label.primary)
+                    }
+                    .onTapGesture {
+                        viewModel.dismiss()
+                    }
                     
                     Spacer()
                     
                     CoinCountView(count: AuthSingleton.shared.actualUser.credits)
                         .padding(.trailing, tokens.padding.xxs)
-                }
-                .onTapGesture {
-                    viewModel.dismiss()
                 }
                 Spacer()
             }

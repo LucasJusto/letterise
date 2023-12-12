@@ -530,13 +530,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0E42004B-C88F-46F7-976D-0A669AB79F25 - 48e86cb75f652ef0"
+                  uuid = "0E42004B-C88F-46F7-976D-0A669AB79F25 - 48e86cb75f652eaf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -546,12 +546,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "583">
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "780">
                </Location>
                <Location
-                  uuid = "0E42004B-C88F-46F7-976D-0A669AB79F25 - 48e86cb75f652ef0"
+                  uuid = "0E42004B-C88F-46F7-976D-0A669AB79F25 - 48e86cb75f652eaf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -561,23 +561,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "733">
-               </Location>
-               <Location
-                  uuid = "0E42004B-C88F-46F7-976D-0A669AB79F25 - 48e86cb75f652ef0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in letterise.AuthSingleton.doAuth(icloudID: Swift.String, completion: (letterise.AuthStatus) -&gt; ()) -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
                   offsetFromSymbolStart = "751">
                </Location>
             </Locations>
@@ -593,8 +578,8 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
@@ -611,10 +596,10 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "69"
                   endingLineNumber = "69"
-                  offsetFromSymbolStart = "9907">
+                  offsetFromSymbolStart = "9936">
                </Location>
                <Location
-                  uuid = "9849E3BE-F42A-47BC-99E1-C0D23FF2EF63 - 48e86cb75f652fca"
+                  uuid = "9849E3BE-F42A-47BC-99E1-C0D23FF2EF63 - 48e86cb75f652fe9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -624,57 +609,9 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
                   offsetFromSymbolStart = "9907">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8EDA065F-323D-4735-9E3C-5E48D25613AD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "letterise/Resource/Auth/AuthSingleton.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "checkCredentials()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8EDA065F-323D-4735-9E3C-5E48D25613AD - 87ac64e4601df1d5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "letterise.AuthSingleton.checkCredentials() -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "179"
-                  endingLineNumber = "179"
-                  offsetFromSymbolStart = "538">
-               </Location>
-               <Location
-                  uuid = "8EDA065F-323D-4735-9E3C-5E48D25613AD - 87ac64e4601df1d5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "letterise.AuthSingleton.checkCredentials() -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "179"
-                  endingLineNumber = "179"
-                  offsetFromSymbolStart = "573">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -689,13 +626,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1DDF640A-31D6-4015-8713-C395276B5A31 - 48e86cb75f6529b7"
+                  uuid = "1DDF640A-31D6-4015-8713-C395276B5A31 - 48e86cb75f652956"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -705,12 +642,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "5184">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "5232">
                </Location>
                <Location
-                  uuid = "1DDF640A-31D6-4015-8713-C395276B5A31 - 48e86cb75f6529b7"
+                  uuid = "1DDF640A-31D6-4015-8713-C395276B5A31 - 48e86cb75f652956"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -720,8 +657,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
                   offsetFromSymbolStart = "5210">
                </Location>
             </Locations>
@@ -737,8 +674,8 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
@@ -755,10 +692,10 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
                   endingLineNumber = "147"
-                  offsetFromSymbolStart = "9353">
+                  offsetFromSymbolStart = "9375">
                </Location>
                <Location
-                  uuid = "64E4FD67-A6F4-4735-B3AE-775AF7C7D85B - 48e86cb75f6531dc"
+                  uuid = "64E4FD67-A6F4-4735-B3AE-775AF7C7D85B - 48e86cb75f6531fb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -768,8 +705,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
                   offsetFromSymbolStart = "9353">
                </Location>
             </Locations>
@@ -785,13 +722,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "97A4F3B6-4193-4DBB-A9A2-F103890DE1BD - 48e86cb75f6536f2"
+                  uuid = "97A4F3B6-4193-4DBB-A9A2-F103890DE1BD - 48e86cb75f653691"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -801,12 +738,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "124"
-                  endingLineNumber = "124"
-                  offsetFromSymbolStart = "9069">
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "9114">
                </Location>
                <Location
-                  uuid = "97A4F3B6-4193-4DBB-A9A2-F103890DE1BD - 48e86cb75f6536f2"
+                  uuid = "97A4F3B6-4193-4DBB-A9A2-F103890DE1BD - 48e86cb75f653691"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -816,8 +753,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "124"
-                  endingLineNumber = "124"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
                   offsetFromSymbolStart = "9088">
                </Location>
             </Locations>
@@ -833,13 +770,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2A496F8F-7E9D-4E09-8497-EE5B08F2E1D4 - 48e86cb75f652b89"
+                  uuid = "2A496F8F-7E9D-4E09-8497-EE5B08F2E1D4 - 48e86cb75f652b47"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -849,12 +786,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "10161">
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "5334">
                </Location>
                <Location
-                  uuid = "2A496F8F-7E9D-4E09-8497-EE5B08F2E1D4 - 48e86cb75f652b89"
+                  uuid = "2A496F8F-7E9D-4E09-8497-EE5B08F2E1D4 - 48e86cb75f652ba8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -864,8 +801,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
                   offsetFromSymbolStart = "10600">
                </Location>
             </Locations>
@@ -881,13 +818,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6F2FA7BF-3D66-4790-8875-B38BD171F2BF - 48e86cb75f652a6e"
+                  uuid = "6F2FA7BF-3D66-4790-8875-B38BD171F2BF - 48e86cb75f652a0d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -897,12 +834,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "2095">
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "2146">
                </Location>
                <Location
-                  uuid = "6F2FA7BF-3D66-4790-8875-B38BD171F2BF - 48e86cb75f652a6e"
+                  uuid = "6F2FA7BF-3D66-4790-8875-B38BD171F2BF - 48e86cb75f652a0d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -912,8 +849,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
                   offsetFromSymbolStart = "2117">
                </Location>
             </Locations>
@@ -929,13 +866,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CBDC9C77-5D49-47D9-9C66-43BCA0492B89 - 48e86cb75f652ad2"
+                  uuid = "CBDC9C77-5D49-47D9-9C66-43BCA0492B89 - 48e86cb75f652af1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -945,12 +882,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "2470">
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "2521">
                </Location>
                <Location
-                  uuid = "CBDC9C77-5D49-47D9-9C66-43BCA0492B89 - 48e86cb75f652ad2"
+                  uuid = "CBDC9C77-5D49-47D9-9C66-43BCA0492B89 - 48e86cb75f652af1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -960,8 +897,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
                   offsetFromSymbolStart = "2492">
                </Location>
             </Locations>
@@ -977,13 +914,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A15D891F-AC76-43D7-9DAF-20D272ED14AB - 48e86cb75f65366f"
+                  uuid = "A15D891F-AC76-43D7-9DAF-20D272ED14AB - 48e86cb75f65360e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -993,12 +930,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
-                  offsetFromSymbolStart = "9128">
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "9179">
                </Location>
                <Location
-                  uuid = "A15D891F-AC76-43D7-9DAF-20D272ED14AB - 48e86cb75f65366f"
+                  uuid = "A15D891F-AC76-43D7-9DAF-20D272ED14AB - 48e86cb75f65360e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1008,8 +945,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
                   offsetFromSymbolStart = "9150">
                </Location>
             </Locations>
@@ -1025,13 +962,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A8332CB0-22F1-4C37-AC5F-DE19F70E7C65 - 48e86cb75f6537eb"
+                  uuid = "A8332CB0-22F1-4C37-AC5F-DE19F70E7C65 - 48e86cb75f65378a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1041,12 +978,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "131"
-                  endingLineNumber = "131"
-                  offsetFromSymbolStart = "7281">
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "7332">
                </Location>
                <Location
-                  uuid = "A8332CB0-22F1-4C37-AC5F-DE19F70E7C65 - 48e86cb75f6537eb"
+                  uuid = "A8332CB0-22F1-4C37-AC5F-DE19F70E7C65 - 48e86cb75f65378a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1056,8 +993,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "131"
-                  endingLineNumber = "131"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
                   offsetFromSymbolStart = "7303">
                </Location>
             </Locations>
@@ -1073,13 +1010,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7EF6DE2C-5EE3-442B-AEAD-A6930941683F - 48e86cb75f653767"
+                  uuid = "7EF6DE2C-5EE3-442B-AEAD-A6930941683F - 48e86cb75f653706"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1089,12 +1026,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135"
-                  offsetFromSymbolStart = "6906">
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "6957">
                </Location>
                <Location
-                  uuid = "7EF6DE2C-5EE3-442B-AEAD-A6930941683F - 48e86cb75f653767"
+                  uuid = "7EF6DE2C-5EE3-442B-AEAD-A6930941683F - 48e86cb75f653706"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1104,8 +1041,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
                   offsetFromSymbolStart = "6928">
                </Location>
             </Locations>
@@ -1121,13 +1058,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AC4C7E35-C69A-400B-B73A-D5315E2C231D - 48e86cb75f6530c4"
+                  uuid = "AC4C7E35-C69A-400B-B73A-D5315E2C231D - 48e86cb75f6530e3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1137,12 +1074,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "9215">
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "9266">
                </Location>
                <Location
-                  uuid = "AC4C7E35-C69A-400B-B73A-D5315E2C231D - 48e86cb75f6530c4"
+                  uuid = "AC4C7E35-C69A-400B-B73A-D5315E2C231D - 48e86cb75f6530e3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1152,8 +1089,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
                   offsetFromSymbolStart = "9237">
                </Location>
             </Locations>
@@ -1169,13 +1106,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5134902D-7AF9-4DB9-AC16-84596AFCAE4F - 48e86cb75f653040"
+                  uuid = "5134902D-7AF9-4DB9-AC16-84596AFCAE4F - 48e86cb75f65301e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1185,12 +1122,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "142"
-                  endingLineNumber = "142"
-                  offsetFromSymbolStart = "10840">
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "9313">
                </Location>
                <Location
-                  uuid = "5134902D-7AF9-4DB9-AC16-84596AFCAE4F - 48e86cb75f653040"
+                  uuid = "5134902D-7AF9-4DB9-AC16-84596AFCAE4F - 48e86cb75f65307f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1200,8 +1137,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "142"
-                  endingLineNumber = "142"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
                   offsetFromSymbolStart = "11279">
                </Location>
             </Locations>
@@ -1217,28 +1154,28 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "registerInGameNickname(iCloudID:inGameNickname:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9AE4B866-9927-44BB-B5EC-2EB88EA37A74 - e885cbe1df88f08d"
+                  uuid = "9AE4B866-9927-44BB-B5EC-2EB88EA37A74 - 6ccd3b5c5e0d2b1a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in letterise.AuthSingleton.registerInGameNickname(iCloudID: Swift.String, inGameNickname: Swift.String, completion: (Swift.Result&lt;letterise.NickNameStatus, letterise.NickNameStatus&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "letterise.AuthSingleton.registerInGameNickname(iCloudID: Swift.String, inGameNickname: Swift.String, completion: (Swift.Result&lt;letterise.NickNameStatus, letterise.NickNameStatus&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "letterise"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "230"
-                  endingLineNumber = "230"
-                  offsetFromSymbolStart = "5236">
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "2639">
                </Location>
                <Location
-                  uuid = "9AE4B866-9927-44BB-B5EC-2EB88EA37A74 - e885cbe1df888f01"
+                  uuid = "9AE4B866-9927-44BB-B5EC-2EB88EA37A74 - e885cbe1df888fa4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1248,8 +1185,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "234"
-                  endingLineNumber = "234"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
                   offsetFromSymbolStart = "3850">
                </Location>
             </Locations>
@@ -1265,13 +1202,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "registerInGameNickname(iCloudID:inGameNickname:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4A286880-FA75-4085-B650-B3E7AB29E9C1 - e885cbe1df88f363"
+                  uuid = "4A286880-FA75-4085-B650-B3E7AB29E9C1 - e885cbe1df88f3e7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1281,12 +1218,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
-                  offsetFromSymbolStart = "626">
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "698">
                </Location>
                <Location
-                  uuid = "4A286880-FA75-4085-B650-B3E7AB29E9C1 - e885cbe1df88f363"
+                  uuid = "4A286880-FA75-4085-B650-B3E7AB29E9C1 - e885cbe1df88f306"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1296,8 +1233,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
                   offsetFromSymbolStart = "615">
                </Location>
             </Locations>
@@ -1313,13 +1250,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "registerInGameNickname(iCloudID:inGameNickname:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "72DAAA11-A22C-496B-8FEE-72E80AB98F66 - e885cbe1df88f40e"
+                  uuid = "72DAAA11-A22C-496B-8FEE-72E80AB98F66 - e885cbe1df88f482"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1329,12 +1266,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "195"
-                  endingLineNumber = "195"
-                  offsetFromSymbolStart = "4419">
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "402">
                </Location>
                <Location
-                  uuid = "72DAAA11-A22C-496B-8FEE-72E80AB98F66 - e885cbe1df88f40e"
+                  uuid = "72DAAA11-A22C-496B-8FEE-72E80AB98F66 - e885cbe1df88f4ad"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1344,23 +1281,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "195"
-                  endingLineNumber = "195"
-                  offsetFromSymbolStart = "4559">
-               </Location>
-               <Location
-                  uuid = "72DAAA11-A22C-496B-8FEE-72E80AB98F66 - e885cbe1df88f40e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in letterise.AuthSingleton.registerInGameNickname(iCloudID: Swift.String, inGameNickname: Swift.String, completion: (Swift.Result&lt;letterise.NickNameStatus, letterise.NickNameStatus&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "letterise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "195"
-                  endingLineNumber = "195"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
                   offsetFromSymbolStart = "3975">
                </Location>
             </Locations>
@@ -1376,13 +1298,13 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "registerInGameNickname(iCloudID:inGameNickname:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "88E15666-E6C4-455D-9637-BFBEBF46BEC9 - e885cbe1df88f1d4"
+                  uuid = "88E15666-E6C4-455D-9637-BFBEBF46BEC9 - e885cbe1df88f04b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1392,12 +1314,12 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "221"
-                  endingLineNumber = "221"
-                  offsetFromSymbolStart = "3512">
+                  startingLineNumber = "224"
+                  endingLineNumber = "224"
+                  offsetFromSymbolStart = "4213">
                </Location>
                <Location
-                  uuid = "88E15666-E6C4-455D-9637-BFBEBF46BEC9 - e885cbe1df88f1d4"
+                  uuid = "88E15666-E6C4-455D-9637-BFBEBF46BEC9 - e885cbe1df88f04b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1407,8 +1329,8 @@
                   urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "221"
-                  endingLineNumber = "221"
+                  startingLineNumber = "224"
+                  endingLineNumber = "224"
                   offsetFromSymbolStart = "1925">
                </Location>
             </Locations>
@@ -1424,10 +1346,42 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "registerInGameNickname(iCloudID:inGameNickname:completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6273FFBE-A465-43BC-992F-2A9B79553FF6 - e885cbe1df888f43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in letterise.AuthSingleton.registerInGameNickname(iCloudID: Swift.String, inGameNickname: Swift.String, completion: (Swift.Result&lt;letterise.NickNameStatus, letterise.NickNameStatus&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "232"
+                  endingLineNumber = "232"
+                  offsetFromSymbolStart = "3713">
+               </Location>
+               <Location
+                  uuid = "6273FFBE-A465-43BC-992F-2A9B79553FF6 - e885cbe1df888f43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in letterise.AuthSingleton.registerInGameNickname(iCloudID: Swift.String, inGameNickname: Swift.String, completion: (Swift.Result&lt;letterise.NickNameStatus, letterise.NickNameStatus&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "232"
+                  endingLineNumber = "232"
+                  offsetFromSymbolStart = "3226">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1440,10 +1394,42 @@
             filePath = "letterise/Resource/Auth/AuthSingleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "doAuth(icloudID:completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "549EDEB1-E1D1-4E7E-9747-EA9F6A4D143A - 48e86cb75f6536d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in letterise.AuthSingleton.doAuth(icloudID: Swift.String, completion: (letterise.AuthStatus) -&gt; ()) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "9069">
+               </Location>
+               <Location
+                  uuid = "549EDEB1-E1D1-4E7E-9747-EA9F6A4D143A - 48e86cb75f6536d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in letterise.AuthSingleton.doAuth(icloudID: Swift.String, completion: (letterise.AuthStatus) -&gt; ()) -&gt; ()"
+                  moduleName = "letterise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelodiefenabch/GIT/letterise/letterise/letterise/Resource/Auth/AuthSingleton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "8955">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

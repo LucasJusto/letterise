@@ -14,6 +14,7 @@ public enum AuthStatus: Error {
     case invalidURL
     case inauthenticated
     case authenticating
+    case needToCreateAccount
 }
 
 enum NickNameStatus: Error {
@@ -172,6 +173,8 @@ class AuthSingleton: ObservableObject {
                     print("ainda não autenticou")
                 case .authenticating:
                     print("autenticando")
+                case .needToCreateAccount:
+                    print("precisa criar conta")
                 }
             }
             

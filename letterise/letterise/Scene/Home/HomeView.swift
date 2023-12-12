@@ -19,7 +19,11 @@ struct HomeView: View {
                     viewModel.setIsShowingGetCoinsView(bool: true)
                 })
                 .navigationDestination(isPresented: $viewModel.isShowingGetCoinsView){
-                    GetCoinsView()
+                    if AuthSingleton.shared.authenticationStatus == .logged {
+                        GetCoinsView()
+                    } else {
+                        NeedToLoginView()
+                    }
                 }
                 
                 Image("letterise")
