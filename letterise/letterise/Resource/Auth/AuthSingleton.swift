@@ -262,24 +262,32 @@ class AuthSingleton: ObservableObject {
     }
     
     func addCredits(amount: String, completion: @escaping (Bool) -> Void) {
-        let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/add_credits")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let body: [String: Any] = [
-            "userID": "\(actualUser.id)",
-            "credits": amount
-        ]
-        
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+        if authenticationStatus == .inauthenticated {
+            let actualCredits = UserDefaults.standard.integer(forKey: "credits")
+            UserDefaults.standard.setValue(actualCredits + (Int(amount) ?? 0), forKey: "credits")
+            changeCredits(amount: UserDefaults.standard.integer(forKey: "credits"))
+            completion(true)
+        } else {
+            
+            let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/add_credits")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let body: [String: Any] = [
+                "userID": "\(actualUser.id)",
+                "credits": amount
+            ]
+            
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                     completion(false)
                     return
                 }
-
+                
                 do {
                     if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any],
                        let newCredits = jsonResponse["new_credits"] as? Int {
@@ -292,29 +300,41 @@ class AuthSingleton: ObservableObject {
                     completion(false)
                 }
             }
-        
-        task.resume()
+            
+            task.resume()
+        }
     }
     
     func spendCredits(amount: String, completion: @escaping (Bool) -> Void) {
-        let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/subtract_credits")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let body: [String: Any] = [
-            "userID": "\(actualUser.id)",
-            "credits": amount
-        ]
-        
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        if authenticationStatus == .inauthenticated {
+            let actualCredits = UserDefaults.standard.integer(forKey: "credits")
+            if actualCredits >= Int(amount) ?? 0 {
+                UserDefaults.standard.setValue(actualCredits - (Int(amount) ?? 0), forKey: "credits")
+                changeCredits(amount: UserDefaults.standard.integer(forKey: "credits"))
+                completion(true)
+            } else {
+                completion(false)
+            }
+        } else {
+            let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/subtract_credits")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let body: [String: Any] = [
+                "userID": "\(actualUser.id)",
+                "credits": amount
+            ]
+            
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                     completion(false)
                     return
                 }
-
+                
                 do {
                     if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any],
                        let newCredits = jsonResponse["new_credits"] as? Int {
@@ -327,7 +347,8 @@ class AuthSingleton: ObservableObject {
                     completion(false)
                 }
             }
-        
-        task.resume()
+            
+            task.resume()
+        }
     }
 }
