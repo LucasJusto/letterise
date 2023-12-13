@@ -17,6 +17,7 @@ struct GetCoinsView: View {
     @State var isShowingAlert = false
     @State var alertTitle = ""
     @State var alertSubtitle = ""
+    @State var isShowingNeedToLogin = false
     
     var body: some View {
         ZStack {
@@ -81,6 +82,9 @@ struct GetCoinsView: View {
                 .navigationTitle("Get coins")
                 .padding(.horizontal)
             }
+            .sheet(isPresented: $isShowingNeedToLogin) {
+                NeedToLoginView(isShowingNeedToLogin: $isShowingNeedToLogin)
+            }
             .alert(isPresented: $isShowingAlert) {
                 Alert(
                     title: Text(alertTitle),
@@ -124,8 +128,12 @@ struct GetCoinsView: View {
         alertSubtitle = "Talk with support to resolve if you don't receive your credits"
     }
     
-    func removeLoading() {
+    func removeLoading(isSuccess: Bool = false) {
         isLoadingPurchase = false
+        
+        if isSuccess && AuthSingleton.shared.authenticationStatus == .inauthenticated {
+            isShowingNeedToLogin = true
+        }
     }
     
     func buy(product: Product) async {
@@ -135,8 +143,7 @@ struct GetCoinsView: View {
                 if "\(transaction.productID)" == "com.letterise.coins.50" {
                     AuthSingleton.shared.addCredits(amount: "200") { result in
                         if result {
-                            // The StoreKit already show the success alert
-                            removeLoading()
+                            removeLoading(isSuccess: true)
                         } else {
                             removeLoading()
                             showErrorAlert()
@@ -147,7 +154,7 @@ struct GetCoinsView: View {
                     AuthSingleton.shared.addCredits(amount: "400") { result in
                         if result {
                             // The StoreKit already show the success alert
-                            removeLoading()
+                            removeLoading(isSuccess: true)
                         } else {
                             removeLoading()
                             showErrorAlert()
@@ -157,7 +164,7 @@ struct GetCoinsView: View {
                 } else if "\(transaction.productID)" == "com.letterise.coins.300" {
                     AuthSingleton.shared.addCredits(amount: "1200") { result in
                         if result {
-                            removeLoading()
+                            removeLoading(isSuccess: true)
                         } else {
                             removeLoading()
                             showErrorAlert()

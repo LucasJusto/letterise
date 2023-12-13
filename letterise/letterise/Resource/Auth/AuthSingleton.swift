@@ -55,11 +55,19 @@ class AuthSingleton: ObservableObject {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         print(icloudID)
-        let body: [String: Any] = ["iCloudID": icloudID]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
+        
+        var body: [String: Any]?
+        let actualCredits = UserDefaults.standard.integer(forKey: "credits")
+
+        if actualCredits != 0 {
+            body = ["iCloudID": icloudID, "credits": actualCredits]
+        } else {
+            body = ["iCloudID": icloudID]
+        }
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body as Any, options: [])
         
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
+            if error != nil {
                 completion(.error)
                 return
             }
@@ -78,9 +86,6 @@ class AuthSingleton: ObservableObject {
                                 if let credits = user["credits"] as? Int,
                                    let id = user["id"] as? Int,
                                    let inGameNickname = user["inGameNickname"] as? String {
-                                    print("Id: \(id)")
-                                    print("Credits: \(credits)")
-                                    print("inGameNickname: \(inGameNickname)")
                                     AuthSingleton.shared.actualUser = UserModel(id: id, iCloudID: icloudID, credits: credits, inGameNickName: inGameNickname)
                                     self.changeAuthStatus(status: .logged)
                                     completion(.logged)
@@ -159,7 +164,7 @@ class AuthSingleton: ObservableObject {
     func checkCredentials() {
         if let userCredential = UserDefaults.standard.string(forKey: "userCredential") {
             doAuth(icloudID: userCredential) { [weak self] result in
-                guard let self = self else { return }
+                guard self != nil else { return }
                 switch result {
                 case .dontHaveInGameNickName:
                     print("precisa cadastrar username")
@@ -180,6 +185,8 @@ class AuthSingleton: ObservableObject {
             
         } else {
             self.changeAuthStatus(status: .inauthenticated)
+            changeCredits(amount: UserDefaults.standard.integer(forKey: "credits"))
+            
         }
     }
     

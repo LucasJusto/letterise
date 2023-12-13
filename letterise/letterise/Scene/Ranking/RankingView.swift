@@ -47,7 +47,7 @@ struct RankingView: View {
         .onAppear {
             rankinViewModel.fetchRankingList { result in
                 switch result {
-                case .success(let rankings):
+                case .success(_):
                     print("success")
                 case .failure(let error):
                     print("Erro ao buscar rankings: \(error.localizedDescription)")

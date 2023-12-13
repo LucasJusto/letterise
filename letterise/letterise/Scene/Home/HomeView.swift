@@ -19,11 +19,7 @@ struct HomeView: View {
                     viewModel.setIsShowingGetCoinsView(bool: true)
                 })
                 .navigationDestination(isPresented: $viewModel.isShowingGetCoinsView){
-                    if AuthSingleton.shared.authenticationStatus == .logged {
-                        GetCoinsView()
-                    } else {
-                        NeedToLoginView()
-                    }
+                    GetCoinsView()
                 }
                 
                 Image("letterise")
@@ -51,7 +47,6 @@ struct HomeView: View {
                 .navigationDestination(isPresented: $viewModel.isShowingRankingView){
                     RankingView()
                 }
-                #warning("add navigation to ranking")
                 
                 DSText("Settings")
                     .textStyle(tokens.font.standard, withColor: tokens.color.label.primary)
