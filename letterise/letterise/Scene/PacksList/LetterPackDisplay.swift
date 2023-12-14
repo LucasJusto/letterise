@@ -11,7 +11,7 @@ struct LetterPackDisplay: Identifiable {
     let id: Int
     let letters: [Letter]
     let isFree: Bool
-    let isOwned: Bool
+    var isOwned: Bool
     let price: Int
 }
 

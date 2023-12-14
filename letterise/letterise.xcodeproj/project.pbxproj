@@ -10,6 +10,7 @@
 		4207D39A74061564F4B6EC6A /* Pods_letterise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B9F2594994A99E2BE5A00D /* Pods_letterise.framework */; };
 		9D3DC8B42B2233E100AB1B68 /* GetCoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DC8B22B2233E100AB1B68 /* GetCoinsViewModel.swift */; };
 		9D3DC8B52B2233E100AB1B68 /* GetCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DC8B32B2233E100AB1B68 /* GetCoinsView.swift */; };
+		9D5F026F2B2B7A3B00964C50 /* PurchaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F026E2B2B7A3B00964C50 /* PurchaseResult.swift */; };
 		9D77C43F2B278BDA001586B1 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D77C43E2B278BDA001586B1 /* RankingView.swift */; };
 		9D77C4422B279563001586B1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D77C4412B279563001586B1 /* SettingsView.swift */; };
 		9D95ED4E2B1FBD1500565340 /* GetCoinsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */; };
@@ -88,6 +89,7 @@
 		75E94C3BBE3DBECC77DEEAE5 /* Pods-letteriseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letteriseTests.release.xcconfig"; path = "Target Support Files/Pods-letteriseTests/Pods-letteriseTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D3DC8B22B2233E100AB1B68 /* GetCoinsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCoinsViewModel.swift; sourceTree = "<group>"; };
 		9D3DC8B32B2233E100AB1B68 /* GetCoinsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCoinsView.swift; sourceTree = "<group>"; };
+		9D5F026E2B2B7A3B00964C50 /* PurchaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseResult.swift; sourceTree = "<group>"; };
 		9D77C43E2B278BDA001586B1 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		9D77C4412B279563001586B1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9D95ED4D2B1FBD1500565340 /* GetCoinsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinsRow.swift; sourceTree = "<group>"; };
@@ -193,6 +195,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9D5F026D2B2B7A3000964C50 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9D5F026E2B2B7A3B00964C50 /* PurchaseResult.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		9D77C4402B279557001586B1 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +300,7 @@
 		F55AB75A2B0D364700FEB14F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9D5F026D2B2B7A3000964C50 /* Enum */,
 				9D95ED542B1FBD5200565340 /* AdMob 2 */,
 				9DE3E4C32B1B56BE009E625D /* Model */,
 				9DE3E4C02B1B5594009E625D /* Auth */,
@@ -718,6 +729,7 @@
 				F5D564B42B2246E00061D4FB /* TipView.swift in Sources */,
 				F55AB7692B138CFE00FEB14F /* LetteriseTopView.swift in Sources */,
 				9D95ED4E2B1FBD1500565340 /* GetCoinsRow.swift in Sources */,
+				9D5F026F2B2B7A3B00964C50 /* PurchaseResult.swift in Sources */,
 				F5AD74362B0D13860062ED5F /* AnswerFeedbackView.swift in Sources */,
 				F5AF15F02B0993080027422A /* KeyboardViewModel.swift in Sources */,
 				F5F50B322B165D71003F7B68 /* LetterPackDisplay.swift in Sources */,
