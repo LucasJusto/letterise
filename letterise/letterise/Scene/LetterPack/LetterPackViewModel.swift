@@ -31,6 +31,7 @@ final class LetterPackViewModel: ObservableObject, LetterPackViewModelProtocol {
     @Published var lastTriedWordResult: AnswerPossibility = .alreadyGuessed
     @Published var isPresentingAnswerFeedback: Bool = false
     @Published var isPresentingCongratulations: Bool = false
+    @Published var isPresentingNeedToLoginView: Bool = false
     @Published var isLoadingAnswers: Bool = true
     @Published var shouldDismiss: Bool = false
     var answerFeedbackTitle: String = ""

@@ -24,4 +24,5 @@ struct BorderColor {
 struct LabelColor {
     let primary: Color = .black
     let counterPrimary: Color = .white
+    let secondary: Color = .gray
 }

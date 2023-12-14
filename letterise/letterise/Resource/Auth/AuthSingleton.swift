@@ -14,6 +14,7 @@ public enum AuthStatus: Error {
     case invalidURL
     case inauthenticated
     case authenticating
+    case needToCreateAccount
 }
 
 enum NickNameStatus: Error {
@@ -54,11 +55,19 @@ class AuthSingleton: ObservableObject {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         print(icloudID)
-        let body: [String: Any] = ["iCloudID": icloudID]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
+        
+        var body: [String: Any]?
+        let actualCredits = UserDefaults.standard.integer(forKey: "credits")
+
+        if actualCredits != 0 {
+            body = ["iCloudID": icloudID, "credits": actualCredits]
+        } else {
+            body = ["iCloudID": icloudID]
+        }
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body as Any, options: [])
         
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
+            if error != nil {
                 completion(.error)
                 return
             }
@@ -77,9 +86,6 @@ class AuthSingleton: ObservableObject {
                                 if let credits = user["credits"] as? Int,
                                    let id = user["id"] as? Int,
                                    let inGameNickname = user["inGameNickname"] as? String {
-                                    print("Id: \(id)")
-                                    print("Credits: \(credits)")
-                                    print("inGameNickname: \(inGameNickname)")
                                     AuthSingleton.shared.actualUser = UserModel(id: id, iCloudID: icloudID, credits: credits, inGameNickName: inGameNickname)
                                     self.changeAuthStatus(status: .logged)
                                     completion(.logged)
@@ -158,7 +164,7 @@ class AuthSingleton: ObservableObject {
     func checkCredentials() {
         if let userCredential = UserDefaults.standard.string(forKey: "userCredential") {
             doAuth(icloudID: userCredential) { [weak self] result in
-                guard let self = self else { return }
+                guard self != nil else { return }
                 switch result {
                 case .dontHaveInGameNickName:
                     print("precisa cadastrar username")
@@ -172,11 +178,15 @@ class AuthSingleton: ObservableObject {
                     print("ainda não autenticou")
                 case .authenticating:
                     print("autenticando")
+                case .needToCreateAccount:
+                    print("precisa criar conta")
                 }
             }
             
         } else {
             self.changeAuthStatus(status: .inauthenticated)
+            changeCredits(amount: UserDefaults.standard.integer(forKey: "credits"))
+            
         }
     }
     
@@ -259,24 +269,32 @@ class AuthSingleton: ObservableObject {
     }
     
     func addCredits(amount: String, completion: @escaping (Bool) -> Void) {
-        let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/add_credits")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let body: [String: Any] = [
-            "userID": "\(actualUser.id)",
-            "credits": amount
-        ]
-        
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+        if authenticationStatus == .inauthenticated {
+            let actualCredits = UserDefaults.standard.integer(forKey: "credits")
+            UserDefaults.standard.setValue(actualCredits + (Int(amount) ?? 0), forKey: "credits")
+            changeCredits(amount: UserDefaults.standard.integer(forKey: "credits"))
+            completion(true)
+        } else {
+            
+            let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/add_credits")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let body: [String: Any] = [
+                "userID": "\(actualUser.id)",
+                "credits": amount
+            ]
+            
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                     completion(false)
                     return
                 }
-
+                
                 do {
                     if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any],
                        let newCredits = jsonResponse["new_credits"] as? Int {
@@ -289,29 +307,41 @@ class AuthSingleton: ObservableObject {
                     completion(false)
                 }
             }
-        
-        task.resume()
+            
+            task.resume()
+        }
     }
     
     func spendCredits(amount: String, completion: @escaping (Bool) -> Void) {
-        let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/subtract_credits")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let body: [String: Any] = [
-            "userID": "\(actualUser.id)",
-            "credits": amount
-        ]
-        
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        if authenticationStatus == .inauthenticated {
+            let actualCredits = UserDefaults.standard.integer(forKey: "credits")
+            if actualCredits >= Int(amount) ?? 0 {
+                UserDefaults.standard.setValue(actualCredits - (Int(amount) ?? 0), forKey: "credits")
+                changeCredits(amount: UserDefaults.standard.integer(forKey: "credits"))
+                completion(true)
+            } else {
+                completion(false)
+            }
+        } else {
+            let url = URL(string: "http://gpt-treinador.herokuapp.com/letterise/subtract_credits")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let body: [String: Any] = [
+                "userID": "\(actualUser.id)",
+                "credits": amount
+            ]
+            
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                     completion(false)
                     return
                 }
-
+                
                 do {
                     if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any],
                        let newCredits = jsonResponse["new_credits"] as? Int {
@@ -324,7 +354,8 @@ class AuthSingleton: ObservableObject {
                     completion(false)
                 }
             }
-        
-        task.resume()
+            
+            task.resume()
+        }
     }
 }

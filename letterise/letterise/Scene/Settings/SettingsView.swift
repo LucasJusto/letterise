@@ -13,13 +13,25 @@ struct SettingsView: View {
     var body: some View {
         List {
             Section {
-                HStack {
-                    Text("Delete account")
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                }
-                .onTapGesture {
-                    isShowingAlert = true
+                if AuthSingleton.shared.authenticationStatus == .inauthenticated {
+                    HStack {
+                        Text("Account")
+                        Spacer()
+                        Text("Do login or create account")
+                        Image(systemName: "chevron.right")
+                    }
+                    .onTapGesture {
+                        AuthSingleton.shared.authenticationStatus = .needToCreateAccount
+                    }
+                } else {
+                    HStack {
+                        Text("Delete account")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
+                    .onTapGesture {
+                        isShowingAlert = true
+                    }
                 }
             } header: {
                 Text("Account")

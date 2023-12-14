@@ -62,6 +62,9 @@ struct LetterPackView: View {
                 dismiss()
             })
         })
+        .sheet(isPresented: $viewModel.isPresentingNeedToLoginView) {
+            NeedToLoginView(isShowingNeedToLogin: $viewModel.isPresentingNeedToLoginView)
+        }
     }
 }
 

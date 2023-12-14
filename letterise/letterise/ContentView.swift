@@ -26,9 +26,11 @@ struct ContentView: View {
             case .error:
                 LoginView(isAuthenticated: $authManager.isLogged)
             case .inauthenticated:
-                LoginView(isAuthenticated: $authManager.isLogged)
+                HomeView()
             case .authenticating:
                 ProgressView()
+            case .needToCreateAccount:
+                LoginView(isAuthenticated: $authManager.isLogged)
             }
         }
     }

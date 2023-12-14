@@ -47,7 +47,6 @@ struct HomeView: View {
                 .navigationDestination(isPresented: $viewModel.isShowingRankingView){
                     RankingView()
                 }
-                #warning("add navigation to ranking")
                 
                 DSText("Settings")
                     .textStyle(tokens.font.standard, withColor: tokens.color.label.primary)

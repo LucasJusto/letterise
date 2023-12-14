@@ -102,7 +102,7 @@ struct SetNicknameView: View {
             showAlert(alertTitle: "Nickname in use", alertSubtitle: "You need to choose another nickname to your profile")
         case .userNotFound:
             showAlert(alertTitle: "User not found", alertSubtitle: "We cant found a user to your credentials")
-        case .serverError(let string):
+        case .serverError(_):
             showAlert(alertTitle: "Server error", alertSubtitle: "Try again later or talk with support")
         case .unknownError:
             showAlert(alertTitle: "Unknown error", alertSubtitle: "Try again later or talk with support")
