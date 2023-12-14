@@ -154,4 +154,87 @@ final class PacksListViewModel: ObservableObject {
             return .failure(error)
         }
     }
+    
+//    viewModel.purchaseLetterPack(letterPackID: 1234, credits: 100) { result in
+//        switch result {
+//        case .success(let letterPackID, let creditsRemaining):
+//            print("Compra realizada com sucesso!")
+//            print("ID do LetterPack: \(letterPackID)")
+//
+//        case .insufficientFunds:
+//            print("Erro: Fundos insuficientes para completar a compra.")
+//
+//        case .genericError(let errorMessage):
+//            print("Erro: \(errorMessage)")
+//
+//        case .networkError:
+//            print("Erro de rede: Não foi possível conectar ao servidor.")
+//        }
+//    }
+
+    
+    private func updateLetterPackAsOwned(letterPackID: String) {
+        for (category, packs) in packsDict {
+            if let index = packs.firstIndex(where: { $0.id == Int(letterPackID) }) {
+                var updatedPacks = packs
+                var updatedPack = updatedPacks[index]
+                updatedPack.isOwned = true
+                updatedPacks[index] = updatedPack
+
+                packsDict[category] = updatedPacks
+                break
+            }
+        }
+    }
+
+    func purchaseLetterPack(letterPackID: Int, credits: Int, completion: @escaping (PurchaseResult) -> Void) {
+        guard let url = URL(string: "http://example.com/letterise/purchase_letterpack") else {
+            completion(.networkError)
+            return
+        }
+
+        let requestBody: [String: Any] = [
+            "userID": AuthSingleton.shared.actualUser.id,
+            "letterPackID": String(letterPackID),
+            "credits": credits
+        ]
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: requestBody, options: .prettyPrinted)
+        } catch {
+            completion(.genericError("Error creating JSON from request body"))
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                completion(.networkError)
+                return
+            }
+
+            do {
+                if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                    if let message = jsonResponse["message"] as? String, let letterPackID = jsonResponse["letterPackID"] as? String, let creditsRemaining = jsonResponse["creditsRemaining"] as? Int {
+                        AuthSingleton.shared.changeCredits(amount: creditsRemaining)
+                        self.updateLetterPackAsOwned(letterPackID: letterPackID)
+                        completion(.success(letterPackID: letterPackID))
+                    } else if let errorMessage = jsonResponse["error"] as? String {
+                        if errorMessage == "Not enough credits" {
+                            completion(.insufficientFunds)
+                        } else {
+                            completion(.genericError(errorMessage))
+                        }
+                    }
+                }
+            } catch {
+                completion(.genericError("Error parsing JSON response"))
+            }
+        }
+
+        task.resume()
+    }
 }
